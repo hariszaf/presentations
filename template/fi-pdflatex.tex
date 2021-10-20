@@ -14,16 +14,19 @@
                 %% instead of `english`, you can typeset the
                 %% presentation in either Czech or Slovak,
                 %% respectively.
-  czech, slovak %% The additional keys allow foreign texts to be
+  czech, slovak, greek %% The additional keys allow foreign texts to be
 ]{babel}        %% typeset as follows:
+
 %%
 %%   \begin{otherlanguage}{czech}   ... \end{otherlanguage}
 %%   \begin{otherlanguage}{slovak}  ... \end{otherlanguage}
 %%
+
 %% These macros specify information about the presentation
 \title{Presentation Title} %% that will be typeset on the
 \subtitle{Presentation Subtitle} %% title page.
-\author{Author's Name}
+\author{Haris Zafeiropoulos} 
+
 %% These additional packages are used within the document:
 \usepackage{ragged2e}  % `\justifying` text
 \usepackage{booktabs}  % Tables
@@ -34,30 +37,36 @@
 \usepackage{url}       % `\url`s
 \usepackage{listings}  % Code listings
 \frenchspacing
+
 \begin{document}
+
   \shorthandoff{-}
   \frame[c]{\maketitle}
 
   \AtBeginSection[]{% Print an outline at the beginning of sections
+
     \begin{frame}<beamer>
-      \frametitle{Outline for Section \thesection}
+      \frametitle{Appendix \thesection}
       \tableofcontents[currentsection]
     \end{frame}}
 
   \begin{darkframes}
     \section{Dark Frames}
     \subsection{Blind Text}
+
+    % Slide 2
     \begin{frame}{Jabberwocky}
       \framesubtitle{Lewis Carroll}%
+
       \begin{tikzpicture}[overlay,remember picture]
         \node[anchor=south east,xshift=-30pt,yshift=35pt]
           at (current page.south east) {
             \includegraphics[width=35mm]{resources/jabberwocky-dark}
           };
       \end{tikzpicture}%
-      'Twas brillig, and the slithy toves\\
-      Did gyre and gimble in the wabe;\\
-      All mimsy were the borogoves,\\
+
+      Let us see... 
+
       And the mome raths outgrabe.\\\bigskip
 
       “Beware the Jabberwock, my son!\\
@@ -66,58 +75,79 @@
       The frumious Bandersnatch!”\\
     \end{frame}
 
+    % Slide 3
     \begin{frame}[label=lists]{Lists and locales}
       \framesubtitle{Lorem ipsum dolor sit amet}
+
       \begin{columns}[onlytextwidth]
         \column{.5\textwidth}
+        
           \begin{itemize}
             \item Nulla nec lacinia odio. Curabitur urna tellus.
+
             \begin{itemize}
               \item Fusce id sodales dolor. Sed id metus dui.
+
               \begin{itemize}
                 \item Cupio virtus licet mi vel feugiat.
               \end{itemize}
+
             \end{itemize}
+
           \end{itemize}
+
         \column{.5\textwidth}
           \begin{enumerate}
             \item Donec porta, risus porttitor egestas scelerisque video.
+            
             \begin{enumerate}
               \item Nunc non ante fringilla, manus potentis cario.
+            
               \begin{enumerate}
                 \item Pellentesque servus morbi tristique.
               \end{enumerate}
+            
             \end{enumerate}
+
           \end{enumerate}
+
       \end{columns}
+
       \bigskip
       \justifying
 
-      {\uselanguage{czech}Nechť již hříšné saxofony ďáblů
-      rozzvučí síň úděsnými tóny waltzu, tanga a quickstepu!}
-      {\uselanguage{slovak} Nezvyčajné kŕdle šťastných figliarskych
-      ďatľov učia pri kótovanom ústí Váhu mĺkveho koňa Waldemara
-      obžierať väč\-šie kusy exkluzívnej kôry.}
+
       {\uselanguage{english}The quick, brown fox jumps over a lazy
       dog. DJs flock by when MTV ax quiz prog. “Now fax quiz Jack!”}
     \end{frame}
 
+    % Here is a subsection! 
     \subsection{Structuring Elements}
-    \begin{frame}[label=simmonshall]{Text blocks}
-      \framesubtitle{In plain, example, and \alert{alert} flavour}
-      \alert{This text} is highlighted.
 
-      \begin{block}{A plain block}
-        This is a plain block containing some \alert{highlighted text}.
-      \end{block}
-      \begin{exampleblock}{An example block}
-        This is an example block containing some \alert{highlighted text}.
-      \end{exampleblock}
-      \begin{alertblock}{An alert block}
-        This is an alert block containing some \alert{highlighted text}.
-      \end{alertblock}
-    \end{frame}
+        % Slide 4
+        \begin{frame}[label=simmonshall]{Text blocks} 
 
+            \framesubtitle{In plain, example, and \alert{alert} flavour}
+            \alert{This text} is highlighted.
+
+            % Here is how to have a yellow box
+            \begin{block}{A plain block}
+                This is a plain block containing some \alert{highlighted text}.
+            \end{block}
+            
+            % Here is how to have a grey box
+            \begin{exampleblock}{An example block}
+                This is an example block containing some \alert{highlighted text}.
+            \end{exampleblock}
+
+            % Here is how to have a red box
+            \begin{alertblock}{An alert block}
+                This is an alert block containing some \alert{highlighted text}.
+            \end{alertblock} 
+
+        \end{frame}
+
+    % Slide 5 
     \begin{frame}[label=proof]{Definitions, theorems, and proofs}
       \framesubtitle{All integers divide zero}
       \begin{definition}
@@ -131,7 +161,9 @@
       \end{proof}
     \end{frame}
 
+
     \subsection{Numerals and Mathematics}
+    % Slide 6
     \begin{frame}[label=math]{Numerals and Mathematics}
       \framesubtitle{Formulae, equations, and expressions}
       \begin{columns}[onlytextwidth]
@@ -179,7 +211,9 @@
       \end{columns}
     \end{frame}
 
+
     \subsection{Figures and Code Listings}
+    % Slide 7
     \begin{frame}[label=figs1]{Figures}
       \framesubtitle{Tables, graphs, and images}
       \begin{table}[!b]
@@ -212,12 +246,15 @@
         \caption{The distribution of theses written using \TeX\ during 2010--15 at MU}
       \end{table}
     \end{frame}
+
+    % Slide 8
     \begin{frame}[label=figs2]{Figures}
       \framesubtitle{Tables, graphs, and images}
+      
+      %  Here is where the graph starts as a FIGURE
       \begin{figure}[b]
         \centering
-        % Flipping a coin
-        % Author: cis
+
         \tikzset{
           head/.style = {fill = none, label = center:\textsf{H}},
           tail/.style = {fill = none, label = center:\textsf{T}}}
@@ -229,7 +266,8 @@
             level 2/.style = {sibling distance=4cm},
             level 3/.style = {sibling distance=2cm},
             level distance = 1.25cm
-          ]
+          ] 
+
           \node[shape = rectangle,
             minimum width = 6cm, font = \sffamily] {Coin flipping}
           child { node[shape = circle split, draw, line width = 1pt,
@@ -269,33 +307,40 @@
             \end{scope}
           \end{scope}
         \end{tikzpicture}}
+
         \caption{Tree of probabilities -- Flipping a coin\footnote[frame]{%
           A derivative of a diagram from \url{texample.net} by cis, CC BY 2.5 licensed}}
-      \end{figure}
+      \end{figure} 
+
     \end{frame}
 
+    % Codin chunks - build the sleepSort object
     \defverbatim[colored]\sleepSort{
       \begin{lstlisting}[language=C,tabsize=2]
-  #include <stdio.h>
-  #include <unistd.h>
-  #include <sys/types.h>
-  #include <sys/wait.h>
+        #include <stdio.h>
+        #include <unistd.h>
+        #include <sys/types.h>
+        #include <sys/wait.h>
 
-  // This is a comment
-  int main(int argc, char **argv)
-  {
-          while (--c > 1 && !fork());
-          sleep(c = atoi(v[c]));
-          printf("%d\n", c);
-          wait(0);
-          return 0;
-  }
-    \end{lstlisting}}
+        // This is a comment
+        int main(int argc, char **argv)
+        {
+                while (--c > 1 && !fork());
+                sleep(c = atoi(v[c]));
+                printf("%d\n", c);
+                wait(0);
+                return 0;
+        }
+      \end{lstlisting}}
+
+    %  Slide 9 - use the sleepSort object
     \begin{frame}{Code listings}{An example source code in C}
       \sleepSort
     \end{frame}
 
+
     \subsection{Citations and Bibliography}
+    % Slide 10
     \begin{frame}[label=citations]{Citations}
       \framesubtitle{\TeX, \LaTeX, and Beamer}
 
@@ -345,58 +390,79 @@
       \end{thebibliography}
     \end{frame}
 
+
+    % Thanks slide
+    \begin{frame}{Thank you for your attention}
+        
+        GitHub: hariszaf \\ 
+        email  : haris-zaf@hcmr.gr
+
+        % Logos 
+    \end{frame}
+
   \end{darkframes}
 
-  \section{Light Frames}
-    \subsection{Blind Text}
-    \begin{frame}{Jabberwocky}
-      \framesubtitle{Lewis Carroll}%
-      \begin{tikzpicture}[overlay,remember picture]
-        \node[anchor=south east,xshift=-30pt,yshift=35pt]
-          at (current page.south east) {
-            \includegraphics[width=35mm]{resources/jabberwocky-light}
-          };
-      \end{tikzpicture}%
-      'Twas brillig, and the slithy toves\\
-      Did gyre and gimble in the wabe;\\
-      All mimsy were the borogoves,\\
-      And the mome raths outgrabe.\\\bigskip
 
-      “Beware the Jabberwock, my son!\\
-      The jaws that bite, the claws that catch!\\
-      Beware the Jubjub bird, and shun\\
-      The frumious Bandersnatch!”\\
-    \end{frame}
-    \againframe{lists}
-    \subsection{Structuring Elements}
-    \againframe{simmonshall}
-    \againframe{proof}
-    \subsection{Numerals and Mathematics}
-    \againframe{math}
-    \subsection{Figures and Code Listings}
-    \againframe{figs1}
-    \againframe{figs2}
-    \defverbatim[colored]\sleepSort{
-      \begin{lstlisting}[language=C,tabsize=2]
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
+% 
+%   THE FOLLOWING IS ABOUT THE LIGHT FRAMES PART
+% 
 
-// This is a comment
-int main(int argc, char **argv)
-{
-        while (--c > 1 && !fork());
-        sleep(c = atoi(v[c]));
-        printf("%d\n", c);
-        wait(0);
-        return 0;
-}
-    \end{lstlisting}}
-  \begin{frame}{Code listings}{An example source code in C}
-      \sleepSort
-    \end{frame}
-    \subsection{Citations and Bibliography}
-    \againframe{citations}
-    \againframe{bibliography}
+
+%   \section{Light Frames} 
+
+%     \subsection{Blind Text}
+%     \begin{frame}{Jabberwocky}
+%       \framesubtitle{Lewis Carroll}%
+%       \begin{tikzpicture}[overlay,remember picture]
+%         \node[anchor=south east,xshift=-30pt,yshift=35pt]
+%           at (current page.south east) {
+%             \includegraphics[width=35mm]{resources/jabberwocky-light}
+%           };
+%       \end{tikzpicture}%
+%       'Twas brillig, and the slithy toves\\
+%       Did gyre and gimble in the wabe;\\
+%       All mimsy were the borogoves,\\
+%       And the mome raths outgrabe.\\\bigskip
+
+%       “Beware the Jabberwock, my son!\\
+%       The jaws that bite, the claws that catch!\\
+%       Beware the Jubjub bird, and shun\\
+%       The frumious Bandersnatch!”\\
+%     \end{frame}
+%     \againframe{lists}
+%     \subsection{Structuring Elements}
+%     \againframe{simmonshall}
+%     \againframe{proof}
+%     \subsection{Numerals and Mathematics}
+%     \againframe{math}
+%     \subsection{Figures and Code Listings}
+%     \againframe{figs1}
+%     \againframe{figs2}
+%     \defverbatim[colored]\sleepSort{
+%       \begin{lstlisting}[language=C,tabsize=2]
+%         #include <stdio.h>
+%         #include <unistd.h>
+%         #include <sys/types.h>
+%         #include <sys/wait.h>
+
+%         // This is a comment
+%         int main(int argc, char **argv)
+%         {
+%                 while (--c > 1 && !fork());
+%                 sleep(c = atoi(v[c]));
+%                 printf("%d\n", c);
+%                 wait(0);
+%                 return 0;
+%         }
+%     \end{lstlisting}}
+    
+%     \begin{frame}{Code listings}{An example source code in C}
+%       \sleepSort
+%     \end{frame}
+
+%     \subsection{Citations and Bibliography}
+%     \againframe{citations}
+%     \againframe{bibliography} 
+
+
 \end{document}

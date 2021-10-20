@@ -94,10 +94,10 @@
   % The logo size
   \newlength\fibeamer@lengths@logowidth
   \setlength\fibeamer@lengths@logowidth{%
-    14\fibeamer@lengths@baseunit}
+    8\fibeamer@lengths@baseunit}
   \newlength\fibeamer@lengths@logoheight
   \setlength\fibeamer@lengths@logoheight{%
-    0.4\fibeamer@lengths@logowidth}
+    0.9\fibeamer@lengths@logowidth}
   \defbeamertemplate*{navigation symbols}{fibeamer}{}
   \defbeamertemplate*{headline}{fibeamer}{}
   \defbeamertemplate*{frametitle}{fibeamer}{%
@@ -132,7 +132,7 @@
       remember picture,
       overlay,
       xshift=0.5\fibeamer@lengths@logowidth,
-      yshift=0.5\fibeamer@lengths@logoheight
+      yshift=0.2\fibeamer@lengths@logoheight
     ]
       \node at (0,0) {
         \fibeamer@includeLogo[

@@ -1,0 +1,11 @@
+
+# Ignore all pdf-making files
+*.toc
+*.snm
+*.out
+*.nav
+*.aux
+*.fls
+*.synctex.gz
+*.log
+*.fdb_latexmk

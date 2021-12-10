@@ -46,48 +46,42 @@
    \shorthandoff{-}
    \frame[c]{\maketitle}
 
-   % Print an outline at the beginning of sections
-   \AtBeginSection[]{
-       
-      \begin{frame}<beamer>
-         \frametitle{Table of Contents}
-         \tableofcontents
-         % using the command \tableofcontents[currentsection]
-         % the tocs of the current section are highlighted
-      \end{frame}
 
-   }
+   % Print an outline at the beginning of sections
 
    % 1st section using dark frames
    \begin{darkframes}
+
       \section{Dark Frames}
-      \subsection{Blind Text}
+   
+         \subsection{Blind Text}
 
-      % Slide 2
-      \begin{frame}{Jabberwocky}
-         
-         \framesubtitle{Lewis Carroll}%
+            % SLIDE 2
+            \begin{frame}{Jabberwocky}
+               
+               \framesubtitle{Lewis Carroll}%
 
-         \begin{tikzpicture}[overlay,remember picture]
-            \node[anchor=south east,xshift=-30pt,yshift=35pt]
-               at (current page.south east) {
-                  \includegraphics[width=35mm]{resources/jabberwocky-dark}
-               };
-         \end{tikzpicture}%
+               \begin{tikzpicture}[overlay,remember picture]
+                  \node[anchor=south east,xshift=-30pt,yshift=35pt]
+                     at (current page.south east) {
+                        \includegraphics[width=35mm]{resources/jabberwocky-dark}
+                     };
+               \end{tikzpicture}%
 
-         Let us see... 
+               Let us see... 
 
-         And the mome raths outgrabe.\\\bigskip
+               And the mome raths outgrabe.\\\bigskip
 
-         “Beware the Jabberwock, my son!\\
-         The jaws that bite, the claws that catch!\\
-         Beware the Jubjub bird, and shun\\
-         The frumious Bandersnatch!”\\
-      \end{frame}
+               “Beware the Jabberwock, my son!\\
+               The jaws that bite, the claws that catch!\\
+               Beware the Jubjub bird, and shun\\
+               The frumious Bandersnatch!”\\
+            \end{frame}
 
    \end{darkframes}
+
    
-      % Slide 3
+      % SLIDE 3
       \begin{frame}[label=lists]{Lists and locales}
          \framesubtitle{Lorem ipsum dolor sit amet}
 
@@ -128,55 +122,57 @@
          \bigskip
          \justifying
 
-
          {\uselanguage{english}The quick, brown fox jumps over a lazy
          dog. DJs flock by when MTV ax quiz prog. “Now fax quiz Jack!”}
+
       \end{frame}
 
-   \begin{darkframes}
+
+
+      \begin{darkframes}
       % Here is a subsection! 
       \subsection{Structuring Elements}
 
-            % Slide 4
-            \begin{frame}[label=simmonshall]{Text blocks} 
+         % SLIDE 4
+         \begin{frame}[label=simmonshall]{Text blocks} 
 
-                  \framesubtitle{In plain, example, and \alert{alert} flavour}
-                  \alert{This text} is highlighted.
+            \framesubtitle{In plain, example, and \alert{alert} flavour}
+            \alert{This text} is highlighted.
 
-                  % Here is how to have a yellow box
-                  \begin{block}{A plain block}
-                        This is a plain block containing some \alert{highlighted text}.
-                  \end{block}
-                  
-                  % Here is how to have a grey box
-                  \begin{exampleblock}{An example block}
-                        This is an example block containing some \alert{highlighted text}.
-                  \end{exampleblock}
+            % Here is how to have a yellow box
+            \begin{block}{A plain block}
+                  This is a plain block containing some \alert{highlighted text}.
+            \end{block}
+            
+            % Here is how to have a grey box
+            \begin{exampleblock}{An example block}
+                  This is an example block containing some \alert{highlighted text}.
+            \end{exampleblock}
 
-                  % Here is how to have a red box
-                  \begin{alertblock}{An alert block}
-                        This is an alert block containing some \alert{highlighted text}.
-                  \end{alertblock} 
+            % Here is how to have a red box
+            \begin{alertblock}{An alert block}
+                  This is an alert block containing some \alert{highlighted text}.
+            \end{alertblock} 
 
-            \end{frame}
+         \end{frame}
 
-      % Slide 5 
-      \begin{frame}[label=proof]{Definitions, theorems, and proofs}
-         \framesubtitle{All integers divide zero}
-         \begin{definition}
-            $\forall a,b\in\mathds{Z}: a\mid b\iff\exists c\in\mathds{Z}:a\cdot c=b$
-         \end{definition}
-         \begin{theorem}
-            $\forall a\in\mathds{Z}: a\mid 0$
-         \end{theorem}
-         \begin{proof}[Proof\nopunct]
-            $\forall a\in\mathds{Z}: a\cdot 0=0$
-         \end{proof}
-      \end{frame}
+         % SLIDE 5 
+         \begin{frame}[label=proof]{Definitions, theorems, and proofs}
+            \framesubtitle{All integers divide zero}
+            \begin{definition}
+               $\forall a,b\in\mathds{Z}: a\mid b\iff\exists c\in\mathds{Z}:a\cdot c=b$
+            \end{definition}
+            \begin{theorem}
+               $\forall a\in\mathds{Z}: a\mid 0$
+            \end{theorem}
+            \begin{proof}[Proof\nopunct]
+               $\forall a\in\mathds{Z}: a\cdot 0=0$
+            \end{proof}
+         \end{frame}
 
 
       \subsection{Numerals and Mathematics}
-      % Slide 6
+      % SLIDE 6
       \begin{frame}[label=math]{Numerals and Mathematics}
          \framesubtitle{Formulae, equations, and expressions}
          \begin{columns}[onlytextwidth]
@@ -226,7 +222,7 @@
 
 
       \subsection{Figures and Code Listings}
-      % Slide 7
+      % SLIDE 7
       \begin{frame}[label=figs1]{Figures}
          \framesubtitle{Tables, graphs, and images}
          \begin{table}[!b]
@@ -260,7 +256,7 @@
          \end{table}
       \end{frame}
 
-      % Slide 8
+      % SLIDE 8
       \begin{frame}[label=figs2]{Figures}
          \framesubtitle{Tables, graphs, and images}
          
@@ -346,14 +342,14 @@
             }
          \end{lstlisting}}
 
-      %   Slide 9 - use the sleepSort object
+      %   SLIDE 9 - use the sleepSort object
       \begin{frame}{Code listings}{An example source code in C}
          \sleepSort
       \end{frame}
 
 
       \subsection{Citations and Bibliography}
-      % Slide 10
+      % SLIDE 10
       \begin{frame}[label=citations]{Citations}
          \framesubtitle{\TeX, \LaTeX, and Beamer}
 
@@ -405,7 +401,7 @@
 
    \end{darkframes}
 
-   % Thank you slide
+   % Thank you SLIDE
    \begin{frame}{Thank you for your attention}
          
          GitHub   : \href{https://github.com/hariszaf}{hariszaf} \\ 
@@ -431,8 +427,8 @@
          % IMBBC
          \begin{tikzpicture}[overlay,remember picture]
             \node[anchor=south east,
-               xshift=-180pt,
-               yshift=20pt]
+               xshift=-185pt,
+               yshift=25pt]
                at (current page.south east) {
                   \includegraphics[width=35mm]{resources/logo-imbbc.png}
                };
@@ -441,7 +437,7 @@
          % HCMR
          \begin{tikzpicture}[overlay,remember picture]
             \node[anchor=south east,
-                  xshift=-120pt,
+                  xshift=-125pt,
                   yshift=10pt]
                   at (current page.south east) {
                      \includegraphics[height=20mm]{
@@ -454,8 +450,8 @@
          % GeomScale
          \begin{tikzpicture}[overlay,remember picture]
             \node[anchor=south east,
-                  xshift=-10pt,
-                  yshift=15pt]
+                  xshift=-5pt,
+                  yshift=22pt]
                   at (current page.south east) {
                      \includegraphics[width=40mm]{
                         resources/geomscale-logo.png

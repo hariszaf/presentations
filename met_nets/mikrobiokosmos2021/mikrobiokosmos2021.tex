@@ -7,7 +7,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
 \documentclass{beamer}
 \usetheme[faculty=fi]{fibeamer}
 \usepackage[utf8]{inputenc}
@@ -23,7 +22,6 @@
 %%    \begin{otherlanguage}{czech}    ... \end{otherlanguage}
 %%    \begin{otherlanguage}{slovak}   ... \end{otherlanguage}
 %%
-
 
 %% These macros specify information about the presentation
 \title{Sampling the flux space of microbial metabolic networks
@@ -64,7 +62,7 @@
          \begin{tikzpicture}[overlay,remember picture]
             \node[anchor=north west, xshift=30pt,yshift=-50pt]
                at (current page.north west) {
-                  \includegraphics[width=110mm]{resources/building_gmd.png}
+                  \includegraphics[width=110mm]{../resources/building_gmd.png}
                };
             \node[align = left, above] at (current page.south) {
                \scriptsize 
@@ -77,7 +75,6 @@
       % \captionof{figure}{\textbf{Confusion Matrix}}
 
    \end{frame}
-
    
    % SLIDE 3
       % \bigskip ; \justifying ; \bigskip
@@ -90,7 +87,7 @@
 
                \node[anchor=north west, xshift=20pt,yshift=-65pt]
                   at (current page.north west) {
-                     \includegraphics[width=70mm]{resources/stoichiometric_matrix.png}
+                     \includegraphics[width=70mm]{../resources/stoichiometric_matrix.png}
                   };
 
                \node[align = left, above] at (current page.south) {
@@ -145,9 +142,9 @@
       \begin{singlespace}
          \begin{tikzpicture}[overlay,remember picture]
 
-            \node[anchor=north west, xshift=20pt,yshift=-60pt]
+            \node[anchor=north west, xshift=30pt,yshift=-60pt]
                at (current page.north west) {
-                  \includegraphics[width=100mm]{resources/solution_spaces.png}
+                  \includegraphics[width=100mm]{../resources/solution_spaces.png}
                };
 
             \node[align = left, above] at (current page.south) {
@@ -158,20 +155,25 @@
                };
          \end{tikzpicture}
 
-         % \bigskip ; \justifying ; \bigskip
+
+         \bigskip ; \justifying ; \bigskip
          \bigskip ; \justifying ; \bigskip
          \bigskip ; \justifying ; \bigskip
 
-         Allows for:
-         \begin{itemize}
-            \item  analysis of GSMMs without the need of an objective function
-            % If we sample a sufficiently large number of points, uniformly distributed, in the polytope,
-            % then these correspond to uniformly at random sample of steady states of the metabolic network.
-            % In this way we can obtain an overview of all the possible flux values and  generate the probability distribution for each flux.
-            % Hence, we obtain a thorough representation of the steady states of the metabolic network and we can
-            % study the properties of certain components of the whole network to deduce significant biological insights.
-            
-         \end{itemize}
+         \begin{singlespace}         
+            \begin{itemize}
+               \item \small 
+               enables the analysis of GSMMs without the need of an objective function
+               \item \small
+               determines the feasible solution spaces for fluxes in a network based on a set of conditions as well as the probability of obtaining a solution
+               % If we sample a sufficiently large number of points, uniformly distributed, in the polytope,
+               % then these correspond to uniformly at random sample of steady states of the metabolic network.
+               % In this way we can obtain an overview of all the possible flux values and  generate the probability distribution for each flux.
+               % Hence, we obtain a thorough representation of the steady states of the metabolic network and we can
+               % study the properties of certain components of the whole network to deduce significant biological insights.
+               
+            \end{itemize}
+         \end{singlespace}
 
       \end{singlespace}
 
@@ -278,7 +280,7 @@
                yshift=10pt]
                at (current page.south east) {
                   \includegraphics[height=17mm]{
-                     resources/UoC_logo_white.png
+                     ../resources/UoC_logo_white.png
                   }
                };
       \end{tikzpicture}
@@ -289,7 +291,7 @@
             xshift=-185pt,
             yshift=25pt]
             at (current page.south east) {
-               \includegraphics[width=35mm]{resources/logo-imbbc.png}
+               \includegraphics[width=35mm]{../resources/logo-imbbc.png}
             };
       \end{tikzpicture}%
 
@@ -300,7 +302,7 @@
                yshift=10pt]
                at (current page.south east) {
                   \includegraphics[height=20mm]{
-                     resources/hcmr-logo.png
+                     ../resources/hcmr-logo.png
                   }
                };
       \end{tikzpicture}%
@@ -312,7 +314,7 @@
                yshift=22pt]
                at (current page.south east) {
                   \includegraphics[width=40mm]{
-                     resources/geomscale-logo.png
+                     ../resources/geomscale-logo.png
                   }
                };
       \end{tikzpicture}

@@ -18,15 +18,9 @@
    czech, slovak, greek %% The additional keys allow foreign texts to be
 ]{babel}            %% typeset as follows:
 
-%%
-%%    \begin{otherlanguage}{czech}    ... \end{otherlanguage}
-%%    \begin{otherlanguage}{slovak}   ... \end{otherlanguage}
-%%
 
 %% These macros specify information about the presentation
-\title{Sampling the flux space of microbial metabolic networks
-% for (un)biased assessment of the possible functional states
-} %% that will be typeset on the
+\title{Sampling the flux space of microbial metabolic networks}
 \subtitle{the example of SARS-CoV-2 on the human alveolar macrophage metabolic network} %% title page.
 \author{Haris Zafeiropoulos} 
 
@@ -48,13 +42,6 @@
    \shorthandoff{-}
    \frame[c]{\maketitle}
 
-
-   % Print an outline at the beginning of sections
-
-   % 1st section using dark frames
-   % \begin{darkframes}
-
-   % \begin{darkframes}
    % SLIDE 2
    \begin{frame}{Genome-scale metabolic reconstruction}
       
@@ -62,13 +49,11 @@
          \begin{tikzpicture}[overlay,remember picture]
             \node[anchor=north west, xshift=30pt,yshift=-50pt]
                at (current page.north west) {
-                  \includegraphics[width=110mm]{../resources/building_gmd.png}
+                  \includegraphics[width=105mm]{../resources/building_gmd_transparent.png}
                };
-            \node[align = left, above] at (current page.south) {
+            \node[align = left, above, yshift=10] at (current page.south) {
                \scriptsize 
-               Figure from: Heirendt, Laurent, et al. "Creation and analysis of biochemical  \\ 
-               \scriptsize
-               constraint-based models using the COBRA Toolbox v. 3.0. Nature protocols 14.3 (2019): 639-702."
+               Figure from: Heirendt, Laurent, et al. Nature protocols 14.3 (2019): 639-702.
             };
          \end{tikzpicture}
       \end{singlespace}
@@ -77,62 +62,54 @@
    \end{frame}
    
    % SLIDE 3
-      % \bigskip ; \justifying ; \bigskip
+   \begin{frame}{From a stoichiometric matrix}
+      \framesubtitle{to a constraint-based model}
+      
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
 
-      \begin{frame}{From a stoichiometric matrix}
-         \framesubtitle{to a constraint-based model}
-         
-         \begin{singlespace}
-            \begin{tikzpicture}[overlay,remember picture]
-
-               \node[anchor=north west, xshift=20pt,yshift=-65pt]
-                  at (current page.north west) {
-                     \includegraphics[width=70mm]{../resources/stoichiometric_matrix.png}
-                  };
-
-               \node[align = left, above] at (current page.south) {
-                     \scriptsize \
-                     Figure from: Heirendt, Laurent, et al. "Creation and analysis of biochemical  \\ 
-                     \scriptsize
-                     constraint-based models using the COBRA Toolbox v. 3.0. Nature protocols 14.3 (2019): 639-702."
+            \node[anchor=north west, xshift=20pt,yshift=-65pt]
+               at (current page.north west) {
+                  \includegraphics[width=70mm]{../resources/stoichiometric_matrix_transparent.png}
                };
 
-               \node[align = center, left, xshift=-10pt] at (current page.east) {
-                  \small
-                  \textbf{Flux Balance Analysis}
-                  \\ 
-                  \small
-                  Maximize \/ minimize an \\
-                  \small
-                  objective function:  \\
-                  \small
-                  $\psi = c_1 v_1 + c_2 v_2 + .. + c_5 v_5$ \\
-                  \small
-                  such that: \\
-                  \small
-                  $S * v = O$ \\ 
-                  \small
-                  and for each reaction $i$: \\
-                  \small
-                  $lb_i <= v_i <= ub_i$ \\ 
-                  
-                  \\
-
-                  \small
-                  where $lb$: lower bound, \\
-                  \small
-                  $ub$: upper bound and \\
-                  \small
-                  $S$: the stoichiometric matrix
+               \node[align = left, above, yshift=10] at (current page.south) {
+                  \scriptsize 
+                  Figure from: Heirendt, Laurent, et al. Nature protocols 14.3 (2019): 639-702.
                };
+   
+            \node[align = center, left, xshift=-10pt] at (current page.east) {
+               \small
+               \textbf{Flux Balance Analysis}
+               \\ 
+               \small
+               Maximize \/ minimize an \\
+               \small
+               objective function:  \\
+               \small
+               $\psi = c_1 v_1 + c_2 v_2 + .. + c_5 v_5$ \\
+               \small
+               such that: \\
+               \small
+               $S * v = O$ \\ 
+               \small
+               and for each reaction $i$: \\
+               \small
+               $lb_i <= v_i <= ub_i$ \\ 
+               
+               \\
 
-            \end{tikzpicture}
-         \end{singlespace}
+               \small
+               where $lb$: lower bound, \\
+               \small
+               $ub$: upper bound and \\
+               \small
+               $S$: the stoichiometric matrix
+            };
 
-    
-       
-      \end{frame}
-         
+         \end{tikzpicture}
+      \end{singlespace}      
+   \end{frame}
 
 
    % SLIDE 4
@@ -144,127 +121,129 @@
 
             \node[anchor=north west, xshift=30pt,yshift=-60pt]
                at (current page.north west) {
-                  \includegraphics[width=100mm]{../resources/solution_spaces.png}
+                  \includegraphics[width=100mm]{../resources/solution_spaces_transparent.png}
                };
 
-            \node[align = left, above] at (current page.south) {
-               \scriptsize \
-               Figure from: Heirendt, Laurent, et al. "Creation and analysis of biochemical  \\ 
-               \scriptsize
-               constraint-based models using the COBRA Toolbox v. 3.0. Nature protocols 14.3 (2019): 639-702."
+               \node[align = left, above, yshift=10] at (current page.south) {
+                  \scriptsize 
+                  Figure from: Heirendt, Laurent, et al. Nature protocols 14.3 (2019): 639-702.
                };
-         \end{tikzpicture}
 
+            \end{tikzpicture}
 
-         \bigskip ; \justifying ; \bigskip
-         \bigskip ; \justifying ; \bigskip
-         \bigskip ; \justifying ; \bigskip
+         \bigskip  \justifying  \bigskip
+         \bigskip  \justifying  \bigskip
+         \bigskip  \justifying  \bigskip
 
-         \begin{singlespace}         
             \begin{itemize}
                \item \small 
                enables the analysis of GSMMs without the need of an objective function
                \item \small
-               determines the feasible solution spaces for fluxes in a network based on a set of conditions as well as the probability of obtaining a solution
-               % If we sample a sufficiently large number of points, uniformly distributed, in the polytope,
-               % then these correspond to uniformly at random sample of steady states of the metabolic network.
-               % In this way we can obtain an overview of all the possible flux values and  generate the probability distribution for each flux.
-               % Hence, we obtain a thorough representation of the steady states of the metabolic network and we can
-               % study the properties of certain components of the whole network to deduce significant biological insights.
-               
+               determines the feasible solution spaces for fluxes in a network based on a set of conditions as well as the probability of obtaining a solution               
             \end{itemize}
-         \end{singlespace}
 
       \end{singlespace}
+   \end{frame}
+ 
 
+   % SLIDE 5
+   \begin{frame}{Our Markov Chain Monte Carlo (MCMC) algorithm}
+      \framesubtitle{for flux sampling}
+
+      \includegraphics[scale=0.11]{../resources/sampling_extra_phase_croped_transparent.png}
+      
+      \scriptsize
+      \begin{block}{Steps of an MMCS phase}
+         \begin{itemize}
+            \item \textbf{sampling step:} using a variant of the \textbf{Billiard walk}  
+            \item \textbf{rounding step:} calculate a linear transformation $T_i$ that puts the sample into isotropic position and then apply it on $P_i$ to obtain the polytope of the next phase
+            \item check several statistic tests
+         \end{itemize}      
+
+      \end{block}
+
+      \begin{singlespace}
+         \scriptsize
+         Chalkis, Fisikopoulos, Tsigaridas and Zafeiropoulos 
+         "Geometric Algorithms for Sampling \\ the Flux Space
+         of Metabolic Networks", SoCG 2021,  
+         DOI: 10.4230/LIPIcs.SoCG.2021.21
+   
+      \end{singlespace}
 
    \end{frame}
 
 
+   % SLIDE 6
+   \begin{frame}{Find possible anti-COVID19 targets}
+      \framesubtitle{a flux sampling application}
+      \bigskip
+      \includegraphics[scale=0.27]{../resources/covid_paper.png}
+      
+      \begin{singlespace}
+         \begin{itemize}
+            \item \small Renz et al. '20 built the biomass function of Sars-Cov-2 to build a host - virus network
+            \item \small Using FBA they computed an optimal steady state using \\ \small \quad (i) human biomass maintenance,\\ \small \quad (ii) virus growth rate
+            \item \small They found reaction GK1 as a possible anti-viral target.
+         \end{itemize}            
+      \end{singlespace}
 
+   \end{frame}
 
-   % \begin{frame}[plain,c]
-   %    \begin{center}
-   %    \Large \textbf{The region of steady states}
-   %    \end{center}
-   %    %\centerline{The region of steady states}
-   %    \begin{columns}
-   %    \begin{column}{0.5\textwidth}
-   %    \vspace*{0.2cm}
-   %    \begin{center}
-   %       As a {\color{blue} low dimensional} polytope.\\% in $\mathbb{R}^n$.\\
-   %       %\vspace*{0.2cm}
-   %       %\includegraphics[scale=0.2]{./figures/low_dim_poly}
-   %        \end{center}    
-   %        \vspace*{0.2cm}
-   %       \begin{equation*}
-   %        \begin{split}
-   %           &\quad\quad\quad\quad\quad Sv = 0,\\ & \quad\quad\quad\quad v_{lb}\leq v \leq v_{ub} \hspace*{1.6cm} {\color{orange}\stackleftrightarrow{v = Nx}} \\
-   %           & \quad\quad\quad S\in\mathbb{R}^{m\times n},\ \mathbf{v}\in\mathbb{R}^n 
-   %        \end{split}
-   %        \end{equation*}
-   %    \end{column}
-   %    \begin{column}{0.5\textwidth}  %%<--- here
-   %    \vspace*{0.1cm}
-   %    \begin{center}
-   %    As a {\color{red} full dimensional} polytope\\
-   %         \includegraphics[scale=0.2]{./figures/polytope}\\
-   %         $P:=\{ x\in\mathbb{R}^d\ |\ Ax\leq b \}$
-   %         \end{center}
-   %    \end{column}
-   %    \end{columns}
-   %    \vspace*{0.3cm}
-   %    \begin{align*}
-   %    A = \begin{pmatrix} I_n N \\ -I_n N\end{pmatrix}\ \text{and }b = \begin{pmatrix} v_{ub} \\ v_{lb} \end{pmatrix}  N
-   %    \end{align*}
-   %    %$A = \begin{pmatrix} I_n N \\ -I_n N\end{pmatrix}$
-   %    %and $b = \begin{pmatrix} x_{ub} \\ x_{lb} \end{pmatrix}  N$
-   %    %\begin{itemize}
-   %       \centering $N\in\mathbb{R}^{n\times d}$ the matrix of the right nullspace of $S$.
-   %    %\end{itemize}
-   %    \end{frame}
+   % SLIDE 7
+   \begin{frame}{Find possible anti-COVID19 targets}
+      \framesubtitle{a flux sampling application}      
+
+      \centerline{
+      \includegraphics[scale=0.21]{
+         ../resources/density_flux_TYMSULT_fba_2_transparent
+         } 
+      \includegraphics[scale=0.21]{
+         ../resources/density_flux_gk1_fba_2_transparent
+         }
+      }
+
+      \begin{itemize}
+         \item Check if the flux distribution of a reaction changes.
+         \item Find possible anti-viral targets and study further..
+      \end{itemize}
+      \vspace*{0.2cm}
+
+   \end{frame}
+   
+
+   % % SLIDE 8
+   % \begin{frame}{Further applications}
+   %    \framesubtitle{of metabolic flux sampling}
       
-      
-      % %9th slide
-      % \begin{frame}[plain,c]
-      % \begin{center}
-      % \Large \textbf{Sampling steady states}
-      % \end{center}
-      
-      % \begin{columns}
-      % \begin{column}{0.5\textwidth}
-      % \begin{center}
-      %    \includegraphics[scale=0.35]{./figures/polytope}
-      % \end{center}
-      % \end{column}
-      % \begin{column}{0.5\textwidth}  %%<--- here
-      
-      % \begin{center}
-      %    \includegraphics[scale=0.35]{./figures/sampling}
-      % \end{center}
-      % \end{column}
-      % \end{columns}
-      
-      % \begin{itemize}
-      %    \item \footnotesize Sampling could lead to important biological insights! {\footnotesize\color{ao} [Palsson'15]}
-      %    \item Explore the flux space {\footnotesize\color{ao} [Schellenberger,Palsson'09]}.
-      % \end{itemize}
+   %    \begin{tikzpicture}[overlay,remember picture]
+
+   %       \node[anchor=north west]
+   %       at (current. page.nort west) {
+   %          \includegraphics[width=40mm]{../resources/interactions.png}
+
+            
+   %       }
          
-      % \begin{mdframed}
-      % \begin{center}\
-      % \textit{We introduce a\\}
-      % \textbf{M}ultiphase \textbf{M}onte \textbf{C}arlo \textbf{S}ampling algorithm\\ based on \textbf{Billiard Walk}
-      % \end{center}
-      % \end{mdframed}
-      % \end{frame}
-      
+   %       \node[anchor=north east, xshift=00pt,yshift=-100pt]
+   %       at (current page.north east) {
+   %          \includegraphics[width=55mm]{../resources/cartoon_wine}
+   %       };
 
-   % Thank you SLIDE
+   %    \end{tikzpicture}
+
+   % \end{frame}
+
+
+   % SLIDE 9 - Thank you SLIDE
    \begin{darkframes}
    \begin{frame}{Thank you for your attention}
          
       % URLs
       GitHub repository  : \href{https://github.com/GeomScale/dingo/}{https://github.com/GeomScale/dingo/} \\ 
+
+      MMCS algorithm publication: \href{10.4230/LIPIcs.SoCG.2021.21}{10.4230/LIPIcs.SoCG.2021.21} \\ 
+      
       \bigskip
       email    : \href{haris-zaf@hcmr.gr}{haris-zaf@hcmr.gr} \\
       Twitter  : \href{https://twitter.com/haris_zaf}{haris\_zaf} \\

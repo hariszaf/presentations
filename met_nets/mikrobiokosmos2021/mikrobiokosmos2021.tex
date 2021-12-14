@@ -43,23 +43,21 @@
    \frame[c]{\maketitle}
 
    % SLIDE 2
-   \begin{frame}{Genome-scale metabolic reconstruction}
+   % \begin{frame}{Genome-scale metabolic reconstruction}
       
-      \begin{singlespace}
-         \begin{tikzpicture}[overlay,remember picture]
-            \node[anchor=north west, xshift=30pt,yshift=-50pt]
-               at (current page.north west) {
-                  \includegraphics[width=105mm]{../resources/building_gmd_transparent.png}
-               };
-            \node[align = left, above, yshift=10] at (current page.south) {
-               \scriptsize 
-               Figure from: Heirendt, Laurent, et al. Nature protocols 14.3 (2019): 639-702.
-            };
-         \end{tikzpicture}
-      \end{singlespace}
-      % \captionof{figure}{\textbf{Confusion Matrix}}
-
-   \end{frame}
+   %    \begin{singlespace}
+   %       \begin{tikzpicture}[overlay,remember picture]
+   %          \node[anchor=north west, xshift=30pt,yshift=-50pt]
+   %             at (current page.north west) {
+   %                \includegraphics[width=105mm]{../resources/building_gmd_transparent.png}
+   %             };
+   %          \node[align = left, above, yshift=10] at (current page.south) {
+   %             \scriptsize 
+   %             Figure from: Heirendt, Laurent, et al. Nature protocols 14.3 (2019): 639-702.
+   %          };
+   %       \end{tikzpicture}
+   %    \end{singlespace}
+   % \end{frame}
    
    % SLIDE 3
    \begin{frame}{From a stoichiometric matrix}
@@ -137,7 +135,7 @@
 
             \begin{itemize}
                \item \small 
-               enables the analysis of GSMMs without the need of an objective function
+               enables the analysis of GEMs without the need of an objective function
                \item \small
                determines the feasible solution spaces for fluxes in a network based on a set of conditions as well as the probability of obtaining a solution               
             \end{itemize}
@@ -175,7 +173,7 @@
 
 
    % SLIDE 6
-   \begin{frame}{Find possible anti-COVID19 targets}
+   \begin{frame}{Find possible targets against SARS-CoV-2}
       \framesubtitle{a flux sampling application}
       \bigskip
       \includegraphics[scale=0.27]{../resources/covid_paper.png}
@@ -191,8 +189,17 @@
    \end{frame}
 
    % SLIDE 7
-   \begin{frame}{Find possible anti-COVID19 targets}
+   \begin{frame}{Find possible targets against SARS-CoV-2}
       \framesubtitle{a flux sampling application}      
+
+      \begin{tikzpicture}[overlay,remember picture]
+
+         \node[anchor=north east, xshift=-10pt,yshift=-30pt]
+            at (current page.north east) {
+               \includegraphics[width=20mm]{../resources/dingo5_transparent.png}
+            };
+      \end{tikzpicture}
+
 
       \centerline{
       \includegraphics[scale=0.21]{
@@ -205,7 +212,7 @@
 
       \begin{itemize}
          \item Check if the flux distribution of a reaction changes.
-         \item Find possible anti-viral targets and study further..
+         \item Find possible anti-viral targets and study further.
       \end{itemize}
       \vspace*{0.2cm}
 
@@ -251,7 +258,7 @@
                      };
 
                   \node[align = right, above, xshift=95, yshift=65] at (current page.south) {
-                     \scriptsize
+                     \small
                      What about microbial interactions ? 
                   };
                   % \node[align = right, above, xshift=-20, yshift=35] at (current page.south) {
@@ -266,23 +273,50 @@
    \end{frame}
 
 
+   % SLIDE 9
+   \begin{frame}{\texttt{dingo}: a Python library }
+      \framesubtitle{for flux sampling}
 
 
+      \begin{columns}[onlytextwidth]
 
-   % SLIDE 9 - Thank you SLIDE
+         \column{.5\textwidth}
+            \includegraphics[scale=0.1]{../resources/dingo5_transparent.png}
+         
+
+            \href{https://github.com/GeomScale/dingo}{https://github.com/GeomScale/dingo}
+
+
+         \column{.41\textwidth}
+
+
+            \begin{center}
+               \texttt{how to} GCollab notebook
+               \includegraphics[scale=0.3]{../resources/dingo_collab_transparent.png}               
+            \end{center}
+ 
+      \end{columns}
+      % \begin{sing
+
+   \end{frame}
+
+
+   % SLIDE 10 - Thank you SLIDE
    \begin{darkframes}
    \begin{frame}{Thank you for your attention}
-         
-      % URLs
-      GitHub repository  : \href{https://github.com/GeomScale/dingo/}{https://github.com/GeomScale/dingo/} \\ 
 
-      MMCS algorithm publication: \href{10.4230/LIPIcs.SoCG.2021.21}{10.4230/LIPIcs.SoCG.2021.21} \\ 
-      
-      \bigskip
+      \framesubtitle{and many thanks to Mikrobiokosmos \\ for the 
+      travel grant
+      in memorium of Prof. Drainas}
+      % URLs
       email    : \href{haris-zaf@hcmr.gr}{haris-zaf@hcmr.gr} \\
       Twitter  : \href{https://twitter.com/haris_zaf}{haris\_zaf} \\
       web-site : \url{https://hariszaf.github.io/} \\
+      
+      \bigskip
+      GitHub repository  : \href{https://github.com/GeomScale/dingo/}{https://github.com/GeomScale/dingo/} \\ 
 
+      MMCS algorithm publication: \href{10.4230/LIPIcs.SoCG.2021.21}{10.4230/LIPIcs.SoCG.2021.21} \\ 
       % Logos   
       % -------------- 
 
@@ -330,6 +364,15 @@
                      ../resources/geomscale-logo.png
                   }
                };
+
+         \node [anchor=north east,
+         xshift=-5pt,
+         yshift=-12pt]
+         at (current page.north east) {
+            \includegraphics[width=20mm]{
+               ../resources/mikrobiokosmos_transparent.png
+            }
+         };
       \end{tikzpicture}
 
    \end{frame}

@@ -131,8 +131,8 @@
     \begin{tikzpicture}[
       remember picture,
       overlay,
-      xshift=1\fibeamer@lengths@logowidth,
-      yshift=0.0\fibeamer@lengths@logoheight
+      xshift=3.5\fibeamer@lengths@logowidth,
+      yshift=-2.55\fibeamer@lengths@logoheight
     ]
       \node at (0,0) {
         \fibeamer@includeLogo[
@@ -144,13 +144,14 @@
     % Input the title
     \usebeamerfont{title}%
     \usebeamercolor[fg]{title}%
-    \begin{minipage}[b][3\baselineskip][b]{\textwidth}%
-      \raggedright\inserttitle
+    \begin{minipage}[b][\baselineskip][b]{\textwidth}%
+      \raggedright
+      \inserttitle
     \end{minipage}
-    \vskip 0.05
-    \baselineskip
+    \justify
+    \vskip-.5\baselineskip
 
-    % Input the dashed line
+   %  % Input the dashed line
     \begin{pgfpicture}
 
       \pgfsetlinewidth{2pt}
@@ -162,7 +163,8 @@
 
     \end{pgfpicture}
 
-    \vfill
+   %  \vfill
+   \vskip+0.4\baselineskip
     
     % Input the subtitle
     \usebeamerfont{subtitle}%
@@ -170,13 +172,13 @@
     \begin{minipage}{\textwidth}
       \raggedright%
       \insertsubtitle%
-    \end{minipage}\vskip.5
-    \baselineskip
+    \end{minipage}\vskip
+    1.8\baselineskip
 
     % Input the author's name
     \usebeamerfont{author}%
     \usebeamercolor[fg]{author}%
-    \begin{minipage}{\textwidth}
+    \begin{minipage}[t]{\textwidth}
       \raggedright%
       \insertauthor%
     \end{minipage}

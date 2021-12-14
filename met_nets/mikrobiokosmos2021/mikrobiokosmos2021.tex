@@ -20,9 +20,19 @@
 
 
 %% These macros specify information about the presentation
-\title{Sampling the flux space of microbial metabolic networks}
-\subtitle{the example of SARS-CoV-2 on the human alveolar macrophage metabolic network} %% title page.
-\author{Haris Zafeiropoulos} 
+\title{
+   Sampling the flux space of microbial metabolic networks
+}
+
+\subtitle{
+   the example of SARS-CoV-2 on the human alveolar macrophage metabolic network 
+} 
+
+\author{
+   Haris Zafeiropoulos \\ 
+   \scriptsize joint work with: Apostolos Chalkis, \\ 
+   Vissarion Fisikopoulos \& Elias Tsigkaridas
+   } 
 
 %% These additional packages are used within the document:
 \usepackage{ragged2e}   % `\justifying` text
@@ -35,8 +45,10 @@
 \usepackage{listings}   % Code listings
 \usepackage{setspace}
 
+
 \frenchspacing
 
+% BEGIN DOC
 \begin{document}
 
    \shorthandoff{-}
@@ -146,11 +158,13 @@
 
    % SLIDE 5
    \begin{frame}{Our Markov Chain Monte Carlo (MCMC) algorithm}
+
       \framesubtitle{for flux sampling}
 
       \includegraphics[scale=0.11]{../resources/sampling_extra_phase_croped_transparent.png}
       
       \scriptsize
+
       \begin{block}{Steps of an MMCS phase}
          \begin{itemize}
             \item \textbf{sampling step:} using a variant of the \textbf{Billiard walk}  
@@ -161,6 +175,7 @@
       \end{block}
 
       \begin{singlespace}
+
          \scriptsize
          Chalkis, Fisikopoulos, Tsigaridas and Zafeiropoulos 
          "Geometric Algorithms for Sampling \\ the Flux Space
@@ -170,7 +185,6 @@
       \end{singlespace}
 
    \end{frame}
-
 
    % SLIDE 6
    \begin{frame}{Find possible targets against SARS-CoV-2}

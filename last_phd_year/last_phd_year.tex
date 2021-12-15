@@ -35,6 +35,7 @@
 \usepackage{url}                                            % `\url`s
 \usepackage{listings}                                       % Code listings
 \usepackage{setspace}
+\usepackage[absolute,overlay]{textpos}                      
 
 \frenchspacing
 
@@ -91,6 +92,7 @@
                   \item \textbf{COI:} Eukaryotes
                   \item \textbf{\textit{rbcl}:} Plants
                   \item \textbf{\textit{dsrb}:} Bacteria, Archaea
+                  \item ...
                \end{enumerate}
 
             \column{.45\textwidth}
@@ -139,8 +141,33 @@
 
          \column{0.5\textwidth}
 
+            \begin{tikzpicture}[overlay,remember picture]
+
+               \node[anchor=east, xshift=-130pt, yshift=10pt]               
+                  at (current page.east) {
+
+                     \includegraphics[width=20mm]{resources/sing_transp.png}
+                  
+                  };
+
+                  \node[anchor=east, xshift=-40pt, yshift=10pt]
+                  at (current page.east) {
+
+                     \includegraphics[width=25mm]{resources/docker_facebook_share.png}
+                  
+                  };
+
+                  \node[anchor=south, align = center, above, xshift=60, yshift=90]
+                  at (current page.south) {
+
+                     Containerization
+
+                  };
+
+            \end{tikzpicture}
             
-            Containerization
+            % \bigskip
+            % Containerization
 
 
       \end{columns}
@@ -149,20 +176,132 @@
    \end{frame}
 
 
+   % INPUT - OUTPUT - RUN WITH A SINGLE COMMAND
+   \begin{frame}
+
+      \frametitle{Mount your I/O}
+      \framesubtitle{you give something - you take something}
+
+      \begin{tikzpicture}[overlay,remember picture]
+
+         \node[anchor=west, xshift=10pt, yshift=-10pt]               
+            at (current page.west) {
+
+               \includegraphics[width=75mm]{resources/pema_anlysis_dir-Page-1.drawio.png}
+            
+            };
+
+            \node[anchor=east, xshift=-10pt, yshift=10pt]               
+            at (current page.east) {
+
+               \includegraphics[width=35mm]{resources/final_table.jpg}
+            
+            };
+
+      \end{tikzpicture}
+      
+   
+   \end{frame}
+
+
+
+   % PEMA PUBLICATION 
+   \begin{frame}
+      \frametitle{1st version published in 2020}
+      \includegraphics[width=100mm]{resources/pema_publ.png}
+   \end{frame}
 
 
    % WORKFLOW OF VERSION 2
    \begin{frame}
       \frametitle{PEMA v.2}
+
       \begin{singlespace}
          \begin{tikzpicture}[overlay,remember picture]
-            \node[anchor=west, xshift=30pt,yshift=-150pt]
-               at (current page.north west) {
-                  \includegraphics[width=110mm]{resources/pema-pema.v2.drawio.png}
+       
+               \node[anchor=west, xshift=30pt,yshift=-150pt]
+                  at (current page.north west) {
+                     \includegraphics[width=110mm]{resources/pema-pema.v2.drawio.png}
+                  };
+                     
+         \end{tikzpicture}
+      \end{singlespace}
+   \end{frame}
+
+
+   % PEMA v.2.1.4 - ARMS
+   \begin{frame}
+      \frametitle{Latest PEMA version}
+      \framesubtitle{addressing the challenges of the community}
+
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
+       
+               \node[anchor=west, xshift=30pt,yshift=-150pt]
+                  at (current page.north west) {
+                     \includegraphics[width=55mm]{resources/Autonomous-Reef-Monitoring.png}
+               };
+
+               \node[anchor=east, xshift=-65pt,yshift=50pt]
+                  at (current page.east) {
+                     \includegraphics[width=34mm]{resources/assemble_logo.png}
+               };
+
+               \node[anchor=east, xshift=-5pt,yshift=50pt]
+                  at (current page.east) {
+                     \includegraphics[width=17mm]{resources/MBON_logo_transparent.png}
+
                };
 
          \end{tikzpicture}
+
+
+         \begin{textblock*}{5cm}(7.2cm,4.0cm) % {block width} (coords) 
+            
+            \scriptsize
+
+            \textbf{\texttt{pema:v.2.1.4} includes:}
+
+            \begin{enumerate}
+               \item analysis of 12S rRNA data now supported
+                     (\href{https://github.com/terrimporter/12SvertebrateClassifier/releases}{12S Vertebrate Classifier v2.0.0-ref} database) 
+               \item PR2 as an alternative reference 
+                     database for the case of 18S rRNA 
+               \item the \texttt{ncbi-taxonomist} tool \\ 
+                     was added to return the NCBI Taxonomy \\ 
+                     Id of the taxonomies found
+            \end{enumerate}
+
+         \end{textblock*}
+
+
       \end{singlespace}
+   \end{frame}
+
+   % GitHub repo
+   \begin{frame}
+   \frametitle{open source is cool}
+      \framesubtitle{interacting with the community}
+
+      \includegraphics[width=60mm]{resources/pema_contribution.png}
+
+      \small
+      \begin{textblock*}{5cm}(7.5cm,4.0cm) % {block width} (coords) 
+         PEMA aims at building a community 
+         to discuss challenges on metabarcoding
+         come up with solutions and why not 
+         develop some of them! 
+      \end{textblock*}
+
+   \end{frame}
+
+
+
+   % PEMA WEBSITE
+   \begin{frame}
+      \frametitle{\textit{How to} and further documentation}
+      \framesubtitle{at \href{http://pema.hcmr.gr}{pema.hcmr.gr}}
+      \includegraphics[width=85mm]{resources/pema_site.png}
    \end{frame}
 
 
@@ -189,6 +328,9 @@
    \end{frame}
 
 
+
+
+
    % -------------------------
    % CHANGE THE CHAPTER SLIDE 
    % -------------------------
@@ -204,7 +346,7 @@
          \begin{tikzpicture}[overlay,remember picture]
             \node[anchor=north west, xshift=30pt,yshift=-50pt]
                at (current page.north west) {
-                  \includegraphics[width=105mm]{resources/moufa_prego.png}
+                  \includegraphics[width=105mm]{resources/prego_methodology_landscape.jpeg}
                };
             \node[align = left, above, yshift=10] at (current page.south) {
                \scriptsize 

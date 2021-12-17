@@ -33,10 +33,17 @@ automatic workflows enable such reconstructions based on the genome sequence.  -
 
 ## Slide 1: Stoichiometric matrix
 
-A genome-scale metabolic model (GEM) is a mathematical representation
-of the metabolism of an organism and is strongly related to its corresponding stoichiometric matrix ($S$).
+Yesterday, Prof Campanaro gave a truly inspiring talk 
+highlighting how one can use MAGs to build metabolic models
+and how these models can be used to shed light at least
+in some corners a maze such as the one of anaerobic digestion.
 
-$S$ is a matrix with the **metabolites** of the cell as rows and its **reactions** as columns
+As he said, a genome-scale metabolic model (GEM) is a mathematical representation
+of the metabolism of an organism.
+
+The stoichiometri matrix $S$ that derives from such a model, 
+includes the **metabolites** present in the organism as its rows
+and the **reactions** as columns,
 meaning the values of a column are the **stoichiometric coefficients** of each metabolite 
 in the corresponding reaction.
 
@@ -57,13 +64,13 @@ reactions that take place inside a cell. -->
 
 Once the model is built, the question is **how much** a reaction occurs under certain circumstances. 
 
-The rate of turnover of molecules through a reaction is called **flux**.
+The rate of turnover of molecules through a reaction is called a **flux**.
 
-The stoichiometric relationshipns impose a series of **mass balance constraints**.
-
-*( meaning you cannot use a metabolite more than it is actually available)*
-
-while the lower and upper bounds of each flux impose certain **capacity constraints**. 
+The stoichiometric relationships 
+<!-- impose a series of **mass balance constraints**, -->
+<!-- while  -->
+<!-- and the lower and upper bounds of each flux impose certain **capacity constraints**.  -->
+constraints for the model.
 
 When applied to the network these constraints define its **allowable solution space**. 
 
@@ -91,7 +98,8 @@ If we sample a sufficiently large number of uniformly distributed points, we can
 
 <!-- Hence, we can obtain a thorough representation of the steady states of the metabolic network and we can study the properties of certain components of the whole network to deduce significant biological insights. -->
 
-In flux sampling can be used **both** with and without an objective function.
+In addition, flux sampling can be used **both** with and without an objective function.
+
 <!-- providing flux distribution of each reaction considering that one is optimized.  -->
 <!-- In the first case, instead of sampling in the whole of the solution space 
 we sample in a smalle part of it where the objective function becomes minimum or maximum.  -->
@@ -169,7 +177,8 @@ study that was published only a couple of months ago, where flux sampling was us
 selecting optimal aroma-producing yeast stains for winemaking.
 
 My future plans are to focus on microbial communities 
-and using flux sampling on such models, investigate microbial interactions.
+and using flux sampling on such models, investigate microbial interactions. 
+So it was nice to hear Prof Campanaro that this is something actually possible! 
 
 
 ## Slide 7: `dingo` library

@@ -40,12 +40,11 @@ in some corners a maze such as the one of anaerobic digestion.
 
 As mentioned in his talk, 
 a genome-scale metabolic model (GEM) is a mathematical representation
-of the metabolism of an organism.
-
-<!-- The stoichiometric matrix $S$ that derives from such a model, 
+of the metabolism of an organism,
+strongly related to the stoichiometric matrix $S$ that
 includes the **metabolites** present in the organism as its rows
-and the **reactions** as columns,
-meaning the values of a column are the **stoichiometric coefficients** of each metabolite 
+and the **reactions** as columns.
+<!-- meaning the values of a column are the **stoichiometric coefficients** of each metabolite 
 in the corresponding reaction. -->
 
 <!-- As you can see in matrix $S$ here, each row is a metabolite 
@@ -63,7 +62,8 @@ reactions that take place inside a cell. -->
 
 <!-- Such functions simulate metabolites consumed during biomass production.  -->
 
-Once the model is built, the question is **how much** a reaction occurs under certain circumstances. 
+Once the model is built, the question
+is **how much** a reaction occurs under certain circumstances. 
 
 The rate of turnover of molecules through a reaction is called a **flux**.
 

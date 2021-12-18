@@ -33,19 +33,20 @@ automatic workflows enable such reconstructions based on the genome sequence.  -
 
 ## Slide 1: Stoichiometric matrix
 
-Yesterday, Prof Campanaro gave a truly inspiring talk 
+Yesterday, Prof Campanaro gave an inspiring talk 
 highlighting how one can use MAGs to build metabolic models
 and how these models can be used to shed light at least
 in some corners a maze such as the one of anaerobic digestion.
 
-As he said, a genome-scale metabolic model (GEM) is a mathematical representation
+As mentioned in his talk, 
+a genome-scale metabolic model (GEM) is a mathematical representation
 of the metabolism of an organism.
 
-The stoichiometri matrix $S$ that derives from such a model, 
+<!-- The stoichiometric matrix $S$ that derives from such a model, 
 includes the **metabolites** present in the organism as its rows
 and the **reactions** as columns,
 meaning the values of a column are the **stoichiometric coefficients** of each metabolite 
-in the corresponding reaction.
+in the corresponding reaction. -->
 
 <!-- As you can see in matrix $S$ here, each row is a metabolite 
 and each column a reaction.  -->
@@ -69,7 +70,8 @@ The rate of turnover of molecules through a reaction is called a **flux**.
 The stoichiometric relationships 
 <!-- impose a series of **mass balance constraints**, -->
 <!-- while  -->
-<!-- and the lower and upper bounds of each flux impose certain **capacity constraints**.  -->
+and the lower and upper bounds of each flux impose certain
+ <!-- **capacity constraints**.  -->
 constraints for the model.
 
 When applied to the network these constraints define its **allowable solution space**. 
@@ -98,7 +100,7 @@ If we sample a sufficiently large number of uniformly distributed points, we can
 
 <!-- Hence, we can obtain a thorough representation of the steady states of the metabolic network and we can study the properties of certain components of the whole network to deduce significant biological insights. -->
 
-In addition, flux sampling can be used **both** with and without an objective function.
+Moreover, flux sampling can be used **both** with and without an objective function, in case we need to get the distribution of a flux when another one is optimized.
 
 <!-- providing flux distribution of each reaction considering that one is optimized.  -->
 <!-- In the first case, instead of sampling in the whole of the solution space 
@@ -119,7 +121,7 @@ To address this challenge, we developed a Multiphase
 Monte Carlo Sampling algorithm which runs at phases, transforming 
 the polytope from phase to phase.
 
-At each phase, we sample several points using the current polytope. 
+At each phase, we sample several points using the current polytope and Billiard walk. 
 <!-- Each chain contains at most l points (for simplicity consider l = O(1)).  -->
 
 <!-- To generate the points we employ an efficient implementation of Billiard Walk. -->
@@ -170,7 +172,7 @@ that reaction and by fixing that you may reverse its effects.  -->
 
 ## Slide 6: Further applications of flux sampling
 
-The potential applications of flux sampling are numerous! 
+The potential applications of flux sampling are more than many! 
 
 Preparing this presentation I found out about a "fragrant" (μοιρωράδτος) 
 study that was published only a couple of months ago, where flux sampling was used in developing or 

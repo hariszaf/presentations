@@ -131,23 +131,23 @@
     \begin{tikzpicture}[
       remember picture,
       overlay,
-      xshift=0.35\fibeamer@lengths@logowidth,
-      yshift=-0.10\fibeamer@lengths@logoheight
+      xshift=2.95\fibeamer@lengths@logowidth,
+      yshift=-2.15\fibeamer@lengths@logoheight
     ]
       \node at (0,0) {
         \fibeamer@includeLogo[
-          width=0.8\fibeamer@lengths@logowidth,
-          height=0.8\fibeamer@lengths@logoheight
+          width=0.7\fibeamer@lengths@logowidth,
+          height=0.7\fibeamer@lengths@logoheight
         ]};
     \end{tikzpicture}
 
     % Input the title
     \usebeamerfont{title}%
     \usebeamercolor[fg]{title}%
-    \begin{minipage}[b][5\baselineskip][b]{\textwidth}%
+    \begin{minipage}[t][1.05\baselineskip][t]{\textwidth}%
       \raggedright\inserttitle
     \end{minipage}
-    \vskip-.5\baselineskip
+    \vfill
 
     % Input the dashed line
     \begin{pgfpicture}
@@ -161,13 +161,16 @@
       \pgfusepath{stroke}
     \end{pgfpicture}
     \vfill
+
+
     % Input the subtitle
+    \vspace*{-0.5cm}
     \usebeamerfont{subtitle}%
     \usebeamercolor[fg]{subtitle}%
-    \begin{minipage}{\textwidth}
+    \begin{minipage}[b]{\textwidth}
       \raggedright%
       \insertsubtitle%
-    \end{minipage}\vskip.25\baselineskip
+    \end{minipage}\vskip \baselineskip
 
     % Input the author's name
     \usebeamerfont{author}%

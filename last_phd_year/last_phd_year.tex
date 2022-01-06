@@ -254,7 +254,8 @@
          \end{figure} 
 
          \begin{textblock*}{7cm}(3.5cm, 8.2cm)
-            \href{https://github.com/hariszaf/pema}{https://github.com/hariszaf/pema}
+            \href{https://github.com/hariszaf/pema}{https://github.com/hariszaf/pema} \\ 
+            \href{http://pema.hcmr.gr}{pema.hcmr.gr}
          \end{textblock*}
 
 
@@ -459,12 +460,12 @@
 
    % \end{frame}
 
-   % PEMA WEBSITE
-   \begin{frame}
-      \frametitle{\textit{How to} and further documentation}
-      \framesubtitle{at \href{http://pema.hcmr.gr}{pema.hcmr.gr}}
-      \includegraphics[width=85mm]{resources/pema_site.png}
-   \end{frame}
+   % % PEMA WEBSITE
+   % \begin{frame}
+   %    \frametitle{\textit{How to} and further documentation}
+   %    \framesubtitle{at \href{http://pema.hcmr.gr}{pema.hcmr.gr}}
+   %    \includegraphics[width=85mm]{resources/pema_site.png}
+   % \end{frame}
 
 
 
@@ -496,8 +497,8 @@
       \framesubtitle{investigating known unknown \\ in COI amplicon data}
 
       \begin{textblock*}{7cm}(1.2cm, 4.5cm)
-         What is all the unassigned OTUs/ASVs \\
-         in COI amplicon data? 
+         What is all these unassigned  \\
+         OTUs / ASVs? 
       \end{textblock*}
 
       \begin{singlespace}
@@ -535,7 +536,6 @@
       \end{textblock*}
    \end{frame}
 
-
    % DARN OUTPUT
    \begin{frame}
       \frametitle{Bacteria are everywhere!}
@@ -556,8 +556,6 @@
       \end{textblock*}
 
    \end{frame}
-
-
 
 
    % -------------------------------------
@@ -682,8 +680,6 @@
       \end{tikzpicture}
 
    \end{frame}
-
-
 
    % -------------------------------------
    % CHANGE THE CHAPTER SLIDE: DINGO
@@ -1007,7 +1003,6 @@
 
    \end{frame}
 
-
    % ZORBAS SCHEME
    \begin{frame}
    
@@ -1028,7 +1023,6 @@
    
    \end{frame}
 
-
    % INFRASTUCTURES
    \begin{frame}
       \frametitle{Computing infrastructures}
@@ -1042,14 +1036,14 @@
       \end{tikzpicture}
 
 
-      \begin{textblock*}{5cm}(8.0cm, 3.0cm)
+      \begin{textblock*}{5cm}(7.4cm, 3.0cm)
 
          \small We will develop a workflow  \\
          \small for the analysis of Genomic \\ 
          \small Observatories (GOs) data \\
          \small that will allow researchers \\ 
-         \small to deal better with the increasing \\
-         \small amount of data
+         \small to deal better with the  \\
+         \small increasing amount of data
 
       \end{textblock*}
    
@@ -1064,26 +1058,26 @@
       }
    \end{darkframes}
 
-
+   % MICROBETAG MODULES 
    \begin{frame}
       \frametitle{\texttt{microbetag}: annotating co-occurrence networks}
       \framesubtitle{a short term EMBO fellowship}
 
-      \begin{textblock*}{5cm}(1.0cm, 3.5cm)
+      \begin{textblock*}{5cm}(0.8cm, 3.5cm)
          Our short misssion consists of 3 modules: 
          
          \begin{itemize}
-            \item pathway complementarity
-            \item environmental conditions and phenotypic data integration
-            \item flux sampling on pairs of metabolic models (if possible)
+            \small \item pathway complementarity
+            \small \item environmental conditions and phenotypic data integration
+            \small \item flux sampling on pairs of metabolic models (if possible)
          \end{itemize}
 
       \end{textblock*}
 
       \begin{tikzpicture}[overlay,remember picture]
-         \node[anchor=north east, xshift=-10pt,yshift=-55pt]
+         \node[anchor=north east, xshift=-5pt,yshift=-55pt]
             at (current page.north east) {
-               \includegraphics[width=65mm]{resources/Sources-of-co-occurrence-in-microbial-interaction-networks-A-Cooccurrence_W640_trans.png}
+               \includegraphics[width=62mm]{resources/Sources-of-co-occurrence-in-microbial-interaction-networks-A-Cooccurrence_W640_trans.png}
             };
          
       \end{tikzpicture}
@@ -1092,6 +1086,85 @@
          \scriptsize Figure from R{\"o}ttjers \& Faust (2018). 
                      FEMS microbiology reviews. 42. 10.1093/femsre/fuy030.
       \end{textblock*}
+
+
+   \end{frame}
+
+   % FIRST STEPS 
+   \begin{frame}
+      \frametitle{First steps}
+      \framesubtitle{pathway complementarity}
+
+      \begin{singlespace}
+         
+         \begin{textblock*}{10cm}(1.0cm, 2.7cm)
+            
+            \begin{enumerate}
+               \small \item use abundance \& metadata table to run FlashWeave
+               \small \item get the NCBI Taxon id of each taxon present in the edge file   
+               \small \item search for available reference genomes for these ids 
+               \small \item use KEGG modules to get major metabolic pathways of interest
+               \small \item search for pathway complementarity in each module of interest
+            \end{enumerate}
+
+         \end{textblock*}
+
+         \begin{textblock*}{10cm}(1.2cm, 6.0cm)
+
+            \scriptsize Relative work \\ 
+            \begin{itemize}
+               \scriptsize \item \href{https://www.pnas.org/content/110/31/12804}{Levy \& Borenstein}. Proceedings of the National Academy of Sciences 110.31 (2013): 12804-12809. \\
+               \scriptsize \item \href{https://www.pnas.org/content/112/20/6449.long}{Zelezniak et al.} Proceedings of the National Academy of Sciences 112.20 (2015): 6449-6454. 
+            \end{itemize}
+            
+            
+         \end{textblock*}
+
+
+
+      \end{singlespace}
+
+   \end{frame}
+
+   % TOOLS AND DBs TO EXPLOIT
+   \begin{frame}
+      \frametitle{Databases to exploit}
+      \framesubtitle{and how to}
+
+      To get KO and further annotations of a taxon: 
+      \begin{itemize}
+         \item via KEGG organisms using \href{https://www.kegg.jp/kegg/rest/keggapi.html}{KEGG API}
+         \item via JGI using the \href{https://github.com/ELIFE-ASU/ecg}{\texttt{ecg}} tool
+         \item via BacDive using the \href{https://api.bacdive.dsmz.de/}{BacDive API} \\ 
+         % client = bacdive.BacdiveClient('haris-zaf@hcmr.gr', 'k@r@vie@@k')
+         % https://api.bacdive.dsmz.de/
+         % https://pypi.org/project/bacdive/
+         % to login there: https://api.bacdive.dsmz.de/login
+      \end{itemize}
+
+      Further annotation sources to be considered: 
+      \begin{itemize}
+         \item \href{https://pages.uoregon.edu/slouca/LoucaLab/archive/FAPROTAX/lib/php/index.php}{FAPROTAX}
+         \item \href{https://bugbase.cs.umn.edu/}{BugBase}
+         \item \href{https://bioinfo.imtech.res.in/manojk/sigmol/}{SigMol}
+      \end{itemize}
+      % \href{https://github.com/xuechunxu/DiTing}{https://github.com/xuechunxu/DiTing}
+
+   \end{frame}
+
+   % QUESTIONS TO BE ADDRESSED 
+   \begin{frame}
+      \frametitle{Open questions}
+      \framesubtitle{just a few of them ;)  }
+
+      \begin{itemize}
+         
+         \item species - strain inheritance in data integration
+         \item dataset, maybe the \href{https://www.embopress.org/doi/full/10.15252/msb.20178157}{Venturelli} one 
+         \item metabolic modelling at the community level
+         \item competition and mutualism: a dialectic relationship
+         
+      \end{itemize}
 
 
    \end{frame}
@@ -1133,7 +1206,6 @@
       \end{thebibliography}
    \end{frame}
 
-
    % Thank you SLIDE
    \begin{darkframes}
    \begin{frame}{Thank you for your attention}
@@ -1145,6 +1217,20 @@
       Twitter  : \href{https://twitter.com/haris_zaf}{haris\_zaf} \\
       web-site : \url{https://hariszaf.github.io/} \\
       
+
+      \begin{textblock*}{4.0cm}(10.0cm, 2.5cm)
+
+         \scriptsize \textbf{Spacial thanks to:} \\
+
+         \scriptsize \href{http://lab42open.hcmr.gr/people/evangelospafilis/}{Dr. Pafilis E.} \\
+         \scriptsize \href{https://cpavloud.github.io/mysite/projects/}{Dr. Pavloudi C.} \\ 
+         \scriptsize \href{https://imbbc.hcmr.gr/user/s-paragkamian/}{PhD Paragkamian S.} \\
+         \scriptsize \href{https://tolischal.github.io/}{Dr. Chalkis A.} \\
+         \scriptsize \href{https://who.paris.inria.fr/Elias.Tsigaridas/}{Prof. Tsigaridas E.} \\
+         \scriptsize \href{https://vissarion.github.io/}{Dr. Fisikopoulos V.} 
+         
+      \end{textblock*}
+
       % Logos   
       % -------------- 
 
@@ -1194,6 +1280,17 @@
                };
 
       \end{tikzpicture}
+
+      % EMBO 
+      \begin{tikzpicture}[overlay, remember picture]
+         \node[anchor=south east, xshift=-10pt, yshift=75pt]
+            at (current page.south east){
+               \includegraphics[width=25mm]{resources/embo_logo_white.png}
+            };
+         
+      \end{tikzpicture}
+
+
 
    \end{frame}
    \end{darkframes}

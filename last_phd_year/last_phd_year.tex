@@ -253,7 +253,8 @@
             \includegraphics[width=60mm]{resources/pema_logo.png}         
          \end{figure} 
 
-         \begin{textblock*}{7cm}(3.5cm, 8.2cm)
+         \begin{textblock*}{7cm}(3.1cm, 8.2cm)
+            \centering
             \href{https://github.com/hariszaf/pema}{https://github.com/hariszaf/pema} \\ 
             \href{http://pema.hcmr.gr}{pema.hcmr.gr}
          \end{textblock*}
@@ -1029,10 +1030,22 @@
       \framesubtitle{an alternative for the most!}
    
       \begin{tikzpicture}[overlay,remember picture]
+
          \node[anchor= west, xshift=10pt]
             at (current page.west){
                \includegraphics[width=60mm]{resources/marine-genomic-observatories.png}
             };
+
+            \node[anchor= west, xshift=10pt, yshift=-90pt]
+            at (current page.west){
+               \includegraphics[width=35mm]{resources/Elixir-Europe-logo-1.png}
+            };
+
+            \node[anchor= west, xshift=160pt, yshift=-90pt]
+            at (current page.west){
+               \includegraphics[width=50mm]{resources/lw_logo.png}
+            };
+
       \end{tikzpicture}
 
 
@@ -1090,10 +1103,10 @@
 
    \end{frame}
 
-   % FIRST STEPS 
+   % FIRST STEPS 1/3
    \begin{frame}
-      \frametitle{First steps}
-      \framesubtitle{pathway complementarity}
+      \frametitle{First steps (1/3)}
+      \framesubtitle{pathway complementarity module}
 
       \begin{singlespace}
          
@@ -1116,15 +1129,91 @@
                \scriptsize \item \href{https://www.pnas.org/content/110/31/12804}{Levy \& Borenstein}. Proceedings of the National Academy of Sciences 110.31 (2013): 12804-12809. \\
                \scriptsize \item \href{https://www.pnas.org/content/112/20/6449.long}{Zelezniak et al.} Proceedings of the National Academy of Sciences 112.20 (2015): 6449-6454. 
             \end{itemize}
-            
-            
+
          \end{textblock*}
-
-
 
       \end{singlespace}
 
    \end{frame}
+
+   % FIRST STEPS 2/3
+   \begin{frame}
+      \frametitle{First steps (2/3)}
+      \framesubtitle{phenotypical annotation module}
+
+      \begin{singlespace}
+         
+         \begin{textblock*}{10cm}(1.0cm, 2.7cm)
+            
+
+            \begin{enumerate}
+
+               \setlength\itemsep{2em}
+
+
+               \small \item \textbf{BugBase} to get: 
+                  \begin{itemize}
+                     \scriptsize \item Gram Positive \& Negative
+                     \scriptsize \item Biofilm Forming
+                     \scriptsize \item Pathogenic Potential
+                     \scriptsize \item Mobile Element Containing
+                     \scriptsize \item Oxygen Utilizing
+                     \scriptsize \item Oxidative Stress Tolerant
+                  \end{itemize}
+
+               
+               \small \item \textbf{FAPROTAX} database: \\
+                     \scriptsize to map taxa to established metabolic or other ecologically relevant functions, using the current literature on cultured strains
+                     % FAPROTAX includes software for converting taxonomic microbial community profiles (e.g. in the form of an OTU table) into putative functional profiles, based on taxa identified in a sample.
+            \end{enumerate}
+
+         \end{textblock*}
+
+         % \begin{textblock*}{10cm}(1.2cm, 6.0cm)
+
+         %    \scriptsize Bibliography \\ 
+         %    \begin{itemize}
+         %       \scriptsize  hello friend
+         %    \end{itemize} 
+
+         % \end{textblock*}
+
+      \end{singlespace}
+
+   \end{frame}
+
+
+   % % FIRST STEPS 3/3
+   % \begin{frame}
+   %    \frametitle{First steps (3/3)}
+   %    \framesubtitle{ecoEFMs}
+
+   %    \begin{singlespace}
+         
+   %       \begin{textblock*}{10cm}(1.0cm, 2.7cm)
+            
+   %          \begin{enumerate}
+   %             \small \item 
+   %          \end{enumerate}
+
+   %       \end{textblock*}
+
+   %       \begin{textblock*}{10cm}(1.2cm, 6.0cm)
+
+   %          \scriptsize Bibliography \\ 
+   %          \begin{itemize}
+   %             \scriptsize 
+   %          \end{itemize}
+
+   %       \end{textblock*}
+
+   %    \end{singlespace}
+
+   % \end{frame}
+   
+
+
+
 
    % TOOLS AND DBs TO EXPLOIT
    \begin{frame}

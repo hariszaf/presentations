@@ -68,14 +68,98 @@
       \end{frame}
    }
 
-   % -------------------------
-   % CHANGE THE CHAPTER SLIDE: INTRODUCTION
-   % -------------------------
+   % BEBIN A SECTION ABOUT ME
    \begin{darkframes}
-      \section{
-         Microbial ecology: a short introduction
-      }
+      \section{My short story}
    \end{darkframes}
+
+   % OLYMPIA TIMES
+   \begin{frame}
+
+      \frametitle{
+         My story starts at a small but quite a nice place
+         }
+      \framesubtitle{Ancient Olympia}
+
+      \begin{tikzpicture}
+         \node[anchor=west, xshift=-15pt, yshift=45pt]               
+         at (current page.west) {
+            \includegraphics[width=55mm]{
+               resources/olympia.jpg}
+         };
+
+         \node[anchor=east, xshift=-52pt, yshift=45pt]               
+         at (current page.east) {
+            \includegraphics[width=55mm]{
+               resources/alfios.jpg}
+         };
+
+      \end{tikzpicture}
+
+      \begin{textblock*}{10cm}(1.0cm, 8.0cm)
+         \small Great times with a lot of basketball and even more \textit{hows} and \textit{whys}
+      \end{textblock*}
+
+   \end{frame}
+
+
+   % EKPA TIMES 
+   \begin{frame}
+      \frametitle{.. moves in Athens}
+      \framesubtitle{Biology Department, National \& Kapodestrian University}
+      \includegraphics[width=60mm]{resources/biol_depart_ekpa.jpg} 
+      \begin{textblock*}{5cm}(7.5cm, 5.0cm)
+         \small Thesis on the morphology, morphometry and anatomy of species of the genus \textit{Pseudamnicola} in Greece
+      \end{textblock*}
+   \end{frame}
+
+
+   % UoC TIMES 
+   \begin{frame}
+
+      \frametitle{.. and then to a "horrible" place called Crete}
+      \framesubtitle{
+         Medical School (MSc), Biology department (PhD) of UoC, \\
+         Hellenic Centre for Marine Research
+         }
+
+      \begin{tikzpicture}
+
+         \node[anchor=east, xshift=-130pt, yshift=30pt]               
+         at (current page.east) {
+            \includegraphics[width=60mm]{
+               resources/plakias.jpg}
+         };
+
+         \node[anchor=east, 
+         xshift=20pt]
+         at (current page.east) {
+            \includegraphics[width=50mm]{
+               resources/hcmr.jpg}
+         };
+
+      \end{tikzpicture}
+
+      % TEXT BLOCK
+      \begin{textblock*}{10cm}(1.0cm, 8.0cm)
+
+         \small MSc thesis on eDNA metabarcoding for biodiversity assessment: 
+         Algorithm design and bioinformatics analysis pipeline implementation
+         
+      \end{textblock*}
+
+
+   \end{frame}
+
+
+   % -------------------------
+   % CHANGE THE CHAPTER SLIDE: MICROBIAL ECOLOGY INTRO
+   % -------------------------
+   % \begin{darkframes}
+   %    \section{
+   %       Microbial ecology: a short introduction
+   %    }
+   % \end{darkframes}
 
    % INTRO
    \begin{frame}
@@ -396,53 +480,53 @@
    \end{frame}
 
    % PEMA v.2.1.4 - ARMS
-   \begin{frame}
-      \frametitle{Latest PEMA version}
-      \framesubtitle{addressing the challenges of the community}
+   % \begin{frame}
+   %    \frametitle{Latest PEMA version}
+   %    \framesubtitle{addressing the challenges of the community}
 
-      \begin{singlespace}
-         \begin{tikzpicture}[overlay,remember picture]
+   %    \begin{singlespace}
+   %       \begin{tikzpicture}[overlay,remember picture]
        
-               \node[anchor=west, xshift=30pt,yshift=-150pt]
-                  at (current page.north west) {
-                     \includegraphics[width=55mm]{resources/Autonomous-Reef-Monitoring.png}
-               };
+   %             \node[anchor=west, xshift=30pt,yshift=-150pt]
+   %                at (current page.north west) {
+   %                   \includegraphics[width=55mm]{resources/Autonomous-Reef-Monitoring.png}
+   %             };
 
-               \node[anchor=east, xshift=-65pt,yshift=50pt]
-                  at (current page.east) {
-                     \includegraphics[width=34mm]{resources/assemble_logo.png}
-               };
+   %             \node[anchor=east, xshift=-65pt,yshift=50pt]
+   %                at (current page.east) {
+   %                   \includegraphics[width=34mm]{resources/assemble_logo.png}
+   %             };
 
-               \node[anchor=east, xshift=-5pt,yshift=50pt]
-                  at (current page.east) {
-                     \includegraphics[width=17mm]{resources/MBON_logo_transparent.png}
+   %             \node[anchor=east, xshift=-5pt,yshift=50pt]
+   %                at (current page.east) {
+   %                   \includegraphics[width=17mm]{resources/MBON_logo_transparent.png}
 
-               };
+   %             };
 
-         \end{tikzpicture}
+   %       \end{tikzpicture}
 
 
-         \begin{textblock*}{5cm}(7.2cm,4.0cm) % {block width} (coords) 
+   %       \begin{textblock*}{5cm}(7.2cm,4.0cm) % {block width} (coords) 
             
-            \scriptsize
+   %          \scriptsize
 
-            \textbf{\texttt{pema:v.2.1.4} includes:}
+   %          \textbf{\texttt{pema:v.2.1.4} includes:}
 
-            \begin{enumerate}
-               \item analysis of 12S rRNA data now supported
-                     (\href{https://github.com/terrimporter/12SvertebrateClassifier/releases}{12S Vertebrate Classifier v2.0.0-ref} database) 
-               \item PR2 as an alternative reference 
-                     database for the case of 18S rRNA 
-               \item the \texttt{ncbi-taxonomist} tool \\ 
-                     was added to return the NCBI Taxonomy \\ 
-                     Id of the taxonomies found
-            \end{enumerate}
+   %          \begin{enumerate}
+   %             \item analysis of 12S rRNA data now supported
+   %                   (\href{https://github.com/terrimporter/12SvertebrateClassifier/releases}{12S Vertebrate Classifier v2.0.0-ref} database) 
+   %             \item PR2 as an alternative reference 
+   %                   database for the case of 18S rRNA 
+   %             \item the \texttt{ncbi-taxonomist} tool \\ 
+   %                   was added to return the NCBI Taxonomy \\ 
+   %                   Id of the taxonomies found
+   %          \end{enumerate}
 
-         \end{textblock*}
+   %       \end{textblock*}
 
 
-      \end{singlespace}
-   \end{frame}
+   %    \end{singlespace}
+   % \end{frame}
 
    % GitHub repo
    % \begin{frame}
@@ -579,7 +663,9 @@
       \begin{textblock*}{12cm}(0cm, 7cm)
          \centering
          \small related repositories under \\
-         \small \href{https://github.com/orgs/lab42open-team}{https://github.com/orgs/lab42open-team}
+         \small \href{https://github.com/orgs/lab42open-team}{https://github.com/orgs/lab42open-team} \\ 
+         \small web-app under\\
+         \small \href{http://prego.hcmr.gr/}{http://prego.hcmr.gr/}
       \end{textblock*}
 
    \end{frame}
@@ -642,23 +728,23 @@
    \end{frame}
 
    % DEVOPS
-   \begin{frame}
+   % \begin{frame}
 
-      \frametitle{Building a knowledge-base}
-      \framesubtitle{development and information technology operations}
+   %    \frametitle{Building a knowledge-base}
+   %    \framesubtitle{development and information technology operations}
 
-      \begin{tikzpicture}[overlay,remember picture]
-         \node[anchor=south west, xshift=10pt,yshift=30pt]
-            at (current page.south west) {
-               \includegraphics[width=120mm]{resources/prego_boots.png}
-            };
+   %    \begin{tikzpicture}[overlay,remember picture]
+   %       \node[anchor=south west, xshift=10pt,yshift=30pt]
+   %          at (current page.south west) {
+   %             \includegraphics[width=120mm]{resources/prego_boots.png}
+   %          };
 
-            \node[anchor=south west, xshift=5pt,yshift=5pt]
-            at (current page.south west) {
-               \includegraphics[width=35mm]{resources/devops.png}
-            };
-      \end{tikzpicture}
-   \end{frame}
+   %          \node[anchor=south west, xshift=5pt,yshift=5pt]
+   %          at (current page.south west) {
+   %             \includegraphics[width=35mm]{resources/devops.png}
+   %          };
+   %    \end{tikzpicture}
+   % \end{frame}
 
 
    % PREGO EXAMPLE
@@ -679,6 +765,10 @@
          };
 
       \end{tikzpicture}
+
+      \begin{textblock*}{6cm}(1.0cm, 8.0cm)
+         \small The PREGO knowledge-base is already available under \href{http://prego.hcmr.gr/}{http://prego.hcmr.gr/}.
+      \end{textblock*}
 
    \end{frame}
 
@@ -852,6 +942,17 @@
 
    % \end{frame}
 
+
+   % COPULA
+   \begin{frame}
+      \frametitle{What is the probability of a flux value of a reaction}
+      \framesubtitle{with respect to the flux value of another reaction}
+      \centering
+      \includegraphics[width=95mm]{resources/hex_-_g6pper_transp.png}
+   \end{frame}
+
+
+
    % SAMPLING ON THE RENZ ET AL. MODEL 
    \begin{frame}{Find possible targets against SARS-CoV-2}
       \framesubtitle{a flux sampling application}      
@@ -984,25 +1085,25 @@
    \end{darkframes}
 
    % ZORBAS PROJECT RESOURCES
-   \begin{frame}
+   % \begin{frame}
 
-      \frametitle{Computational requirements}
-      \framesubtitle{for \textit{trivial} bioinformatic tasks}
+   %    \frametitle{Computational requirements}
+   %    \framesubtitle{for \textit{trivial} bioinformatic tasks}
 
-      \begin{tikzpicture}[overlay, remember picture]
-         \node[anchor=north, yshift=-30mm]
-            at (current page.north){
-               \includegraphics[width=105mm]{resources/imbbc_needs.jpeg}
-            };
-      \end{tikzpicture}
+   %    \begin{tikzpicture}[overlay, remember picture]
+   %       \node[anchor=north, yshift=-30mm]
+   %          at (current page.north){
+   %             \includegraphics[width=105mm]{resources/imbbc_needs.jpeg}
+   %          };
+   %    \end{tikzpicture}
 
-      \begin{textblock*}{10cm}(2cm, 7.5cm)
-            \scriptsize Red bars denote published research with high resource requirements \\
-            \scriptsize of the various computational methods employed at the IMBBC HPC facility
-      \end{textblock*}
+   %    \begin{textblock*}{10cm}(2cm, 7.5cm)
+   %          \scriptsize Red bars denote published research with high resource requirements \\
+   %          \scriptsize of the various computational methods employed at the IMBBC HPC facility
+   %    \end{textblock*}
 
 
-   \end{frame}
+   % \end{frame}
 
    % ZORBAS SCHEME
    \begin{frame}
@@ -1034,7 +1135,7 @@
          \node[anchor= west, xshift=10pt]
             at (current page.west){
                \includegraphics[width=60mm]{resources/marine-genomic-observatories.png}
-            };
+            }; 
 
             \node[anchor= west, xshift=10pt, yshift=-90pt]
             at (current page.west){
@@ -1073,11 +1174,14 @@
 
    % MICROBETAG MODULES 
    \begin{frame}
-      \frametitle{\texttt{microbetag}: annotating co-occurrence networks}
-      \framesubtitle{a short term EMBO fellowship}
 
-      \begin{textblock*}{5cm}(0.8cm, 3.5cm)
-         Our short misssion consists of 3 modules: 
+      \frametitle{
+         \texttt{microbetag}: annotating co-occurrence networks
+      }
+      \framesubtitle{and a trip to KU Leuven}
+
+      \begin{textblock*}{5cm}(1.0cm, 3.5cm)
+         We will try building 3 modules: 
          
          \begin{itemize}
             \small \item pathway complementarity
@@ -1101,86 +1205,100 @@
       \end{textblock*}
 
 
-   \end{frame}
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=south west,
+               xshift=15pt,
+               yshift=22pt]
+               at (current page.south west) {
+                  \includegraphics[width=25mm]{
+                      resources/embo_logo.png
+                  }
+               };
 
-   % FIRST STEPS 1/3
-   \begin{frame}
-      \frametitle{First steps (1/3)}
-      \framesubtitle{pathway complementarity module}
+      \end{tikzpicture}
 
-      \begin{singlespace}
-         
-         \begin{textblock*}{10cm}(1.0cm, 2.7cm)
-            
-            \begin{enumerate}
-               \small \item use abundance \& metadata table to run FlashWeave
-               \small \item get the NCBI Taxon id of each taxon present in the edge file   
-               \small \item search for available reference genomes for these ids 
-               \small \item use KEGG modules to get major metabolic pathways of interest
-               \small \item search for pathway complementarity in each module of interest
-            \end{enumerate}
 
-         \end{textblock*}
-
-         \begin{textblock*}{10cm}(1.2cm, 6.0cm)
-
-            \scriptsize Relative work \\ 
-            \begin{itemize}
-               \scriptsize \item \href{https://www.pnas.org/content/110/31/12804}{Levy \& Borenstein}. Proceedings of the National Academy of Sciences 110.31 (2013): 12804-12809. \\
-               \scriptsize \item \href{https://www.pnas.org/content/112/20/6449.long}{Zelezniak et al.} Proceedings of the National Academy of Sciences 112.20 (2015): 6449-6454. 
-            \end{itemize}
-
-         \end{textblock*}
-
-      \end{singlespace}
 
    \end{frame}
 
-   % FIRST STEPS 2/3
-   \begin{frame}
-      \frametitle{First steps (2/3)}
-      \framesubtitle{phenotypical annotation module}
+   % % FIRST STEPS 1/3
+   % \begin{frame}
+   %    \frametitle{First steps (1/3)}
+   %    \framesubtitle{pathway complementarity module}
 
-      \begin{singlespace}
+   %    \begin{singlespace}
          
-         \begin{textblock*}{10cm}(1.0cm, 2.7cm)
+   %       \begin{textblock*}{10cm}(1.0cm, 2.7cm)
+            
+   %          \begin{enumerate}
+   %             \small \item use abundance \& metadata table to run FlashWeave
+   %             \small \item get the NCBI Taxon id of each taxon present in the edge file   
+   %             \small \item search for available reference genomes for these ids 
+   %             \small \item use KEGG modules to get major metabolic pathways of interest
+   %             \small \item search for pathway complementarity in each module of interest
+   %          \end{enumerate}
+
+   %       \end{textblock*}
+
+   %       \begin{textblock*}{10cm}(1.2cm, 6.0cm)
+
+   %          \scriptsize Relative work \\ 
+   %          \begin{itemize}
+   %             \scriptsize \item \href{https://www.pnas.org/content/110/31/12804}{Levy \& Borenstein}. Proceedings of the National Academy of Sciences 110.31 (2013): 12804-12809. \\
+   %             \scriptsize \item \href{https://www.pnas.org/content/112/20/6449.long}{Zelezniak et al.} Proceedings of the National Academy of Sciences 112.20 (2015): 6449-6454. 
+   %          \end{itemize}
+
+   %       \end{textblock*}
+
+   %    \end{singlespace}
+
+   % \end{frame}
+
+   % % FIRST STEPS 2/3
+   % \begin{frame}
+   %    \frametitle{First steps (2/3)}
+   %    \framesubtitle{phenotypical annotation module}
+
+   %    \begin{singlespace}
+         
+   %       \begin{textblock*}{10cm}(1.0cm, 2.7cm)
             
 
-            \begin{enumerate}
+   %          \begin{enumerate}
 
-               \setlength\itemsep{2em}
+   %             \setlength\itemsep{2em}
 
 
-               \small \item \textbf{BugBase} to get: 
-                  \begin{itemize}
-                     \scriptsize \item Gram Positive \& Negative
-                     \scriptsize \item Biofilm Forming
-                     \scriptsize \item Pathogenic Potential
-                     \scriptsize \item Mobile Element Containing
-                     \scriptsize \item Oxygen Utilizing
-                     \scriptsize \item Oxidative Stress Tolerant
-                  \end{itemize}
+   %             \small \item \textbf{BugBase} to get: 
+   %                \begin{itemize}
+   %                   \scriptsize \item Gram Positive \& Negative
+   %                   \scriptsize \item Biofilm Forming
+   %                   \scriptsize \item Pathogenic Potential
+   %                   \scriptsize \item Mobile Element Containing
+   %                   \scriptsize \item Oxygen Utilizing
+   %                   \scriptsize \item Oxidative Stress Tolerant
+   %                \end{itemize}
 
                
-               \small \item \textbf{FAPROTAX} database: \\
-                     \scriptsize to map taxa to established metabolic or other ecologically relevant functions, using the current literature on cultured strains
-                     % FAPROTAX includes software for converting taxonomic microbial community profiles (e.g. in the form of an OTU table) into putative functional profiles, based on taxa identified in a sample.
-            \end{enumerate}
+   %             \small \item \textbf{FAPROTAX} database: \\
+   %                   \scriptsize to map taxa to established metabolic or other ecologically relevant functions, using the current literature on cultured strains
+   %                   % FAPROTAX includes software for converting taxonomic microbial community profiles (e.g. in the form of an OTU table) into putative functional profiles, based on taxa identified in a sample.
+   %          \end{enumerate}
 
-         \end{textblock*}
+   %       \end{textblock*}
 
-         % \begin{textblock*}{10cm}(1.2cm, 6.0cm)
+   %       % \begin{textblock*}{10cm}(1.2cm, 6.0cm)
 
-         %    \scriptsize Bibliography \\ 
-         %    \begin{itemize}
-         %       \scriptsize  hello friend
-         %    \end{itemize} 
+   %       %    \scriptsize Bibliography \\ 
+   %       %    \begin{itemize}
+   %       %       \scriptsize  hello friend
+   %       %    \end{itemize} 
 
-         % \end{textblock*}
+   %       % \end{textblock*}
 
-      \end{singlespace}
+   %    \end{singlespace}
 
-   \end{frame}
+   % \end{frame}
 
 
    % % FIRST STEPS 3/3
@@ -1211,49 +1329,57 @@
 
    % \end{frame}
    
-
-
-
-
    % TOOLS AND DBs TO EXPLOIT
-   \begin{frame}
-      \frametitle{Databases to exploit}
-      \framesubtitle{and how to}
+   % \begin{frame}
+   %    \frametitle{Databases to exploit}
+   %    \framesubtitle{and how to}
 
-      To get KO and further annotations of a taxon: 
-      \begin{itemize}
-         \item via KEGG organisms using \href{https://www.kegg.jp/kegg/rest/keggapi.html}{KEGG API}
-         \item via JGI using the \href{https://github.com/ELIFE-ASU/ecg}{\texttt{ecg}} tool
-         \item via BacDive using the \href{https://api.bacdive.dsmz.de/}{BacDive API} \\ 
-         % client = bacdive.BacdiveClient('haris-zaf@hcmr.gr', 'k@r@vie@@k')
-         % https://api.bacdive.dsmz.de/
-         % https://pypi.org/project/bacdive/
-         % to login there: https://api.bacdive.dsmz.de/login
-      \end{itemize}
+   %    To get KO and further annotations of a taxon: 
+   %    \begin{itemize}
+   %       \item via KEGG organisms using \href{https://www.kegg.jp/kegg/rest/keggapi.html}{KEGG API}
+   %       \item via JGI using the \href{https://github.com/ELIFE-ASU/ecg}{\texttt{ecg}} tool
+   %       \item via BacDive using the \href{https://api.bacdive.dsmz.de/}{BacDive API} \\ 
+   %       % client = bacdive.BacdiveClient('haris-zaf@hcmr.gr', 'k@r@vie@@k')
+   %       % https://api.bacdive.dsmz.de/
+   %       % https://pypi.org/project/bacdive/
+   %       % to login there: https://api.bacdive.dsmz.de/login
+   %    \end{itemize}
 
-      Further annotation sources to be considered: 
-      \begin{itemize}
-         \item \href{https://pages.uoregon.edu/slouca/LoucaLab/archive/FAPROTAX/lib/php/index.php}{FAPROTAX}
-         \item \href{https://bugbase.cs.umn.edu/}{BugBase}
-         \item \href{https://bioinfo.imtech.res.in/manojk/sigmol/}{SigMol}
-      \end{itemize}
-      % \href{https://github.com/xuechunxu/DiTing}{https://github.com/xuechunxu/DiTing}
+   %    Further annotation sources to be considered: 
+   %    \begin{itemize}
+   %       \item \href{https://pages.uoregon.edu/slouca/LoucaLab/archive/FAPROTAX/lib/php/index.php}{FAPROTAX}
+   %       \item \href{https://bugbase.cs.umn.edu/}{BugBase}
+   %       \item \href{https://bioinfo.imtech.res.in/manojk/sigmol/}{SigMol}
+   %    \end{itemize}
+   %    % \href{https://github.com/xuechunxu/DiTing}{https://github.com/xuechunxu/DiTing}
 
-   \end{frame}
+   % \end{frame}
 
-   % QUESTIONS TO BE ADDRESSED 
-   \begin{frame}
-      \frametitle{Open questions}
-      \framesubtitle{just a few of them ;)  }
+   % % QUESTIONS TO BE ADDRESSED 
+   % \begin{frame}
+   %    \frametitle{Open questions}
+   %    \framesubtitle{just a few of them ;)  }
 
-      \begin{itemize}
+   %    \begin{itemize}
          
-         \item species - strain inheritance in data integration
-         \item dataset, maybe the \href{https://www.embopress.org/doi/full/10.15252/msb.20178157}{Venturelli} one 
-         \item metabolic modelling at the community level
-         \item competition and mutualism: a dialectic relationship
+   %       \item species - strain inheritance in data integration
+   %       \item dataset, maybe the \href{https://www.embopress.org/doi/full/10.15252/msb.20178157}{Venturelli} one 
+   %       \item metabolic modelling at the community level
+   %       \item competition and mutualism: a dialectic relationship
          
-      \end{itemize}
+   %    \end{itemize}
+
+
+   % \end{frame}
+
+   \begin{frame}
+      \frametitle{Looking for the next stop!}
+      \framesubtitle{and another "horrible" place}
+
+      \begin{figure}
+         \centering
+         \includegraphics[width=90mm]{resources/lyon_final_cover.jpg}            
+      \end{figure}
 
 
    \end{frame}
@@ -1268,12 +1394,12 @@
 
    % PUBLICATIONS FRAME
    \begin{frame}[label=bibliography]{Publications}
-      \framesubtitle{\TeX, \LaTeX, and Beamer}
+      
       \begin{thebibliography}{9}
 
          \scriptsize
          \bibitem{prego}
-            Zafeiropoulos, H., Paragkamian, S., Ninidakis, S., Pavlopoulos, G.A., Jensen, L.J. \& Pafilis, E. PREGO: a literature- and data-mining resource to associate microorganisms, biological processes, and environment types. - \textbf{\textit{under review}}
+            Zafeiropoulos, H., Paragkamian, S., Ninidakis, S., Pavlopoulos, G.A., Jensen, L.J. \& Pafilis, E. PREGO: a literature- and data-mining resource to associate microorganisms, biological processes, and environment types. - \textbf{\textit{under revision at Microorgarisms journal}}
 
 
          \scriptsize

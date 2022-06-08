@@ -17,6 +17,12 @@
    czech, slovak, greek %% The additional keys allow foreign texts to be
 ]{babel}            %% typeset as follows:
 
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+
+
+
 %% These macros specify information about the presentation
 \title{
    Microbial communities through the lens of high throughput sequencing, data integration and metabolic networks analysis
@@ -628,8 +634,6 @@
    \end{frame}
 
 
-
-
    % EOSC Life GOs
    \begin{frame}
       \frametitle{Metagenome go deeper than amplicon studies}
@@ -644,7 +648,9 @@
          \bigskip
          
          \footnotesize
-         You may find more about this project  \\
+         You may find more \\ 
+         \footnotesize
+         about this project  \\
          \footnotesize
          through its \href{https://github.com/emo-bon/pipeline-v5}{GitHub repository}
 
@@ -954,7 +960,6 @@
 
    \end{frame}
 
-
    % A toy species model
    \begin{frame}
       \frametitle{Metabolic modelling}
@@ -988,7 +993,7 @@
 
    \end{frame}
 
-
+   \if 0 
    % MOVING FROM ODEs TO CONSTRAINT MODELING
    \begin{frame}
       \frametitle{From concentrations to fluxes}
@@ -1010,8 +1015,7 @@
       $\frac {d\omega}{dt} = Sv$
 
    \end{frame}
-
-
+   \fi
 
    % BUILDIING MODELS
    \begin{frame}
@@ -1049,37 +1053,108 @@
                };
    
             \node[align = center, left, xshift=-10pt] at (current page.east) {
-               \small
-               \textbf{Flux Balance Analysis}
-               \\ 
-               \small
-               Maximize \/ minimize an \\
-               \small
-               objective function:  \\
-               \small
-               $\psi = c_1 v_1 + c_2 v_2 + .. + c_5 v_5$ \\
-               \small
-               such that: \\
-               \small
-               $S * v = O$ \\ 
-               \small
-               and for each reaction $i$: \\
-               \small
-               $lb_i <= v_i <= ub_i$ \\ 
-               
-               \\
+               \footnotesize In a \textbf{steady state} \\
+               \footnotesize the production rate \\
+               \footnotesize of each metabolite \\ \bigskip
+               \footnotesize equals its consumption rate \\  
 
-               \small
-               where $lb$: lower bound, \\
-               \small
-               $ub$: upper bound and \\
-               \small
-               $S$: the stoichiometric matrix
+               \footnotesize The \textbf{flux vector}
+               \footnotesize is a vector with \\
+               \footnotesize the value of \\
+               \footnotesize each reaction flux \\
+               \footnotesize in a certain steady \\ \bigskip
+               \footnotesize state. \\  
+
+               \footnotesize The steady state assumption \\
+               \footnotesize is ensured by \\
+               \footnotesize the \textbf{zero-vector}. 
+
+               % \textbf{Flux Balance Analysis}
+               % \\ 
+               % \small
+               % Maximize \/ minimize an \\
+               % \small
+               % objective function:  \\
+               % \small
+               % $\psi = c_1 v_1 + c_2 v_2 + .. + c_5 v_5$ \\
+               % \small
+               % such that: \\
+               % \small
+               % $S  v = O$ \\ 
+               % \small
+               % and for each reaction $i$: \\
+               % \small
+               % $lb_i \leq v_i \leq ub_i$ \\ 
+               
+               % \\
+
+               % \small
+               % where $lb$: lower bound, \\
+               % \small
+               % $ub$: upper bound and \\
+               % \small
+               % $S$: the stoichiometric matrix
             };
 
          \end{tikzpicture}
       \end{singlespace}      
    \end{frame}
+
+   % GET FULL DIM POLYTOPE
+   \begin{frame}
+      \frametitle{The region of steady states}
+      \framesubtitle{moving to full dimensional polytope}
+
+      \begin{columns}[onlytextwidth]
+
+         \column{.4\textwidth}
+         \centering
+
+            \small
+            The \textit{constraints} on the reactions fluxes.
+             \begin{equation}
+               \begin{split}
+                Sv=0, \\ 
+                v_{lb} \leq v \leq v_{ub}
+               \end{split}
+            \label{eq:fba}
+            \end{equation}
+ 
+
+            \bigskip
+            $S \in \mathbb{R}^{m \times n}, v \in \mathbb{R}^{n}$
+
+
+         \column{0.2\textwidth}
+         \centering
+            $\underleftrightarrow{v = Nx}$
+
+         \column{.4\textwidth}
+         \centering
+
+            As a \textit{full dimensional} polytope
+
+            \includegraphics[width=30mm]{../met_nets/resources/3dpoly.svg.png}
+
+            $P := \{x \in \mathbb{R}^d | Ax \leq b\}$
+
+      \end{columns}
+
+      \bigskip
+
+      \footnotesize
+      $N\in\mathbb{R}^{n\times d}$ denotes the matrix of the null space of $S$,
+      i.e. $S N = 0_{m \times d}$. \bigskip
+
+      \footnotesize
+      By replacing $v$ with $Nx$ in Equation~\ref{eq:fba}, we get the full dimensional polytope $P$,  
+      where 
+      $A = \begin{pmatrix} I_n N \\ -I_n N\end{pmatrix}$
+      and 
+      $b = \begin{pmatrix} v_{ub} \\ v_{lb} \end{pmatrix}  N$, (in $\mathbb{R}^d$).
+
+   \end{frame}
+
 
    % FLUX SAMPLING
    \begin{frame}[label=simmonshall]{Flux sampling} 
@@ -1113,8 +1188,6 @@
 
       \end{singlespace}
    \end{frame}
- 
-
 
    % make a slide for the sampling performance metrics
    % these are: 
@@ -1123,7 +1196,7 @@
    %  - cost per sample: the total number of operations the algorithm needs to sample an i.i.d point
 
 
-
+   % BILLIARD WALK
    \begin{frame}
       \frametitle{Billiard walk}
       \framesubtitle{for random sampling}
@@ -1175,6 +1248,10 @@
 
    
    \end{frame}
+
+   % When the polytope is skinny:
+% The average number of reflections increases.
+% The mixing rate decreases.
 
 
    % MCMC ALGORITHM

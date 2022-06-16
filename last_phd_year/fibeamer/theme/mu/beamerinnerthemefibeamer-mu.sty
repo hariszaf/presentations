@@ -64,20 +64,20 @@
     \usebeamercolor[fg]{item}%
     \fibeamer@oldcite{#1}}}}
 \defbeamertemplate*{section in toc}{fibeamer}{%
-  \usebeamercolor[fg]{item}%
+  \small\usebeamercolor[fg]{item}%
     \inserttocsectionnumber.%
   \usebeamercolor[fg]{structure}%
   \kern1.25ex\inserttocsection\par}
 \defbeamertemplate*{subsection in toc}{fibeamer}{%
   \hspace\leftmargini
-  \usebeamercolor[fg]{item}%
+  \small\usebeamercolor[fg]{item}%
     \inserttocsectionnumber.\inserttocsubsectionnumber%
   \usebeamercolor[fg]{structure}%
   \kern1.25ex\inserttocsubsection\par}
 \defbeamertemplate*{subsubsection in toc}{fibeamer}{%
   \hspace\leftmargini
   \hspace\leftmarginii
-  \usebeamercolor[fg]{item}%
+  \small\usebeamercolor[fg]{item}%
     \inserttocsectionnumber.\inserttocsubsectionnumber.%
     \inserttocsubsubsectionnumber%
   \usebeamercolor[fg]{structure}%

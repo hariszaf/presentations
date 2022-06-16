@@ -215,9 +215,6 @@
                \end{textblock*}
             };
 
-
-      
-
          \end{tikzpicture}
       \end{singlespace}
 
@@ -355,7 +352,7 @@
 
    \begin{darkframes}
       \section{
-         \textbf{Chapter 2}: Software development to establish quality HTS-oriented bioinformatics methods for microbial diversity assessment
+      \textbf{Chapter 2}: Software development to establish quality HTS-oriented bioinformatics methods for microbial diversity assessment
       }
    \end{darkframes}
 
@@ -433,24 +430,24 @@
       16S/18S ribosomal RNA, ITS, and COI marker genes}
    \end{darkframes}
    
-   %  % AIM OF STUDY
-   % \begin{darkframes}
-   %    \begin{frame}
-   %       \frametitle{\textbf{Chapter 2.1}: PEMA: a flexible Pipeline for Environmental DNA Metabarcoding Analysis of the
-   %       16S/18S ribosomal RNA, ITS, and COI marker genes}
-   %       \framesubtitle{Aim of the study and contribution}
+    % AIM OF STUDY
+   \begin{darkframes}
+      \begin{frame}
+         \frametitle{\textbf{Chapter 2.1}: PEMA: a flexible Pipeline for Environmental DNA Metabarcoding Analysis of the
+         16S/18S ribosomal RNA, ITS, and COI marker genes}
+         \framesubtitle{Aim of the study and contribution}
 
-   %       To build an open source
-   %       pipeline that bundles state-of-the-art bioinformatics tools for all necessary steps of
-   %       amplicon analysis and aims to address:
-   %       \begin{itemize}
-   %          \item one-stop-shop for several marker genes \& approaches
-   %          \item easey-to-set \& easy-to-use 
-   %          \item scalable
-   %          \item flexible
-   %       \end{itemize}
-   %    \end{frame}
-   % \end{darkframes}
+         To build an open source
+         pipeline that bundles state-of-the-art bioinformatics tools for all necessary steps of
+         amplicon analysis and aims to address:
+         \begin{itemize}
+            \item one-stop-shop for several marker genes \& approaches
+            \item easey-to-set \& easy-to-use 
+            \item scalable
+            \item flexible
+         \end{itemize}
+      \end{frame}
+   \end{darkframes}
 
    % % BIOINFORMATICS TRICKS AND HINTS
    % \begin{frame}
@@ -844,114 +841,111 @@
       \end{frame}
    \end{darkframes}
 
+   % % DARN METHODOLOGY
+   % \begin{frame}
+   %    \frametitle{Methodology / Implementation}
+   %    \framesubtitle{Dark mAtteR iNvesigator}
 
-   % DARN METHODOLOGY
-   \begin{frame}
-      \frametitle{Methodology / Implementation}
-      \framesubtitle{Dark mAtteR iNvesigator}
+   %    \begin{textblock*}{7cm}(1.2cm, 3.5cm)
+   %       \small In COI amplicon studies, \\
+   %       \small a great number of OTUs/ASVs retrieved \\
+   %       \small either have no hits or \\
+   %       \small their hit has a low confidence \\
+   %       \bigskip
+   %       \small DARN estimates to what extent \\
+   %       \small the OTUs/ASVs retrieved in an \\ 
+   %       \small environmental sample represent \\ 
+   %       \small target taxa or not 
+   %    \end{textblock*}
 
-      \begin{textblock*}{7cm}(1.2cm, 3.5cm)
-         \small In COI amplicon studies, \\
-         \small a great number of OTUs/ASVs retrieved \\
-         \small either have no hits or \\
-         \small their hit has a low confidence \\
-         \bigskip
-         \small DARN estimates to what extent \\
-         \small the OTUs/ASVs retrieved in an \\ 
-         \small environmental sample represent \\ 
-         \small target taxa or not 
-      \end{textblock*}
+   %    \begin{singlespace}
+   %       \begin{tikzpicture}[overlay,remember picture]
+   %          \node[anchor=north east,yshift=-5pt]
+   %             at (current page.north east) {
+   %                \includegraphics[width=50mm]{resources/darn_methodology_transparent.png}
+   %             };
+   %          \node[align = right, above, xshift=110, yshift=10] at (current page.south) {
+   %             \tiny 
+   %             Figure from: \href{https://doi.org/10.3897/mbmg.5.69657}{10.3897/mbmg.5.69657}
+   %          };
+   %       \end{tikzpicture}
+   %    \end{singlespace}
+   % \end{frame}
 
-      \begin{singlespace}
-         \begin{tikzpicture}[overlay,remember picture]
-            \node[anchor=north east,yshift=-5pt]
-               at (current page.north east) {
-                  \includegraphics[width=50mm]{resources/darn_methodology_transparent.png}
-               };
-            \node[align = right, above, xshift=110, yshift=10] at (current page.south) {
-               \tiny 
-               Figure from: \href{https://doi.org/10.3897/mbmg.5.69657}{10.3897/mbmg.5.69657}
-            };
-         \end{tikzpicture}
-      \end{singlespace}
-   \end{frame}
+   % % SEQUENCES RETRIEVED
+   % \begin{frame}
+   %    \frametitle{Methodology / Implementation}
+   %    \framesubtitle{sequences retrieved}
 
-   % SEQUENCES RETRIEVED
-   \begin{frame}
-      \frametitle{Methodology / Implementation}
-      \framesubtitle{sequences retrieved}
+   %    \begin{table}[]
+   %       \resizebox{\textwidth}{!}{%
+   %       \begin{tabular}{lllll}
+   %       \hline
+   %       \multirow{2}{*}{\textbf{Resources}} & \multicolumn{2}{l}{\textbf{bacteria}} & \multicolumn{2}{l}{\textbf{archaea}} \\ \cline{2-5} 
+   %       & \textbf{\# of sequences} & \textbf{\# of strains} & \textbf{\# of sequences} & \textbf{\# of strains} \\ \hline
+   %       BOLD & 3,917 & 2,267 & 117 & 117 \\
+   %       PFam-oriented & 9,154 & 4,532 & 217 & 115 \\ \hline
+   %       \textbf{Total unique entries} & \textbf{11,421} & \textbf{6,798} & \textbf{334} & \textbf{201}
+   %       \end{tabular}}
+   %    \end{table}
 
-      \begin{table}[]
-         \resizebox{\textwidth}{!}{%
-         \begin{tabular}{lllll}
-         \hline
-         \multirow{2}{*}{\textbf{Resources}} & \multicolumn{2}{l}{\textbf{bacteria}} & \multicolumn{2}{l}{\textbf{archaea}} \\ \cline{2-5} 
-         & \textbf{\# of sequences} & \textbf{\# of strains} & \textbf{\# of sequences} & \textbf{\# of strains} \\ \hline
-         BOLD & 3,917 & 2,267 & 117 & 117 \\
-         PFam-oriented & 9,154 & 4,532 & 217 & 115 \\ \hline
-         \textbf{Total unique entries} & \textbf{11,421} & \textbf{6,798} & \textbf{334} & \textbf{201}
-         \end{tabular}}
-      \end{table}
+   % \end{frame}
 
-   \end{frame}
+   % % DARN PHYLOGENY TREE
+   % \begin{frame}
+   %    \frametitle{Methodology / Implementation}
+   %    \framesubtitle{Phylogenetic tree of the COI consensus sequences retrieved}
+   %    \begin{tikzpicture}[overlay, remember picture]
+   %       \node[anchor=west, xshift=10pt, yshift=-15pt]
+   %       at (current page.west){
+   %          \includegraphics[width=60mm]{resources/placements_of_consensus_seqs_transpaernt.png}
+   %       };
+   %    \end{tikzpicture}
 
-   % DARN PHYLOGENY TREE
-   \begin{frame}
-      \frametitle{Methodology / Implementation}
-      \framesubtitle{Phylogenetic tree of the COI consensus sequences retrieved}
-      \begin{tikzpicture}[overlay, remember picture]
-         \node[anchor=west, xshift=10pt, yshift=-15pt]
-         at (current page.west){
-            \includegraphics[width=60mm]{resources/placements_of_consensus_seqs_transpaernt.png}
-         };
-      \end{tikzpicture}
-
-      \begin{textblock*}{7cm}(7.0cm, 4.5cm)
+   %    \begin{textblock*}{7cm}(7.0cm, 4.5cm)
          
-         the consensus sequences have  \\ 
-         been placed in their corresponding \\ 
-         taxonomic branches, proving \\
-         the tree valid
+   %       the consensus sequences have  \\ 
+   %       been placed in their corresponding \\ 
+   %       taxonomic branches, proving \\
+   %       the tree valid
 
-      \end{textblock*}
-   \end{frame}
+   %    \end{textblock*}
+   % \end{frame}
 
-   % DARN OUTPUT
-   \begin{frame}
-      \frametitle{Results: DARN using real-world data}
-      \framesubtitle{with multiple sample types, primers, PCR protocols and bioinormatics pipelines}
+   % % DARN OUTPUT
+   % \begin{frame}
+   %    \frametitle{Results: DARN using real-world data}
+   %    \framesubtitle{with multiple sample types, primers, PCR protocols and bioinormatics pipelines}
 
-      \begin{tikzpicture}[overlay, remember picture]
-         \node[anchor=west, xshift=-20pt, yshift=-20pt]
-         at (current page.west){
-            \includegraphics[width=90mm]{resources/darn_krona_output.png}
-         };
-      \end{tikzpicture}
+   %    \begin{tikzpicture}[overlay, remember picture]
+   %       \node[anchor=west, xshift=-20pt, yshift=-20pt]
+   %       at (current page.west){
+   %          \includegraphics[width=90mm]{resources/darn_krona_output.png}
+   %       };
+   %    \end{tikzpicture}
 
-      \begin{textblock*}{6cm}(7cm, 3.5cm)
-         bacterial sequences are \\ 
-         omnipresent in COI amplicon data \\
-         \bigskip
-         More results at:
-         \href{https://hariszaf.github.io/darn/}{https://hariszaf.github.io/darn/} \\
-      \end{textblock*}
+   %    \begin{textblock*}{6cm}(7cm, 3.5cm)
+   %       bacterial sequences are \\ 
+   %       omnipresent in COI amplicon data \\
+   %       \bigskip
+   %       More results at:
+   %       \href{https://hariszaf.github.io/darn/}{https://hariszaf.github.io/darn/} \\
+   %    \end{textblock*}
 
-   \end{frame}
+   % \end{frame}
 
-
-   % DARN CONCLUSIONS
-   \begin{frame}
-      \frametitle{Conclusions}
-      \framesubtitle{on DARN and COI amplicon studies}
-      \begin{itemize}
-         \item \small bacteria, algae, fungi etc. was verified to be present in COI amplicon data
-         \item \small bacteria make up a significant proportion of sequences generated in COI based eDNA metabarcoding datasets
-         \item \small dark matter seems to be particularly common in eDNA as compared to bulk samples
-         \item \small DARN supports quality control and further investigation of the unassigned OTUs/ASVs and
-               \small allows researchers to better understand the known unknowns
-      \end{itemize}
-   \end{frame}
-
+   % % DARN CONCLUSIONS
+   % \begin{frame}
+   %    \frametitle{Conclusions}
+   %    \framesubtitle{on DARN and COI amplicon studies}
+   %    \begin{itemize}
+   %       \item \small bacteria, algae, fungi etc. was verified to be present in COI amplicon data
+   %       \item \small bacteria make up a significant proportion of sequences generated in COI based eDNA metabarcoding datasets
+   %       \item \small dark matter seems to be particularly common in eDNA as compared to bulk samples
+   %       \item \small DARN supports quality control and further investigation of the unassigned OTUs/ASVs and
+   %             \small allows researchers to better understand the known unknowns
+   %    \end{itemize}
+   % \end{frame}
 
 
    % -------------------------------------
@@ -960,11 +954,15 @@
 
    \begin{darkframes}
       \section{
-         \texttt{PREGO}: a knowledge-base for organisms - environments - processes associations
+         \textbf{Chapter 3:} PREGO: a literature- and data-mining
+         resource to associate microorganisms,
+         biological processes, and
+         environment types
       }
    \end{darkframes}
 
    % PREGO LOGO - SLIDE
+   \if 0
    \begin{frame}
       
       \begin{figure}
@@ -980,222 +978,395 @@
       \end{textblock*}
 
    \end{frame}
+   \fi
 
-   % % PREGO VENN DIAGRAM
-   % \begin{frame}
-   %    \frametitle{PREGO as \textit{processes - environments - organisms}}
-   %    \framesubtitle{and how to link them}
-   %    \includegraphics[width=105mm]{resources/prego_triple_associations.png}
-   % \end{frame}
+    % AIM OF STUDY
+    \begin{darkframes}
+      \begin{frame}
+         \frametitle{\textbf{Chapter 3}: PREGO: a literature- and data-mining
+         resource to associate microorganisms,
+         biological processes, and
+         environment types}
+         \framesubtitle{Aim of the study and contribution}
 
-   % % METADATA
-   % \begin{frame}
+         \small
+            To build a hypothesis generation resource based on associations between: 
+            \begin{itemize}
+               \item \textit{organisms} and the \textit{environments} they inhabit
+               \item \textit{organisms} and the biological \textit{processes} they are involved with
+               \item \textit{processes} and the \textit{environments} where they occur
+            \end{itemize}
 
-   %    \frametitle{Metadata example}
-   %    \framesubtitle{from various metagenome repositories}
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=10pt, yshift=-5mm]
-   %          at (current page.west) {
-   %             \includegraphics[width=120mm]{resources/metadata_like.png}
-   %          };
-   %       \end{tikzpicture} 
-   % \end{frame}
+            To this end, associations among such terms were exported from: 
+            \begin{itemize}
+               \item the publicaly available literature
+               \item genome and omics' studies, their results and their corresponding metadata
+            \end{itemize}
 
-   % % EXTRACT EXAMPLE
-   % \begin{frame}
-   %    \frametitle{Named Entity Recognition}
-   %    \framesubtitle{tagging the literature}
-   %    \begin{figure}
-   %       \includegraphics[width=105mm]{resources/extract_example_transp.png}
-   %       \caption{
-   %          \scriptsize Example text from Arora-Williams et al. Microbiome 6.1 (2018): 1-16.
-   %       }
-   %    \end{figure}
+      \end{frame}
+   \end{darkframes}
+
+   % PREGO TERMINOLOGY
+   \begin{frame}
+      \frametitle{PREGO and its referring terms}
+      \framesubtitle{the fundamental role of ontologies}
+      \includegraphics[width=105mm]{resources/prego_triple_associations.png}
+   \end{frame}
+
+   % PREGO METHODOLOGY
+   \begin{frame}
+      \frametitle{Methods / Implementation}
+      \framesubtitle{3 channels of information - 1 framework}
+
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
+            \node[anchor=north west, xshift=30pt,yshift=-70pt]
+               at (current page.north west) {
+                  \includegraphics[width=105mm]{resources/figure_1_prego_analysis_horizontal_tr.png}
+               };
+            % \node[align = left, above, yshift=30] at (current page.south) {
+            %    \scriptsize 
+            %    from Special Issue  \\  
+            %    \scriptsize
+            %    "Selected Papers from the 9th Conference of the Hellenic Scientific Society MIKROBIOKOSMOS"
+            % };
+
+            % Named Entity Recognition and Comention/Co-occurrence analysis is the
+            % common framework in order to build a weighted association network with nodes being
+            % the entity identifiers. 
+
+         \end{tikzpicture}
+      \end{singlespace}
+   \end{frame}
+
+   % NER and LITERATURE
+   \begin{frame}
+      \frametitle{Named Entity Recognition \& the literature channel}
+      \framesubtitle{exporting associations from publicly available publications}
+      \begin{figure}
+         \includegraphics[width=105mm]{resources/extract_example_transp.png}
+         \caption{
+            \scriptsize Example text from Arora-Williams et al. Microbiome 6.1 (2018): 1-16.
+         }
+      \end{figure}
       
-   % \end{frame}
+   \end{frame}
 
-   % % PREGO METHODOLOGY
-   % \begin{frame}
+   % METADATA CHANNEL
+   \begin{frame}
 
-   %    \frametitle{PREGO methodology}
-   %    \framesubtitle{co-occurrence again!}
+      \frametitle{The \textit{Environmental Samples} and the \textit{Annotated Genomes and Isolates} channels}
+      \framesubtitle{the role of metadata}
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=10pt, yshift=-5mm]
+            at (current page.west) {
+               \includegraphics[width=120mm]{resources/metadata_like.png}
+            };
+         \end{tikzpicture} 
+   \end{frame}
 
-   %    \begin{singlespace}
-   %       \begin{tikzpicture}[overlay,remember picture]
-   %          \node[anchor=north west, xshift=30pt,yshift=-70pt]
-   %             at (current page.north west) {
-   %                \includegraphics[width=105mm]{resources/figure_1_prego_analysis_horizontal_tr.png}
-   %             };
-   %          \node[align = left, above, yshift=30] at (current page.south) {
-   %             \scriptsize 
-   %             Figure from the PREGO publication that is now
-   %             under review. 
-   %             % at Special Issue  \\  
-   %             % \scriptsize
-   %             % "Selected Papers from the 9th Conference of the Hellenic Scientific Society MIKROBIOKOSMOS"
-   %          };
-   %       \end{tikzpicture}
-   %    \end{singlespace}
-   % \end{frame}
+   % SCORING SCHEME 
+   \begin{frame}
+      \frametitle{Co-mentioning and scoring scheme }
+      \framesubtitle{which are the most worthy and relevant associations}
 
-   % % DEVOPS
-   % \begin{frame}
+      \small
+      \begin{itemize}
+         \item [$\rightarrow$] genome annotation oriented associations: fixed scores
+         \item [$\rightarrow$] associations in the \textit{Environmental Samples} channel are scored based on the number of samples they co-occur. 
+         \item [$\rightarrow$] similarly, in the \textit{Literature} channel, based on the number of publications
+      \end{itemize}
+      % Thus, for each entity x, the number of samples is calculated as the background and a number of samples of the associated entity (metadata background) 
+      % c.,y (see Table A1). Each association between entities x, y has a number of samples, cx,y that they co-occur. 
+ 
+      \begin{columns}[onlytextwidth]
+         \column{.6\textwidth}
+            \begin{table}[ht]
+               \begin{tabular}{c|llll}
+                & \multicolumn{4}{l}{Y = y} \\ \cline{2-5} 
+               \multirow{4}{*}{X = x} &  & Yes & No & Total \\ \cline{3-5} 
+                & \multicolumn{1}{l|}{Yes} & $c_{x,y}$ & $c_{x,0}$ & $c_{x,.}$ \\
+                & \multicolumn{1}{l|}{No} & $c_{0,y}$ & $c_{0,0}$ & $c_{0,.}$ \\
+                & \multicolumn{1}{l|}{Total} & $c_{.,y}$ & $c_{.,0}$ & $c_{.,.}$
+               \end{tabular}
+            \end{table}
 
-   %    \frametitle{Building a knowledge-base}
-   %    \framesubtitle{development and information technology operations}
+            \column{.4\textwidth}
+               Environmental samples score: 
 
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=south west, xshift=10pt,yshift=30pt]
-   %          at (current page.south west) {
-   %             \includegraphics[width=120mm]{resources/prego_boots.png}
-   %          };
+                  \begin{equation}
+                     score_{x,y} = 2.0*\sqrt{\frac{c_{x,y}}{c_{.,y}}}^{ \:a}
+                  \end{equation}
+                  % The exponents on the numerator and denominator equal to 0 . 5 and to 0 . 1, respectively, 
+                  % in order to reduce the rapid increase of score.
 
-   %          \node[anchor=south west, xshift=5pt,yshift=5pt]
-   %          at (current page.south west) {
-   %             \includegraphics[width=35mm]{resources/devops.png}
-   %          };
-   %    \end{tikzpicture}
-   % \end{frame}
+      \end{columns}
 
-   % % PREGO EXAMPLE
-   % \begin{frame}
-   %    \frametitle{PREGO in action}
-   %    \framesubtitle{looking for environments a taxon is present}
 
-   %    \begin{tikzpicture}[overlay,remember picture]
 
-   %       \node[anchor=west, xshift=5pt,yshift=10pt]
-   %             at (current page.west) {
-   %                \includegraphics[width=63mm]{resources/prego_org_env_literature.png}
-   %       };
+   \end{frame}
 
-   %       \node[anchor=east, xshift=-2pt,yshift=-25pt]
-   %       at (current page.east) {
-   %          \includegraphics[width=65mm]{resources/prego_org_biol_proc_literature.png}
-   %       };
 
-   %    \end{tikzpicture}
+   % DEVOPS
+   \if 0
+   \begin{frame}
 
-   %    \begin{textblock*}{6cm}(1.0cm, 8.0cm)
-   %       \small The PREGO knowledge-base is available at \href{http://prego.hcmr.gr/}{http://prego.hcmr.gr/}.
-   %    \end{textblock*}
+      \frametitle{Building a knowledge-base}
+      \framesubtitle{development and information technology operations}
 
-   % \end{frame}
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=south west, xshift=10pt,yshift=30pt]
+            at (current page.south west) {
+               \includegraphics[width=120mm]{resources/prego_boots.png}
+            };
 
-%    % SLIDE FOR MARIKAT
-%    \begin{frame}
-%       \frametitle{What about taxa or functions of your interest?}
-%       \framesubtitle{or even environments!}
+            \node[anchor=south west, xshift=5pt,yshift=5pt]
+            at (current page.south west) {
+               \includegraphics[width=35mm]{resources/devops.png}
+            };
+      \end{tikzpicture}
+   \end{frame}
+   \fi 
 
-%       \begin{singlespace}
-%          \begin{columns}[onlytextwidth]
+   % RESULTS: ASSOCIATIONS
+   \begin{frame}
+      \frametitle{Associations between entities of PREGO}
+      \framesubtitle{after metadata retrieveal and co-occurrence analysis}
 
-%             \column{.5\textwidth}
-%                \begin{tikzpicture}[overlay,remember picture]
+         \begin{table}[]
+            \resizebox{0.9\textwidth}{!}{%
+            \begin{tabular}{@{}cccccrcr@{}}
+               \toprule
+               \textbf{Channel} & \textbf{Source} & \textbf{\begin{tabular}[c]{@{}c@{}}Environments \\ - \\ Processes\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Environments \\ - \\ Functions\end{tabular}} & \textbf{Taxonomy} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Taxa \\ -\\  Environments\end{tabular}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Taxa \\ - \\ Processes\end{tabular}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Taxa \\ -\\ Function\end{tabular}}} \\ \midrule
+               \multirow{3}{*}{Literature} & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}MEDLINE \\ PubMed - \\ PMC OA\end{tabular}} & \multirow{3}{*}{883,997} & \multirow{3}{*}{422,579} & Strains & 69,968 & \multicolumn{1}{r}{590,630} & 384,079 \\
+               &  &  &  & Species & 778,877 & \multicolumn{1}{r}{3,501,635} & 1,961,920 \\
+               &  &  &  & Total & 1,669,608 & \multicolumn{1}{r}{7,969,310} & 4,613,827 \\
+               \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}Environmental \\ samples\end{tabular}} & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}MG-RAST \\ amplicon\end{tabular}} & \multirow{3}{*}{-} & \multirow{3}{*}{-} & Strains & 13,645 & \multirow{3}{*}{-} & \multicolumn{1}{c}{\multirow{3}{*}{-}} \\
+               &  &  &  & Species & 39,007 &  & \multicolumn{1}{c}{} \\
+               &  &  &  & Total & 53,439 &  & \multicolumn{1}{c}{} \\
+               & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}MG-RAST \\ metagenome\end{tabular}} & \multirow{3}{*}{-} & \multirow{3}{*}{620,846} & Strains & 262,106 & \multirow{3}{*}{-} & 8,626,328 \\
+               &  &  &  & Species & 103,913 &  & 10,715,548 \\
+               &  &  &  & Total & 372,301 &  & 19,950,096 \\
+               & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}MGnify \\ amplicon\end{tabular}} & \multirow{3}{*}{-} & \multirow{3}{*}{-} & Strains & 18 & - & \multicolumn{1}{l}{} \\
+               &  &  &  & Species & 30,122 & \multicolumn{1}{r}{351} & \multicolumn{1}{c}{-} \\
+               &  &  &  & Total & 111,976 & \multicolumn{1}{r}{2,097} & \multicolumn{1}{l}{} \\
+               \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}Annotated Genomes \\ and Isolates\end{tabular}} & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}JGI IMG\\ isolates\end{tabular}} & \multirow{3}{*}{-} & \multirow{3}{*}{-} & Strains & 8,229 & \multirow{3}{*}{-} & 3,461,693 \\
+               &  &  &  & Species & 42,141 &  & 13,216,559 \\
+               &  &  &  & Total & 50,888 &  & 16,821,850 \\
+               & \multirow{3}{*}{STRUO} & \multirow{3}{*}{-} & \multirow{3}{*}{-} & Strains & \multicolumn{1}{c}{\multirow{3}{*}{-}} & \multirow{3}{*}{-} & 1,803 \\
+               &  &  &  & Species & \multicolumn{1}{c}{} &  & 4,070,195 \\
+               &  &  &  & Total & \multicolumn{1}{c}{} &  & 4,079,312 \\
+               & \multirow{3}{*}{BioProject} & \multirow{3}{*}{-} & \multirow{3}{*}{-} & Strains & 3,263 & \multicolumn{1}{r}{7,473} & \multicolumn{1}{l}{} \\
+               &  &  &  & Species & 4,187 & \multicolumn{1}{r}{4,294} & \multicolumn{1}{l}{} \\
+               &  &  &  & Total & 7,641 & \multicolumn{1}{r}{12,169} & \multicolumn{1}{l}{} \\
+               \multirow{3}{*}{Total} & \multirow{3}{*}{All} & \multirow{3}{*}{883,997} & \multirow{3}{*}{1,043,425} & Strains & 357,229 & \multicolumn{1}{r}{598,103} & 12,473,903 \\
+               &  &  &  & Species & 998,247 & \multicolumn{1}{r}{3,506,280} & 29,964,222 \\
+               &  &  &  & Total & 2,265,853 & \multicolumn{1}{r}{7,983,576} & 45,465,085 \\ \cmidrule(l){5-8} 
+               \end{tabular}%
+         
+            }
+            % \caption[Source databases integrated in PREGO and the number of items retrieved]{
+            %    Source databases that are integrated in PREGO and the number of items retrieved. 
+            %    The Open Access subset of PubMed Central has a Creative Commons license available for commercial and noncommercial use. 
+            %    JGI has its own license, the same applies for BioProject, MEDLINE®, and PubMed® as well.
+            %    }
+            \label{table:prego1}
+         \end{table}
+      
+   \end{frame}
 
-%                   \node[align = left, above, xshift=85, yshift=-40] at (current page.west) {
-%                      Uranium bioremedation  \\
 
-%                      by adding high \\
+   % PREGO EXAMPLE - SCREENSHOTS
+   \if 0
+   \begin{frame}
+      \frametitle{PREGO in action}
+      \framesubtitle{looking for environments a taxon is present}
+
+      \begin{tikzpicture}[overlay,remember picture]
+
+         \node[anchor=west, xshift=5pt,yshift=10pt]
+               at (current page.west) {
+                  \includegraphics[width=63mm]{resources/prego_org_env_literature.png}
+         };
+
+         \node[anchor=east, xshift=-2pt,yshift=-25pt]
+         at (current page.east) {
+            \includegraphics[width=65mm]{resources/prego_org_biol_proc_literature.png}
+         };
+
+      \end{tikzpicture}
+
+      \begin{textblock*}{6cm}(1.0cm, 8.0cm)
+         \small The PREGO knowledge-base is available at \href{http://prego.hcmr.gr/}{http://prego.hcmr.gr/}.
+      \end{textblock*}
+
+   \end{frame}
+   \fi
+
+   % SLIDE FOR MARIKAT
+   \begin{frame}
+      \frametitle{A real case hypothesis generation scenario}
+      \framesubtitle{\textit{Posidonia} and its microbiome}
+
+      \begin{singlespace}
+         \begin{columns}[onlytextwidth]
+
+            % \column{.5\textwidth}
+            %    \begin{tikzpicture}[overlay,remember picture]
+
+            %       \node[align = left, above, xshift=85, yshift=-40] at (current page.west) {
+            %          Uranium bioremedation  \\
+
+            %          by adding high \\
                      
-%                      concentrations of acetate \\
+            %          concentrations of acetate \\
 
-%                      What taxa support \\
-%                      \textbf{\textit{"Response to acetate"}} \\
+            %          What taxa support \\
+            %          \textbf{\textit{"Response to acetate"}} \\
                
-%                      \href{https://prego.hcmr.gr/PregoAnalysis?knowledge=10&experiments=10&textmining=10&type1=-21&id1=GO:0010034}{Have a look!} \\
+            %          \href{https://prego.hcmr.gr/PregoAnalysis?knowledge=10&experiments=10&textmining=10&type1=-21&id1=GO:0010034}{Have a look!} \\
                
-%                      \textit{Geobacter} is the first hit !
+            %          \textit{Geobacter} is the first hit !
                
-%                   };
+            %       };
       
-%                \end{tikzpicture}
+            %    \end{tikzpicture}
 
 
 
-%             \column{.5\textwidth}
-%                \begin{tikzpicture}[overlay,remember picture]
+            \column{.5\textwidth}
+               \begin{tikzpicture}[overlay,remember picture]
 
 
-%                   \node[align = right, above, xshift=75, yshift=45] at (current page.south) {
-%                      \small
-%                      What about \textbf{\textit{Posidonia}} ? \\
-%                      \small
-%                      Literature suggests that Planctomycetes \\
-%                      \small
-%                      and especially \textit{Blastopirellula} \\
-%                      \small
-%                      and \textit{Rhodopirellula} are commonly \\
-%                      \small 
-%                      found in its microbiome. \\
-%                      Why so ? \\
-%                      \small
-%                      You may have a look \href{https://prego.hcmr.gr/PregoAnalysis?knowledge=10&experiments=10&textmining=10&type1=-2&id1=265488}{here}
+                  \node[align = right, above, xshift=75, yshift=45] at (current page.south) {
+                     \small
+                     What about \textbf{\textit{Posidonia}} ? \\
+                     \small
+                     Literature suggests that Planctomycetes \\
+                     \small
+                     and especially \textit{Blastopirellula} \\
+                     \small
+                     and \textit{Rhodopirellula} are commonly \\
+                     \small 
+                     found in its microbiome. \\
+                     Why so ? \\
+                     \small
+                     You may have a look \href{https://prego.hcmr.gr/PregoAnalysis?knowledge=10&experiments=10&textmining=10&type1=-2&id1=265488}{here}
 
-%                   };
+                  };
 
-%                \end{tikzpicture}
-%          \end{columns}
-%       \end{singlespace}
+               \end{tikzpicture}
 
-%    \end{frame}
+         \end{columns}
+      \end{singlespace}
+
+   \end{frame}
 
 
-%    % -------------------------------------
-%    % CHANGE THE CHAPTER SLIDE: DINGO
-%    % -------------------------------------
 
-%    \begin{darkframes}
-%       \section{
-%          \texttt{dingo}: a Python library for metabolic flux sampling
-%       }   
-%    \end{darkframes}
+   \begin{frame}
+      \frametitle{Conclusions}
+      \framesubtitle{on PREGO and its associations}
 
-%    % DINGO LOGO - SLIDE
-%    \begin{frame}
+      \small
+      \begin{itemize}
+         \item Literature 
+         \item similar number of molecular functions in all cases indicates the robustness of the main
+         metabolic processes required for life
+         \item , the number of environmental types that have been associated with members of each phylum varies, as a phylum may be universally present, while others could be
+         strongly niche-specific
+      \end{itemize}
+
+   \end{frame}
+
+
+
+
+   % -------------------------------------
+   % CHANGE THE CHAPTER SLIDE: DINGO
+   % -------------------------------------
+
+   \begin{darkframes}
+      \section{
+         \textbf{Chapter 4}: A New MCMC Algorithm for Sampling the Flux Space of Metabolic Networks
+      }   
+   \end{darkframes}
+
+    % AIM OF STUDY
+    \begin{darkframes}
+      \begin{frame}
+         \frametitle{\textbf{Chapter 4}: A New MCMC Algorithm for Sampling
+         the Flux Space of Metabolic Networks}
+         \framesubtitle{Aim of the study and contribution}
+
+         \small
+         Flux sampling is a computationally intensive task, especially as the dimension of the 
+         polytopes derived from the metabolic model under study increases. 
+
+         Microbial genome-scale models correspond to relatively low dimensional polytopes, 
+         but that is not the case for models integrating multiple GEMs. 
+
+         Further, more often than not, metabolic models of a host and a microbe is
+
+         Therefore, to allow flux sampling at high dimensional polytopes
+         we introduce a Multi-phase Monte Carlo Sampling (MMCS) algorithm. 
+
+         % Our MMCS algorithm splits the sampling procedure in phases where, starting from $P$ , 
+         % each phase uses the sample to round the polytope.
+         % This improves the efficiency of the random walk in the next phase,
+         % we propose an improved variant of Billiard Walk (BW) ; faster arithmetic complexity per step
+
+      \end{frame}
+   \end{darkframes}
+
+
+
+   % DINGO LOGO - SLIDE
+   \if 0
+   \begin{frame}
       
-%       \begin{figure}
-%          \includegraphics[width=55mm]{../met_nets/resources/dingo5_transparent.png}
-%       \end{figure}
+      \begin{figure}
+         \includegraphics[width=55mm]{../met_nets/resources/dingo5_transparent.png}
+      \end{figure}
 
-%       \begin{textblock*}{12cm}(3.5cm, 7cm)
-%          \href{https://github.com/GeomScale/dingo}{https://github.com/GeomScale/dingo}
-%       \end{textblock*}
+      \begin{textblock*}{12cm}(3.5cm, 7cm)
+         \href{https://github.com/GeomScale/dingo}{https://github.com/GeomScale/dingo}
+      \end{textblock*}
+   \end{frame}
+   \fi 
 
-%    \end{frame}
+   % A toy species model
+   \begin{frame}
+      \frametitle{Metabolic modelling}
+      \framesubtitle{and the biomass function}
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
+            \node[anchor=north west, xshift=20pt,yshift=-50pt]
+               at (current page.north west) {
+                  \includegraphics[width=65mm]{resources/e_coli_map_crop_Transp.png}
+               };
 
-%    % A toy species model
-%    \begin{frame}
-%       \frametitle{Metabolic modelling}
-%       \framesubtitle{and the biomass function}
-%       \begin{singlespace}
-%          \begin{tikzpicture}[overlay,remember picture]
-%             \node[anchor=north west, xshift=20pt,yshift=-50pt]
-%                at (current page.north west) {
-%                   \includegraphics[width=65mm]{resources/e_coli_map_crop_Transp.png}
-%                };
-
-%             \node[anchor=north west, xshift=120pt,yshift=-190pt]
-%                at (current page.north west) {
-%                   \includegraphics[width=85mm]{resources/fraction_of_Ecoli_xml_transp_crop.png}
-%                };
-%             \node[align = left, above, xshift=-80, yshift=10] at (current page.east) {
+            \node[anchor=north west, xshift=120pt,yshift=-190pt]
+               at (current page.north west) {
+                  \includegraphics[width=85mm]{resources/fraction_of_Ecoli_xml_transp_crop.png}
+               };
+            \node[align = left, above, xshift=-80, yshift=10] at (current page.east) {
                   
-%                   \footnotesize Metabolic models allow us \\ 
-%                   \footnotesize to move from a metabolic map \\ to mathematical structures \\
-%                   \footnotesize the study of which may provide \\ 
-%                   \small fundamental biological insight
-%                };
+                  \footnotesize Metabolic models allow us \\ 
+                  \footnotesize to move from a metabolic map \\ to mathematical structures \\
+                  \footnotesize the study of which may provide \\ 
+                  \small fundamental biological insight
+               };
 
-%          \end{tikzpicture}
-%       \end{singlespace}
+         \end{tikzpicture}
+      \end{singlespace}
 
-%       % SAY THAT 
-%       % The overall approach is to mechanistically represent the relationship between genotype and phenotype 
-%       % by mathematically and computationally modeling the constraints that are imposed on the
-%       % phenotype of a biochemical system by physicochemical laws, genetics, and the environment
+      % SAY THAT 
+      % The overall approach is to mechanistically represent the relationship between genotype and phenotype 
+      % by mathematically and computationally modeling the constraints that are imposed on the
+      % phenotype of a biochemical system by physicochemical laws, genetics, and the environment
 
-%    \end{frame}
+   \end{frame}
 
 %    \if 0 
 %    % MOVING FROM ODEs TO CONSTRAINT MODELING
@@ -1618,32 +1789,52 @@
 %    % \end{frame}
 
 
-%    % -------------------------
-%    % CHANGE THE CHAPTER SLIDE: TRISTOMO SWAMP 
-%    % -------------------------
-%    % \begin{darkframes}
-%    %    \section{
-%    %       Tristomo swamp: a hybrid amplicon \& shotgun metagenomics analysis 
-%    %    }
-%    % \end{darkframes}
+   % -------------------------
+   % CHANGE THE CHAPTER SLIDE: TRISTOMO SWAMP 
+   % -------------------------
+   \begin{darkframes}
+      \section{
+         \textbf{Chapter 5:} Deciphering the functional potential of a hypersaline marsh microbial mat community
+      }
+
+      \begin{frame}
+         \frametitle{\textbf{Chapter 5:} Deciphering the functional potential of a hypersaline marsh microbial mat community}
+         \framesubtitle{Aim of the study and contribution}
 
 
-%    % \begin{frame}
-%    %    \frametitle{A swamp in Karpathos}
-%    %    \framesubtitle{an Aegean island}
-%    %    \includegraphics[width=85mm]{resources/tristomo_swamp.png}
-%    % \end{frame}
+
+      \end{frame}
+
+   \end{darkframes}
 
 
-%    % -------------------------------------
-%    % CHANGE THE CHAPTER SLIDE: HPC
-%    % -------------------------------------
 
-%    \if 0 
+   % \begin{frame}
+   %    \frametitle{\textbf{Chapter 5:} Deciphering the functional potential of a hypersaline marsh microbial mat community}
+   %    \framesubtitle{an Aegean island}
+   %    \includegraphics[width=85mm]{resources/tristomo_swamp.png}
+   % \end{frame}
 
-%    \begin{darkframes}
-%       \section{0s \& 1s in molecular biology}
-%    \end{darkframes}
+
+
+   % -------------------------------------
+   % CHANGE THE CHAPTER SLIDE: HPC
+   % -------------------------------------
+
+
+   \begin{darkframes}
+      \section{\textbf{Chapter 6:} 0s and 1s in marine molecular
+      research: a regional HPC perspective}
+
+      \begin{frame}
+         \frametitle{\textbf{Chapter 6:} 0s and 1s in marine molecular research: a regional HPC perspective}
+         \framesubtitle{Aim of the study and contribution}
+
+
+         
+      \end{frame}
+
+   \end{darkframes}
 
 %    % ZORBAS PROJECT RESOURCES
 %    \begin{frame}
@@ -1994,265 +2185,312 @@
 %    % CONCLUSIONS & FUTURE WORK
 %    % -------------------------------------
 
-%    \begin{darkframes}
-%       \section{
-%          Take home messages \& future work
-%       }
-%    \end{darkframes}
+   \begin{darkframes}
+      \section{
+         \textbf{\textbf{Chapter 7: } Conclusions}
+      }
 
-%    \begin{frame}
-%       \frametitle{Bioinformatics allow us to address several challenges in microbial ecology}
-%       \framesubtitle{yet, it is more than a means to an end}
+   \begin{frame}
+      \frametitle{\textbf{Chapter 7: } Conclusions}
+      % \framesubtitle{and future perspectives}
 
-%       \begin{itemize}
+      \begin{itemize}
 
-%          \item \footnotesize Bioinformatics approaches enhance microbial diversity assesment based on HTS data
- 
-%          \item \footnotesize Containerization technologies and e-infrastructures provide the means for computational capacity and reproducibility
-
-%          \item \footnotesize High quality metadata enable efficient exploitation of sequecning data in a meta-analysis level
+         \item Bioinformatics approaches enhance microbial diversity assesment based on HTS data
+         \bigskip
+         \item Containerization technologies and e-infrastructures provide the means for computational capacity and reproducibility
+         \bigskip
+         \item High quality metadata enable efficient exploitation of sequecning data in a meta-analysis level
          
-%          \item \footnotesize Markov Chain Monte Carlo approaches enable flux sampling in high-dimensional polytopes 
+      \end{itemize}
+   \end{frame}
 
-%       \end{itemize}
+   \begin{frame}
+      \frametitle{\textbf{Chapter 7: } Conclusions}
+      \framesubtitle{and future perspectives}
+      \begin{itemize}
+         \item Markov Chain Monte Carlo approaches enable flux sampling in high-dimensional polytopes 
+         \bigskip
+         \item Hypersaline mats host a great range of novel taxa \& their functioning might be subject to anaplerotic reactions
 
-%       \begin{block}{Perspective for future work}
-%          More holistic approaches are essential to uncover the underlying mechanisms governing microbial
-%          communities
-%       \end{block}
+      \end{itemize}
+      \bigskip
+      \begin{block}{Perspective for future work}
+         \small
+         \textit{
+            "a combination of quantitative high - throughput experiments and predictive metabolic
+            models can elucidate the genotype - phenotype map of microbial metabolic strategies"
+         }
+         providing great insight on the evolvability of metabolic decisions and on how such 
+         decisions affect microbial coexistence in the communities. 
+         
+      \end{block}
 
-%    \end{frame}
-
-
-
-\begin{frame}
-   \frametitle{Wrap-up}
-   \framesubtitle{software tools}
-
-   \begin{columns}[onlytextwidth]
-
-      \column{.25\textwidth}
-
-         \includegraphics[width=25mm]{resources/pema_logo.png}
-
-         \begin{textblock*}{3cm}(1.3cm,6.8cm)
-            \tiny \href{https://github.com/hariszaf/pema}{github.com/hariszaf/pema}
-         \end{textblock*}
-
-      \column{.25\textwidth}
-
-         \includegraphics[width=25mm]{resources/darn_logo.png}
-         \begin{textblock*}{3cm}(3.8cm,6.8cm)
-            \tiny	 \href{https://github.com/hariszaf/darn}{github.com/hariszaf/darn}
-         \end{textblock*}
-
-      \column{.25\textwidth}
-
-         \includegraphics[width=25mm]{resources/prego_logo.png}
-         \begin{textblock*}{3cm}(6.3cm,6.8cm)
-            \tiny	 \href{https://github.com/lab42open-team}{github.com/lab42open-team/} \\
-            \tiny the \texttt{prego*} repositories
-         \end{textblock*}
-
-      \column{.25\textwidth}
-
-         \includegraphics[width=25mm]{../met_nets/resources/dingo5_transparent.png}
-         \begin{textblock*}{3cm}(9.0cm,6.8cm)
-            \tiny	 \href{https://github.com/GeomScale/dingo}{github.com/GeomScale/dingo}
-         \end{textblock*}
-
-   \end{columns}
-\end{frame}
+   \end{frame}
+   \end{darkframes}
 
 
+   % -------------------------
+   % PUBLICATIONS
+   % -------------------------
 
+   % SOFTWARE CONTRIBUTIONS
+   \begin{frame}
+      \frametitle{Wrap-up}
+      \framesubtitle{software tools}
 
-%    \if 0
-%    % -------------------------
-%    % PUBLICATIONS
-%    % -------------------------
-%    \begin{darkframes}
-%       \section{Publications}
-%    \end{darkframes}
+      \begin{columns}[onlytextwidth]
 
-%    % PUBLICATIONS FRAME
-%    \begin{frame}[label=bibliography]{Publications}
+         \column{.25\textwidth}
+
+            \includegraphics[width=25mm]{resources/pema_logo.png}
+
+            \begin{textblock*}{3cm}(1.3cm,6.8cm)
+               \tiny \href{https://github.com/hariszaf/pema}{github.com/hariszaf/pema}
+            \end{textblock*}
+
+         \column{.25\textwidth}
+
+            \includegraphics[width=25mm]{resources/darn_logo.png}
+            \begin{textblock*}{3cm}(3.8cm,6.8cm)
+               \tiny	 \href{https://github.com/hariszaf/darn}{github.com/hariszaf/darn}
+            \end{textblock*}
+
+         \column{.25\textwidth}
+
+            \includegraphics[width=25mm]{resources/prego_logo.png}
+            \begin{textblock*}{3cm}(6.3cm,6.8cm)
+               \tiny	 \href{https://github.com/lab42open-team}{github.com/lab42open-team/} \\
+               \tiny the \texttt{prego*} repositories
+            \end{textblock*}
+
+         \column{.25\textwidth}
+
+            \includegraphics[width=25mm]{../met_nets/resources/dingo5_transparent.png}
+            \begin{textblock*}{3cm}(9.0cm,6.8cm)
+               \tiny	 \href{https://github.com/GeomScale/dingo}{github.com/GeomScale/dingo}
+            \end{textblock*}
+
+      \end{columns}
+   \end{frame}
+
+   % PUBLICATIONS FRAME
+   \begin{frame}[label=bibliography]{Publications}
       
-%       \begin{thebibliography}{9}
+      \begin{thebibliography}{9}
 
-%          \tiny
-%          \bibitem{prego}
-%             \textbf{Zafeiropoulos, H.}, Paragkamian, S., Ninidakis, S., Pavlopoulos, G.A., Jensen, L.J. \& Pafilis, E. (2022). PREGO: a literature- and data-mining resource to associate microorganisms, biological processes, and environment types.~\href{https://www.mdpi.com/1469654}{Microorganisms  10(2), 293.}
+         \tiny
+         \bibitem{prego}
+            \textbf{Zafeiropoulos, H.}, Paragkamian, S., Ninidakis, S., Pavlopoulos, G.A., Jensen, L.J. \& Pafilis, E. (2022). PREGO: a literature- and data-mining resource to associate microorganisms, biological processes, and environment types.~\href{https://www.mdpi.com/1469654}{Microorganisms  10(2), 293.}
 
-%          \tiny
-%          \bibitem{darn2021}
-%             \textbf{Zafeiropoulos, H.}, Gargan, L., Hintikka, S., Pavloudi, C. \& Carlsson, J. (2021). The Dark mAtteR iNvestigator (DARN) tool: getting to know the known unknowns in COI amplicon data. \href{https://mbmg.pensoft.net/article/69657/list/9/}{Metabarcoding and Metagenomics, 5, e69657.}
+         \tiny
+         \bibitem{darn2021}
+            \textbf{Zafeiropoulos, H.}, Gargan, L., Hintikka, S., Pavloudi, C. \& Carlsson, J. (2021). The Dark mAtteR iNvestigator (DARN) tool: getting to know the known unknowns in COI amplicon data. \href{https://mbmg.pensoft.net/article/69657/list/9/}{Metabarcoding and Metagenomics, 5, e69657.}
 
-%          \tiny
-%          \bibitem{mmcs2021}
-%             Chalkis, A., Fisikopoulos, V., Tsigaridas, E. \& \textbf{Zafeiropoulos, H.} (2021). Geometric algorithms for sampling the flux space of metabolic networks, \href{ https://drops.dagstuhl.de/opus/volltexte/2021/13820/}{37th International Symposium on Computational Geometry (SoCG 2021).}
+         \tiny
+         \bibitem{mmcs2021}
+            Chalkis, A., Fisikopoulos, V., Tsigaridas, E. \& \textbf{Zafeiropoulos, H.} (2021). Geometric algorithms for sampling the flux space of metabolic networks, \href{ https://drops.dagstuhl.de/opus/volltexte/2021/13820/}{37th International Symposium on Computational Geometry (SoCG 2021).}
 
-%          \tiny
-%          \bibitem{hpc2021}             
-%             \textbf{Zafeiropoulos, H.}, Gioti, A., Ninidakis, S., Potirakis, A., Paragkamian, S., ... \& Pafilis, E. (2021). 0s and 1s in marine molecular research: a regional HPC perspective. \href{https://academic.oup.com/gigascience/article/10/8/giab053/6353916}{GigaScience, 10(8), giab053.}
+         \tiny
+         \bibitem{hpc2021}             
+            \textbf{Zafeiropoulos, H.}, Gioti, A., Ninidakis, S., Potirakis, A., Paragkamian, S., ... \& Pafilis, E. (2021). 0s and 1s in marine molecular research: a regional HPC perspective. \href{https://academic.oup.com/gigascience/article/10/8/giab053/6353916}{GigaScience, 10(8), giab053.}
 
-%          \tiny
-%          \bibitem{santorini}
-%             Polymenakou, P.N., Nomikou, P., \textbf{Zafeiropoulos, H.}, ..., Kyrpides, N.C., Kotoulas, G. \& Magoulas, A. (2021). 
-%             The santorini volcanic complex as a valuable source of enzymes for bioenergy. 
-%             \href{https://doi.org/10.3390/en14051414}{Energies, 14(5), p.1414.}
+         \tiny
+         \bibitem{santorini}
+            Polymenakou, P.N., Nomikou, P., \textbf{Zafeiropoulos, H.}, ..., Kyrpides, N.C., Kotoulas, G. \& Magoulas, A. (2021). 
+            The santorini volcanic complex as a valuable source of enzymes for bioenergy. 
+            \href{https://doi.org/10.3390/en14051414}{Energies, 14(5), p.1414.}
 
-%          \tiny
-%          \bibitem{pema2020}
-%          \textbf{Zafeiropoulos, H.}, Viet, H. Q., Vasileiadou, K., Potirakis, A., Arvanitidis, C., Topalis, P., Pavloudi, C. \& Pafilis, E. (2020). PEMA: a flexible Pipeline for Environmental DNA Metabarcoding Analysis of the 16S/18S ribosomal RNA, ITS, and COI marker genes. \href{https://academic.oup.com/gigascience/article/9/3/giaa022/5803335}{GigaScience, 9(3), giaa022.}
+         \tiny
+         \bibitem{pema2020}
+         \textbf{Zafeiropoulos, H.}, Viet, H. Q., Vasileiadou, K., Potirakis, A., Arvanitidis, C., Topalis, P., Pavloudi, C. \& Pafilis, E. (2020). PEMA: a flexible Pipeline for Environmental DNA Metabarcoding Analysis of the 16S/18S ribosomal RNA, ITS, and COI marker genes. \href{https://academic.oup.com/gigascience/article/9/3/giaa022/5803335}{GigaScience, 9(3), giaa022.}
  
-%          \tiny	
-%          \bibitem{karpathos-marsh}
-%             Pavloudi, C. \& \textbf{Zafeiropoulos, H.} (2022) Deciphering the community structure and the functional potential of a hypersaline marsh microbial mat community~\textbf{\textit{(under review at FEMS Microbiology Ecology)}}
+         \tiny	
+         \bibitem{karpathos-marsh}
+            Pavloudi, C. \& \textbf{Zafeiropoulos, H.} (2022) Deciphering the community structure and the functional potential of a hypersaline marsh microbial mat community~\textbf{\textit{(under review at FEMS Microbiology Ecology)}}
 
-%          \tiny
-%          \bibitem{cell-systems}
-%             Garza, D.R., Gonze, D., \textbf{Zafeiropoulos, H.}, Liu, B. \& Faust, K., (2022) Metabolic models of human gut microbiota: advances and challenges \textbf{\textit{(under review at Cell systems)}} 
+         \tiny
+         \bibitem{cell-systems}
+            Garza, D.R., Gonze, D., \textbf{Zafeiropoulos, H.}, Liu, B. \& Faust, K., (2022) Metabolic models of human gut microbiota: advances and challenges \textbf{\textit{(under review at Cell systems)}} 
 
-%          \tiny 
-%          \bibitem{historical-data}
-%          Paragkamian, S., Sarafidou, G., ..., \textbf{Zafeiropoulos, H.}, Arvanitidis, C., Pafilis, E. \& Gerovasileiou, V. 
-%          Automating the curation process of historical literature on marine biodiversity using text mining: the DECO workflow \textbf{\textit{(under review in Frontiers in Marine Science)}}
+         \tiny 
+         \bibitem{historical-data}
+         Paragkamian, S., Sarafidou, G., ..., \textbf{Zafeiropoulos, H.}, Arvanitidis, C., Pafilis, E. \& Gerovasileiou, V. 
+         Automating the curation process of historical literature on marine biodiversity using text mining: the DECO workflow \textbf{\textit{(under review in Frontiers in Marine Science)}}
 
 
-%       \end{thebibliography}
+      \end{thebibliography}
 
-%    \end{frame}
+   \end{frame}
 
-%    \fi 
+   % -------------------------
+   % Acknowledgements & thank you
+   % -------------------------
 
-%    % -------------------------
-%    % Acknowledgements & thank you
-%    % -------------------------
+   % Acknowledgments
+   \begin{frame}
+      \frametitle{Acknowledgments}
+      \framesubtitle{funding \& grants}
+
+      \begin{columns}[onlytextwidth]
+
+         \column{0.39\textwidth}
+            \includegraphics[width=30mm]{resources/thumbnail_gsri_logo_v2-en.png}
+            \includegraphics[width=40mm]{resources/elidek_logo_en.png}
    
-%    \begin{frame}
-%       \frametitle{Acknowledgments}
-%       \framesubtitle{funding \& grants}
+         \column{0.36\textwidth}
+            \includegraphics[width=27mm]{resources/eosclogo.png}
+            \includegraphics[width=30mm]{resources/Elixir-Europe-logo-1.png}
 
-%       \begin{columns}[onlytextwidth]
+         \column{0.33\textwidth}
+            \includegraphics[width=35mm]{resources/Acronym_Environment_RECONNECT_transp.png}
+            \includegraphics[width=27mm]{resources/GSoC_logo.svg.png}
 
-%          \column{0.39\textwidth}
-%             \includegraphics[width=30mm]{resources/thumbnail_gsri_logo_v2-en.png}
-%             \includegraphics[width=40mm]{resources/elidek_logo_en.png}
-   
-%          \column{0.36\textwidth}
-%             \includegraphics[width=27mm]{resources/eosclogo.png}
-%             \includegraphics[width=30mm]{resources/Elixir-Europe-logo-1.png}
+      \end{columns}
 
-%          \column{0.33\textwidth}
-%             \includegraphics[width=35mm]{resources/Acronym_Environment_RECONNECT_transp.png}
-%             \includegraphics[width=27mm]{resources/GSoC_logo.svg.png}
+   \end{frame}
 
-%       \end{columns}
+   % THANK YOU
+   \begin{darkframes}
 
-%    \end{frame}
+   \begin{frame}
 
+      \frametitle{Acknowledgments}
+      \framesubtitle{people and more}
 
-%    \begin{darkframes}
+      % COMMITTE MEMBERS
+      \begin{textblock*}{4.0cm}(1.2cm, 2.5cm)
+         \footnotesize
+         \textbf{My promotors: }\\
+            \href{http://lab42open.hcmr.gr/people/evangelospafilis/}{Dr. Pafilis E.} \\
+            \href{http://computational-genomics.weebly.com/}{Prof. Nikolaou Chr.} \\
+            \href{https://ladoukakis.weebly.com/}{Prof. Ladoukakis} \\
+         \bigskip
+         \textbf{the rest of my 7-member \\ committee:} \\
+            \href{http://www.biology.uoc.gr/labweb/lika/}{Prof. Dina Lika} \\
+            \href{https://www.biology.uoc.gr/el/personnel/7714}{Prof. Panagiotis Sarris} \\
+            \href{https://sites.google.com/view/lab-area52}{Prof. Jens Carlsson} \\
+            \href{http://msysbiology.com/}{Prof. Karoline Faust} \\
 
-%    \begin{frame}{Thank you for your attention}
+      \end{textblock*}
 
-%       \framesubtitle{and your patience ;)}
-%       % URLs
-%       GitHub   : \href{https://github.com/hariszaf}{https://github.com/hariszaf} \\
-%       email    : \href{haris-zaf@hcmr.gr}{haris-zaf@hcmr.gr} \\
-%       Twitter  : \href{https://twitter.com/haris_zaf}{haris\_zaf} \\
-%       web-site : \url{https://hariszaf.github.io/} \\
-      
+      % PERSONAL URLs
+      % \begin{textblock*}{8.5cm}(0.8cm, 6.5cm)
+      %    \footnotesize
 
-%       \begin{textblock*}{4.0cm}(9.5cm, 1.5cm)
+      %    \begin{columns}[onlytextwidth]
+      %       \begin{column}{0.5\textwidth}
+      %          GitHub   : \href{https://github.com/hariszaf}{github.com/hariszaf} \\
+      %          email    : \href{haris-zaf@hcmr.gr}{haris-zaf@hcmr.gr} \\
+      %       \end{column}
+      %       \begin{column}{0.5\textwidth}
+      %          Twitter  : \href{https://twitter.com/haris_zaf}{haris\_zaf} \\
+      %          web-site : \href{https://hariszaf.github.io/}{hariszaf.github.io} \\
+      %       \end{column}
 
-%          \footnotesize \textbf{Spacial thanks to:} \\
+      %    \end{columns}
 
-%          \footnotesize \href{https://cpavloud.github.io/mysite/projects/}{Dr. Pavloudi C.} \\ 
-%          \footnotesize \href{https://imbbc.hcmr.gr/user/s-paragkamian/}{PhD Paragkamian S.} \\
-%          % \footnotesize \href{https://sites.google.com/view/lab-area52/home/meet-the-team?authuser=0}{Dr. Gargan L.} \\
-%          % \footnotesize \href{https://www.researchgate.net/profile/Sanni-Hintikka}{Dr. Hintikka S.} \\
-%          \footnotesize \href{https://imbbc.hcmr.gr/user/sninidakis/}{Mr. Ninidakis St.} \\
-%          \footnotesize \href{https://imbbc.hcmr.gr/user/potant/}{Mr. Potirakis Ant.} \\
-%          \footnotesize \href{https://tolischal.github.io/}{Dr. Chalkis A.} \\
-%          \footnotesize \href{https://vissarion.github.io/}{Dr. Fisikopoulos V.} \\ 
-%          \footnotesize \href{https://who.paris.inria.fr/Elias.Tsigaridas/}{Prof. Tsigaridas E.} \\
-%          \footnotesize \href{http://lab42open.hcmr.gr/people/evangelospafilis/}{Dr. Pafilis E.} \\
-%          % \footnotesize \href{http://computational-genomics.weebly.com/}{Prof. Nikolaou Chr.} \\
-%          % \footnotesize \href{https://ladoukakis.weebly.com/}{Prof. Ladoukakis} \\
+      % \end{textblock*}
+
+      % SPECIAL THANKS
+      \begin{textblock*}{4.0cm}(4.8cm, 2.5cm)
+
+         \footnotesize \textbf{Special thanks to:} \\
+
+         \footnotesize \href{https://imbbc.hcmr.gr/user/s-paragkamian/}{PhD Paragkamian S.} \\
+         \footnotesize \href{https://sites.google.com/view/lab-area52/home/meet-the-team?authuser=0}{Dr. Gargan L.} \\
+         \footnotesize \href{https://www.researchgate.net/profile/Sanni-Hintikka}{Dr. Hintikka S.} \\
+         \footnotesize \href{https://imbbc.hcmr.gr/user/sninidakis/}{Mr. Ninidakis St.} \\
+         \footnotesize \href{https://imbbc.hcmr.gr/user/potant/}{Mr. Potirakis Ant.} \\
+         \footnotesize \href{https://tolischal.github.io/}{Dr. Chalkis A.} \\
+         \footnotesize \href{https://vissarion.github.io/}{Dr. Fisikopoulos V.} \\ 
+         \footnotesize \href{https://who.paris.inria.fr/Elias.Tsigaridas/}{Prof. Tsigaridas E.} \\
          
-%       \end{textblock*}
+      \end{textblock*}
 
-%       % Logos   
-%       % -------------- 
+      % THE CREW
+      \begin{textblock*}{4.0cm}(8.0cm, 2.5cm)
+         \footnotesize
+         \textbf{My mojo:}\\
+         \footnotesize 
+         \href{https://cpavloud.github.io/mysite/projects/}{Dr. Pavloudi C.} \\ 
 
-%       % UoC
-%       \begin{tikzpicture}[overlay,remember picture]
-%          \node[anchor=south west,
-%                xshift=-350pt,
-%                yshift=10pt]
-%                at (current page.south east) {
-%                   \includegraphics[height=14mm]{
-%                       ../met_nets/resources//UoC_logo_white.png
-%                   }
-%                };
-%       \end{tikzpicture}
+         \bigskip 
 
-%       % IMBBC
-%       \begin{tikzpicture}[overlay,remember picture]
-%          \node[anchor=south east,
-%             xshift=-220pt,
-%             yshift=25pt]
-%             at (current page.south east) {
-%                \includegraphics[width=27mm]{ ../met_nets/resources//logo-imbbc.png}
-%             };
-%       \end{tikzpicture}%
+         \textbf{My corner}: \\
 
-%       % HCMR
-%       \begin{tikzpicture}[overlay,remember picture]
-%          \node[anchor=south east,
-%                xshift=-170pt,
-%                yshift=10pt]
-%                at (current page.south east) {
-%                   \includegraphics[height=17mm]{
-%                       ../met_nets/resources//hcmr-logo.png
-%                   }
-%                };
-%       \end{tikzpicture}
-
-%       % LAB42OPEN
-%       \begin{tikzpicture}[overlay, remember picture]
-%          \node[anchor=south east, xshift=-115pt, yshift=12]
-%             at (current page.south east){
-%                \includegraphics[width=17mm]{resources/lab42open.png}
-%             };
-%       \end{tikzpicture}
-
-%       % GeomScale
-%       \begin{tikzpicture}[overlay,remember picture]
-%          \node[anchor=south east,
-%                xshift=-5pt,
-%                yshift=22pt]
-%                at (current page.south east) {
-%                   \includegraphics[width=35mm]{
-%                       ../met_nets/resources//geomscale-logo.png
-%                   }
-%                };
-
-%       \end{tikzpicture}
-
-%       % % EMBO 
-%       % \begin{tikzpicture}[overlay, remember picture]
-%       %    \node[anchor=south east, xshift=-10pt, yshift=75pt]
-%       %       at (current page.south east){
-%       %          \includegraphics[width=25mm]{resources/embo_logo_white.png}
-%       %       };
+            Would not be here \\
+            if it was not with you. 
          
-%       % \end{tikzpicture}
+      \end{textblock*}
+
+      % Logos
+      % UoC
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=south west,
+               xshift=-350pt,
+               yshift=10pt]
+               at (current page.south east) {
+                  \includegraphics[height=14mm]{
+                      ../met_nets/resources//UoC_logo_white.png
+                  }
+               };
+      \end{tikzpicture}
+
+      % IMBBC
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=south east,
+            xshift=-220pt,
+            yshift=25pt]
+            at (current page.south east) {
+               \includegraphics[width=27mm]{ ../met_nets/resources//logo-imbbc.png}
+            };
+      \end{tikzpicture}%
+
+      % HCMR
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=south east,
+               xshift=-170pt,
+               yshift=10pt]
+               at (current page.south east) {
+                  \includegraphics[height=17mm]{
+                      ../met_nets/resources//hcmr-logo.png
+                  }
+               };
+      \end{tikzpicture}
+
+      % LAB42OPEN
+      \begin{tikzpicture}[overlay, remember picture]
+         \node[anchor=south east, xshift=-115pt, yshift=12]
+            at (current page.south east){
+               \includegraphics[width=17mm]{resources/lab42open.png}
+            };
+      \end{tikzpicture}
+
+      % GeomScale
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=south east,
+               xshift=-5pt,
+               yshift=22pt]
+               at (current page.south east) {
+                  \includegraphics[width=35mm]{
+                      ../met_nets/resources//geomscale-logo.png
+                  }
+               };
+
+      \end{tikzpicture}
+
+      % % EMBO 
+      % \begin{tikzpicture}[overlay, remember picture]
+      %    \node[anchor=south east, xshift=-10pt, yshift=75pt]
+      %       at (current page.south east){
+      %          \includegraphics[width=25mm]{resources/embo_logo_white.png}
+      %       };
+         
+      % \end{tikzpicture}
 
 
-%    \end{frame}
-%    \end{darkframes}
+   \end{frame}
+   \end{darkframes}
 
 \end{document}

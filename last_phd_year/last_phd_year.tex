@@ -551,8 +551,8 @@
 
       % TABLE PART 1
       \begin{table}[]
-         \resizebox{1.1\textwidth}{!}{%
-         \hskip-3.0cm
+         \resizebox{1.08\textwidth}{!}{%
+         \hskip-2.8cm
 
          \begin{tabular}{l|llllllllll}
             \textbf{\begin{tabular}[c]{@{}l@{}}mock community of Gohl et al. (2016)\\ KAPA protocol\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ (d = 1 \\ strict = 0.8 \\ no singletons)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 1 \\ strict = 0.8 \\ with singletons)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 3 \\ strictness = 0.6 \\ no singletons)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 3 \\ strictness = 0.8\\ with singletons)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 10 \\ strictness = 0.8 \\ with singletons)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 10 \\ strictness = 0.8 \\ no singletons)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 25  \\ strictness = 0.6 )\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 25 \\ strictntess = 0.8)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 30 \\ strictness = 0.6)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Swarm \\ ( d = 30 \\ strictness = 0.8)\end{tabular}} \\ \hline
@@ -1285,6 +1285,7 @@
          % Further, more often than not, metabolic models of a host and a microbe is
 
          % Therefore, 
+         \bigskip
          To allow flux sampling at high dimensional polytopes, 
          such as those of multispecies communities or host-microbe cases,
          we introduce a Multi-phase Monte Carlo Sampling (MMCS) algorithm. 
@@ -1296,8 +1297,6 @@
 
       \end{frame}
    \end{darkframes}
-
-
 
    % DINGO LOGO - SLIDE
    \if 0
@@ -1346,426 +1345,514 @@
 
    \end{frame}
 
-%    \if 0 
-%    % MOVING FROM ODEs TO CONSTRAINT MODELING
-%    \begin{frame}
-%       \frametitle{From concentrations to fluxes}
-%       \framesubtitle{to study changing environments}
-
-%       We can describe the mass balance of a chemical compound as the difference between the sum of the 
-%       fluxes of all the reactions that form it and the sum of all that degrade it. 
-
-%       \bigskip 
-
-%       $\frac {d\omega_i}{dt} = \sum \limits_{k} s_{ik} v_k =  \langle  s_{i} , v \rangle  $
-
-%       \bigskip
-
-%       and thus:
-
-%       \bigskip 
-
-%       $\frac {d\omega}{dt} = Sv$
-
-%    \end{frame}
-%    \fi
-
-%    % BUILDIING MODELS
-%    \begin{frame}
-%       \frametitle{Genome-scale metabolic reconstruction}
-%       \framesubtitle{approaches, pros and cons}      
-%       \begin{singlespace}
-%          \begin{tikzpicture}[overlay,remember picture]
-%             \node[anchor=north west, xshift=30pt,yshift=-60pt]
-%                at (current page.north west) {
-%                   \includegraphics[width=105mm]{ ../met_nets/resources/building_gmd_transparent.png}
-%                };
-%             \node[align = left, above, yshift=10] at (current page.south) {
-%                \scriptsize 
-%                Figure from: Heirendt et al. Nature protocols 14.3 (2019): 639-702.
-%             };
-%          \end{tikzpicture}
-%       \end{singlespace}
-%    \end{frame}
+   % BUILDIING MODELS
+   \begin{frame}
+      \frametitle{Genome-scale metabolic reconstruction}
+      \framesubtitle{approaches, pros and cons}      
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
+            \node[anchor=north west, xshift=30pt,yshift=-60pt]
+               at (current page.north west) {
+                  \includegraphics[width=105mm]{ ../met_nets/resources/building_gmd_transparent.png}
+               };
+            \node[align = left, above, yshift=10] at (current page.south) {
+               \scriptsize 
+               Figure from: Heirendt et al. Nature protocols 14.3 (2019): 639-702.
+            };
+         \end{tikzpicture}
+      \end{singlespace}
+   \end{frame}
    
-%    % STOICHIOMETRIC MATRIX & FBA
-%    \begin{frame}{From a stoichiometric matrix}
-%       \framesubtitle{to a constraint-based model}
+   % STOICHIOMETRIC MATRIX & FBA
+   \begin{frame}{From a stoichiometric matrix}
+      \framesubtitle{to a constraint-based model}
       
-%       \begin{singlespace}
-%          \begin{tikzpicture}[overlay,remember picture]
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
 
-%             \node[anchor=north west, xshift=20pt,yshift=-65pt]
-%                at (current page.north west) {
-%                   \includegraphics[width=70mm]{ ../met_nets/resources//stoichiometric_matrix_transparent.png}
-%                };
+            \node[anchor=north west, xshift=20pt,yshift=-65pt]
+               at (current page.north west) {
+                  \includegraphics[width=70mm]{ ../met_nets/resources//stoichiometric_matrix_transparent.png}
+               };
 
-%                \node[align = left, above, yshift=10] at (current page.south) {
-%                   \scriptsize 
-%                   Figure from: Heirendt et al. Nature protocols 14.3 (2019): 639-702.
-%                };
+               \node[align = left, above, yshift=10] at (current page.south) {
+                  \scriptsize 
+                  Figure from: Heirendt et al. Nature protocols 14.3 (2019): 639-702.
+               };
    
-%             \node[align = center, left, xshift=-10pt] at (current page.east) {
-%                \footnotesize In a \textbf{steady state} \\
-%                \footnotesize the production rate \\
-%                \footnotesize of each metabolite \\ \bigskip
-%                \footnotesize equals its consumption rate \\  
+            \node[align = center, left, xshift=-10pt] at (current page.east) {
+               \footnotesize In a \textbf{steady state} \\
+               \footnotesize the production rate \\
+               \footnotesize of each metabolite \\ \bigskip
+               \footnotesize equals its consumption rate \\  
 
-%                \footnotesize The \textbf{flux vector}
-%                \footnotesize is a vector with \\
-%                \footnotesize the value of \\
-%                \footnotesize each reaction flux \\
-%                \footnotesize in a certain steady \\ \bigskip
-%                \footnotesize state. \\  
+               \footnotesize The \textbf{flux vector}
+               \footnotesize is a vector with \\
+               \footnotesize the value of \\
+               \footnotesize each reaction flux \\
+               \footnotesize in a certain steady \\ \bigskip
+               \footnotesize state. \\  
 
-%                \footnotesize The steady state assumption \\
-%                \footnotesize is ensured by \\
-%                \footnotesize the \textbf{zero-vector}. 
+               \footnotesize The steady state assumption \\
+               \footnotesize is ensured by \\
+               \footnotesize the \textbf{zero-vector}. 
 
-%                % \textbf{Flux Balance Analysis}
-%                % \\ 
-%                % \small
-%                % Maximize \/ minimize an \\
-%                % \small
-%                % objective function:  \\
-%                % \small
-%                % $\psi = c_1 v_1 + c_2 v_2 + .. + c_5 v_5$ \\
-%                % \small
-%                % such that: \\
-%                % \small
-%                % $S  v = O$ \\ 
-%                % \small
-%                % and for each reaction $i$: \\
-%                % \small
-%                % $lb_i \leq v_i \leq ub_i$ \\ 
+               % \textbf{Flux Balance Analysis}
+               % \\ 
+               % \small
+               % Maximize \/ minimize an \\
+               % \small
+               % objective function:  \\
+               % \small
+               % $\psi = c_1 v_1 + c_2 v_2 + .. + c_5 v_5$ \\
+               % \small
+               % such that: \\
+               % \small
+               % $S  v = O$ \\ 
+               % \small
+               % and for each reaction $i$: \\
+               % \small
+               % $lb_i \leq v_i \leq ub_i$ \\ 
                
-%                % \\
+               % \\
 
-%                % \small
-%                % where $lb$: lower bound, \\
-%                % \small
-%                % $ub$: upper bound and \\
-%                % \small
-%                % $S$: the stoichiometric matrix
-%             };
+               % \small
+               % where $lb$: lower bound, \\
+               % \small
+               % $ub$: upper bound and \\
+               % \small
+               % $S$: the stoichiometric matrix
+            };
 
-%          \end{tikzpicture}
-%       \end{singlespace}      
-%    \end{frame}
+         \end{tikzpicture}
+      \end{singlespace}      
+   \end{frame}
 
-%    % GET FULL DIM POLYTOPE
-%    \begin{frame}
-%       \frametitle{The region of steady states}
-%       \framesubtitle{moving to full dimensional polytope}
+   % \if 0 
+   % MOVING FROM ODEs TO CONSTRAINT MODELING
+   \begin{frame}
+      \frametitle{From concentrations to fluxes}
+      \framesubtitle{to study changing environments}
 
-%       \begin{columns}[onlytextwidth]
+      We can describe the mass balance of a chemical compound as the difference between the sum of the 
+      fluxes of all the reactions that form it and the sum of all that degrade it. 
 
-%          \column{.4\textwidth}
-%          \centering
+      \bigskip 
 
-%             \small
-%             The \textit{constraints} on the reactions fluxes.
-%              \begin{equation}
-%                \begin{split}
-%                 Sv=0, \\ 
-%                 v_{lb} \leq v \leq v_{ub}
-%                \end{split}
-%             \label{eq:fba}
-%             \end{equation}
+      $\frac {d\omega_i}{dt} = \sum \limits_{k} s_{ik} v_k =  \langle  s_{i} , v \rangle  $
+
+      \bigskip
+
+      and thus:
+
+      \bigskip 
+
+      $\frac {d\omega}{dt} = Sv$
+
+   \end{frame}
+   % \fi
+
+   % GET FULL DIM POLYTOPE
+   \begin{frame}
+      \frametitle{The region of steady states}
+      \framesubtitle{moving to full dimensional polytope}
+
+      \begin{columns}[onlytextwidth]
+
+         \column{.4\textwidth}
+         \centering
+
+            \small
+            The \textit{constraints} on the reactions fluxes.
+             \begin{equation}
+               \begin{split}
+                Sv=0, \\ 
+                v_{lb} \leq v \leq v_{ub}
+               \end{split}
+            \label{eq:fba}
+            \end{equation}
  
 
-%             \bigskip
-%             $S \in \mathbb{R}^{m \times n}, v \in \mathbb{R}^{n}$
+            \bigskip
+            $S \in \mathbb{R}^{m \times n}, v \in \mathbb{R}^{n}$
 
 
-%          \column{0.2\textwidth}
-%          \centering
-%             $\underleftrightarrow{v = Nx}$
+         \column{0.2\textwidth}
+         \centering
+            $\underleftrightarrow{v = Nx}$
 
-%          \column{.4\textwidth}
-%          \centering
+         \column{.4\textwidth}
+         \centering
 
-%             As a \textit{full dimensional} polytope
+            As a \textit{full dimensional} polytope
 
-%             \includegraphics[width=30mm]{../met_nets/resources/3dpoly.svg.png}
+            \includegraphics[width=30mm]{../met_nets/resources/3dpoly.svg.png}
 
-%             $P := \{x \in \mathbb{R}^d | Ax \leq b\}$
+            $P := \{x \in \mathbb{R}^d | Ax \leq b\}$
 
-%       \end{columns}
+      \end{columns}
 
-%       \bigskip
+      \bigskip
 
-%       \footnotesize
-%       $N\in\mathbb{R}^{n\times d}$ denotes the matrix of the null space of $S$,
-%       i.e. $S N = 0_{m \times d}$. \bigskip
+      \footnotesize
+      $N\in\mathbb{R}^{n\times d}$ denotes the matrix of the null space of $S$,
+      i.e. $S N = 0_{m \times d}$. \bigskip
 
-%       \footnotesize
-%       By replacing $v$ with $Nx$ in Equation~\ref{eq:fba}, we get the full dimensional polytope $P$,  
-%       where 
-%       $A = \begin{pmatrix} I_n N \\ -I_n N\end{pmatrix}$
-%       and 
-%       $b = \begin{pmatrix} v_{ub} \\ v_{lb} \end{pmatrix}  N$, (in $\mathbb{R}^d$).
+      \footnotesize
+      By replacing $v$ with $Nx$ in Equation~\ref{eq:fba}, we get the full dimensional polytope $P$,  
+      where 
+      $A = \begin{pmatrix} I_n N \\ -I_n N\end{pmatrix}$
+      and 
+      $b = \begin{pmatrix} v_{ub} \\ v_{lb} \end{pmatrix}  N$, (in $\mathbb{R}^d$).
 
-%    \end{frame}
+   \end{frame}
 
+   % FLUX SAMPLING
+   \begin{frame}[label=simmonshall]{Flux sampling} 
 
-%    % FLUX SAMPLING
-%    \begin{frame}[label=simmonshall]{Flux sampling} 
+      \framesubtitle{an alternative approach}
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
 
-%       \framesubtitle{an alternative approach}
-%       \begin{singlespace}
-%          \begin{tikzpicture}[overlay,remember picture]
+            \node[anchor=north west, xshift=30pt,yshift=-60pt]
+               at (current page.north west) {
+                  \includegraphics[width=100mm]{ ../met_nets/resources/space_fba_sampling.png}
+               };
 
-%             \node[anchor=north west, xshift=30pt,yshift=-60pt]
-%                at (current page.north west) {
-%                   \includegraphics[width=100mm]{ ../met_nets/resources/space_fba_sampling.png}
-%                };
+               % \node[align = left, above, yshift=10] at (current page.south) {
+               %    \scriptsize 
+               %    Figure from: Heirendt et al. Nature protocols 14.3 (2019): 639-702.
+               % };
 
-%                % \node[align = left, above, yshift=10] at (current page.south) {
-%                %    \scriptsize 
-%                %    Figure from: Heirendt et al. Nature protocols 14.3 (2019): 639-702.
-%                % };
+            \end{tikzpicture}
 
-%             \end{tikzpicture}
+         \bigskip  \justifying  \bigskip
+         \bigskip  \justifying  \bigskip
+         \bigskip  \justifying  \bigskip
 
-%          \bigskip  \justifying  \bigskip
-%          \bigskip  \justifying  \bigskip
-%          \bigskip  \justifying  \bigskip
+            \begin{itemize}
+               \item \small 
+               enables the analysis of GEMs without the need of an objective function
+               \item \small
+               determines the feasible solution spaces for fluxes in a network based on a set of conditions as well as the probability of obtaining a solution               
+            \end{itemize}
 
-%             \begin{itemize}
-%                \item \small 
-%                enables the analysis of GEMs without the need of an objective function
-%                \item \small
-%                determines the feasible solution spaces for fluxes in a network based on a set of conditions as well as the probability of obtaining a solution               
-%             \end{itemize}
+      \end{singlespace}
+   \end{frame}
 
-%       \end{singlespace}
-%    \end{frame}
-
-%    % make a slide for the sampling performance metrics
-%    % these are: 
-%    %  - cost per iteration: the number of operations the algorithm needs to sample a single point
-%    %  - mixing time: the number of samples the algorithm needs to burn in order to lose dependency from previous iterations (i.i.d)
-%    %  - cost per sample: the total number of operations the algorithm needs to sample an i.i.d point
-
-
-%    % BILLIARD WALK
-%    \begin{frame}
-%       \frametitle{Billiard walk}
-%       \framesubtitle{for random sampling}
-
-%       \begin{columns}[t, totalwidth=7cm]
-
-%          \column{.3\textwidth}
-%             \includegraphics[width=27mm]{../met_nets/resources/bill1.png}
-
-%          \column{.3\textwidth}
-%             \includegraphics[width=27mm]{../met_nets/resources/bill2.png}
-
-%       \end{columns}
-
-%       \bigbreak
-
-
-%       \begin{columns}[t, totalwidth=7cm]
-
-%          \column{.3\textwidth}
-%             \includegraphics[width=27mm]{../met_nets/resources/bill3.png}
-
-%          \column{.3\textwidth}
-%             \includegraphics[width=27mm]{../met_nets/resources/bill4.png}
-
-%       \end{columns}
-
-%       \bigbreak
-
-%       \begin{columns}[t, totalwidth=7cm]
-
-%          \column{.3\textwidth}
-%             \includegraphics[width=27mm]{../met_nets/resources/bill5.png}
-
-%          \column{.3\textwidth}
-%             \includegraphics[width=27mm]{../met_nets/resources/bill6.png}
-
-%       \end{columns}
-
-%       \begin{textblock*}{8.0cm}(8.5cm, 3.0cm)
-%          \footnotesize Generate the length of the \\ trajectory $L \sim D$. \\
-%          \bigbreak
-%          \footnotesize Pick a uniform direction $v$ \\ to define the trajectory. \\
-%          \bigbreak
-%          \footnotesize The trajectory reflects on \\ the boundary if necessary. \\
-%          \bigbreak
-%          \footnotesize Return the end of the \\ trajectory as $p_i+1$.
-%       \end{textblock*}
-
-   
-%    \end{frame}
-
-%    % When the polytope is skinny:
-% % The average number of reflections increases.
-% % The mixing rate decreases.
-
-
-%    % MCMC ALGORITHM
-%    \begin{frame}{Our Markov Chain Monte Carlo (MCMC) algorithm}
-%       \framesubtitle{for flux sampling}
-
-%       \includegraphics[scale=0.11]{ ../met_nets/resources//sampling_extra_phase_croped_transparent.png}
+   % METRICS
+   \if 0
+   \begin{frame}
+      \frametitle{Random walk performance metrics}
+      \framesubtitle{}
       
-%       \scriptsize
-%       \begin{block}{Steps of an MMCS phase}
-%          \begin{itemize}
-%             \item \textbf{sampling step:} using a variant of the \textbf{Billiard walk}  
-%             \item \textbf{rounding step:} calculate a linear transformation $T_i$ that puts the sample into isotropic position and then apply it on $P_i$ to obtain the polytope of the next phase
-%             \item check several statistic tests
-%          \end{itemize}      
+      \begin{itemize}
+         \item \textbf{cost per iteration:} the number of operations the algorithm needs to sample a single point
+         \item \textbf{mixing time:} the number of samples the algorithm needs to burn in order to lose dependency from previous iterations (i.i.d)
+         \item \textbf{cost per sample:} the total number of operations the algorithm needs to sample an i.i.d point
 
-%       \end{block}
+      \end{itemize}
 
-%       % \begin{singlespace}
-%       %    \scriptsize
-%       %    Chalkis, Fisikopoulos, Tsigaridas and Zafeiropoulos 
-%       %    "Geometric Algorithms for Sampling \\ the Flux Space
-%       %    of Metabolic Networks", SoCG 2021,  
-%       %    DOI: 10.4230/LIPIcs.SoCG.2021.21
-   
-%       % \end{singlespace}
+      MCMC Convergence diagnostics
 
-%    \end{frame}
+      \begin{itemize}
+         \item \textbf{Effective Sample Size (ESS): } 
+         % measures the information content, or effectiveness of a sample chain
+         % can be defined as the minimum size of a set of posterior samples (taken directly from the posterior), 
+         % which have the same efficiency (measure of quality) in the posterior density estimation as a given chain of samples obtained from MCMC sampling
 
-%    % % RENZ ET AL. PAPER
-%    % \begin{frame}{Find possible targets against SARS-CoV-2}
-%    %    \framesubtitle{a flux sampling application}
-%    %    \bigskip
-%    %    \includegraphics[scale=0.27]{ ../met_nets/resources//covid_paper.png}
-      
-%    %    \begin{singlespace}
-%    %       \begin{itemize}
-%    %          \item \small Renz et al. '20 built the biomass function of Sars-Cov-2 to build a host - virus network
-%    %          \item \small Using FBA they computed an optimal steady state using \\ \small \quad (i) human biomass maintenance,\\ \small \quad (ii) virus growth rate
-%    %          \item \small They found reaction GK1 as a possible anti-viral target.
-%    %       \end{itemize}            
-%    %    \end{singlespace}
+         %  a function proportional to the ratio between the
+         % variance of the ideal Monte Carlo estimator (drawing samples di-
+         % rectly from the target) over the variance of the estimator obtained
+         % by MCMC or IS techniques, using the same number of samples in
+         % both estimators.
 
-%    % \end{frame}
+         the number of effectively independent draws from
+         the target distribution that the Markov chain is equivalent to
 
-
-%    % SAMPLING ON THE RENZ ET AL. MODEL 
-%    \begin{frame}{Find possible targets against SARS-CoV-2}
-%       \framesubtitle{a flux sampling application}      
-
-%       \begin{tikzpicture}[overlay,remember picture]
-
-%          \node[anchor=north east, xshift=-10pt,yshift=-30pt]
-%             at (current page.north east) {
-%                \includegraphics[width=20mm]{ ../met_nets/resources//dingo5_transparent.png}
-%             };
-%       \end{tikzpicture}
-
-
-%       \centerline{
-%       \includegraphics[scale=0.21]{
-%           ../met_nets/resources//density_flux_TYMSULT_fba_2_transparent
-%          } 
-%       \includegraphics[scale=0.21]{
-%           ../met_nets/resources//density_flux_gk1_fba_2_transparent
-%          }
-%       }
-
-%       \begin{itemize}
-%          \item Check if the flux distribution of a reaction changes.
-%          \item Find possible anti-viral targets and study further.
-%       \end{itemize}
-%       \vspace*{0.2cm}
-
-%       For more about this example case, you may check this \href{https://www.tweag.io/blog/2021-07-14-metabolic-networks/}{blog-post}.
-
-%    \end{frame}
-
-%    % COPULA
-%    \begin{frame}
-%       \frametitle{What is the probability of a flux value of a reaction}
-%       \framesubtitle{with respect to the flux value of another reaction}
-%       \centering
-%       \includegraphics[width=95mm]{resources/hex_-_g6pper_transp.png}
-%    \end{frame}
-
-%    % FLUX SAMPLING APPLICATIONS
-%    \begin{frame}{Further applications}
-%       \framesubtitle{of metabolic flux sampling}
-
-%       \begin{singlespace}
-
-%          \begin{columns}[onlytextwidth]
-
-%             \column{.5\textwidth}
-%                \begin{tikzpicture}[overlay,remember picture]
-                  
-%                   \node[anchor=north west, xshift=15, yshift=-100pt]
-%                   at (current page.north west) {
-%                      \includegraphics[width=55mm]{ ../met_nets/resources//cartoon_wine.jpg}
-
-%                   };
-
-%                   \node[align = left, above, xshift=-80, yshift=35] at (current page.south) {
-%                      \scriptsize Scott, William T., et al. "Metabolic flux sampling \\ 
-%                      \scriptsize predicts strain-dependent differences related to \\ 
-%                      \scriptsize 
-%                      aroma production among commercial wine yeasts." \\
-%                      \scriptsize
-%                       Microbial cell factories 20.1 (2021): 1-15.   
-%                   };
-      
-%                \end{tikzpicture}
-
-
-
-%             \column{.5\textwidth}
-%                \begin{tikzpicture}[overlay,remember picture]
-
-%                   \node[anchor=north east, xshift=-45, yshift=-100pt]
-%                      at (current page.north east) {
-%                         \includegraphics[width=30mm]{ ../met_nets/resources//interactions_transparent.png}
-%                      };
-
-%                   \node[align = right, above, xshift=95, yshift=65] at (current page.south) {
-%                      \small
-%                      What about microbial interactions ? 
-%                   };
-%                   % \node[align = right, above, xshift=-20, yshift=35] at (current page.south) {
-
-%                   %    fsfasfhasdf
-
-%                   % }
-
-%                \end{tikzpicture}
-%          \end{columns}
-%       \end{singlespace}
-%    \end{frame}
-
-%    % % dingo Python library
-%    % \begin{frame}{\texttt{dingo}: a Python library }
-%    %    \framesubtitle{for flux sampling}
-
-%    %    \begin{columns}[onlytextwidth]
-
-%    %       \column{.48\textwidth}
-%    %          \includegraphics[scale=0.1]{ ../met_nets/resources//dingo5_transparent.png}
+         \item potential scale reduction factor (PSRF)
          
-%    %          \href{https://github.com/GeomScale/dingo}{https://github.com/GeomScale/dingo}
+      \end{itemize}
+   
+   \end{frame}
+   \fi
 
-%    %       \column{.41\textwidth}
+   % BILLIARD WALK
+   \begin{frame}
+      \frametitle{Billiard walk}
+      \framesubtitle{for random sampling}
 
-%    %          \begin{center}
-%    %             \texttt{how to} GCollab notebook
-%    %             \includegraphics[scale=0.3]{ ../met_nets/resources//dingo_collab_transparent.png}               
-%    %          \end{center}
+      \begin{columns}[t, totalwidth=7cm]
+
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill1.png}
+
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill2.png}
+
+      \end{columns}
+
+      \bigbreak
+
+
+      \begin{columns}[t, totalwidth=7cm]
+
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill3.png}
+
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill4.png}
+
+      \end{columns}
+
+      \bigbreak
+
+      \begin{columns}[t, totalwidth=7cm]
+
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill5.png}
+
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill6.png}
+
+      \end{columns}
+
+      \begin{textblock*}{8.0cm}(8.5cm, 3.0cm)
+         \footnotesize Generate the length of the \\ trajectory $L \sim D$. \\
+         \bigbreak
+         \footnotesize Pick a uniform direction $v$ \\ to define the trajectory. \\
+         \bigbreak
+         \footnotesize The trajectory reflects on \\ the boundary if necessary. \\
+         \bigbreak
+         \footnotesize Return the end of the \\ trajectory as $p_i+1$.
+      \end{textblock*}
+
+   
+   \end{frame}
+
+   % When the polytope is skinny:
+   % The average number of reflections increases.
+   % The mixing rate decreases.
+
+   % MCMC ALGORITHM
+   \begin{frame}{Our Markov Chain Monte Carlo (MCMC) algorithm}
+      \framesubtitle{for flux sampling}
+
+      \includegraphics[scale=0.11]{ ../met_nets/resources/sampling_extra_phase_croped_transparent.png}
+      
+      \scriptsize
+      \begin{block}{Steps of an MMCS phase}
+         \begin{itemize}
+            \item \textbf{sampling step:} using a variant of the \textbf{Billiard walk}  
+            \item \textbf{rounding step:} calculate a linear transformation $T_i$ that puts the sample into isotropic position and then apply it on $P_i$ to obtain the polytope of the next phase
+            \item check several statistic tests
+         \end{itemize}      
+
+      \end{block}
+
+      % \begin{singlespace}
+      %    \scriptsize
+      %    Chalkis, Fisikopoulos, Tsigaridas and Zafeiropoulos 
+      %    "Geometric Algorithms for Sampling \\ the Flux Space
+      %    of Metabolic Networks", SoCG 2021,  
+      %    DOI: 10.4230/LIPIcs.SoCG.2021.21
+   
+      % \end{singlespace}
+
+   \end{frame}
+
+   % Burn-in is the process of discarding the first z samples from the chain and using only the remaining samples in subsequent analysis. 
+
+   % RESULTS - A MARGINAL 
+   \begin{frame}
+      \frametitle{Flux sampling output}
+      \framesubtitle{marginal distributions and copulas}
+      \includegraphics[width=110mm]{resources/copulas_cropped_transp.png}
+   
+   \end{frame}
+
+   % RESULTS - EXPERIMENTS
+   \begin{frame}
+      \frametitle{Resulst / experiments}
+      \framesubtitle{sampling the largest single-species metabolic networks}
+
+      \begin{table}[]
+         \resizebox{0.9\textwidth}{!}{%
+            \begin{tabular}{|c||c|c|c||c|c||c|c|}\hline
+                  &  & & & \multicolumn{2}{c}{MMCS} &   \multicolumn{2}{c}{\texttt{cobra}} \\
+               model & m & n & d & Time (sec)  & N  & Time (sec)  & N \\ \hline
+               e\_coli\_core & 72 & 95 &  24 & 6.50e-01 & 3.40e+03 (8)   & 7.20e+01  & 4.61e+06  \\     % time   psrf   M    N
+               iLJ478 & 570 & 652 & 59  & 9.00e+00 & 5.40e+03 (5)  & 4.54e+02  & 2.79e+07 \\                   % & 9 & $100\%$ & 5 & 5400
+               iSB619 & 655 & 743 & 83 & 1.70e+01 &  8.20e+03 (5)  & 9.56e+02  & 5.51e+07  \\
+               iHN637 & 698 & 785 & 88  & 2.00e+01 & 6.80e+03 (4)  & 1.03e+03  & 6.19e+07  \\
+               iJN678 & 795 & 863 & 91 & 2.50e+01 & 8.10e+03 (4)  & 1.17e+03  & 6.62e+07 \\                  % & 25 & $100\%$ & 4 & 8100
+               iNF517  & 650 & 754 & 92  & 1.70e+01 & 6.20e+03 (4)  & 1.33e+03  & 6.77e+07  \\
+               iJN746  & 907 & 1054 & 116 & 5.70e+01 & 8.70e+03 (3)  & 2.22e+03  & 1.07e+08 \\              % & 57 & $100\%$ & 3 & 8700
+               iAB\_RBC\_283  & 342 & 469 & 130 & 5.20e+01 &  1.07e+04 (5)  & 7.85e+03  & 4.05e+08  \\
+               iJR904  & 761 & 1075 &  227  & 2.98e+02 & 1.62e+04 (4) & 8.81e+03  & 4.12e+08   \\
+               iAT\_PLT\_636   & 738 & 1008 & 289  & 3.25e+02  & 1.04e+04 (2)  & 1.73e+04  & 6.68e+08 \\
+               iSDY\_1059 & 1888 & 2539 & 509 & 2.813e+03 & 2.31e+04 (3) & 6.66e+04  & 2.07e+09 \\
+               iAF1260 & 1668 & 2382 & 516 & 6.84e+03 & 5.33e+04 (6)  & 7.04e+04  & 2.13e+09 \\
+               iEC1344\_C  & 1934 & 2726 & 578  & 4.86e+03 & 3.95e+04 (4) & 9.42e+04   & 2.67e+09 \\
+               iJO1366  & 1805 & 2583 & 582 & 6.02e+03 & 5.14e+04 (5)  & 9.99e+04  & 2.71e+09 \\
+               iBWG\_1329 & 1949 & 2741 & 609 & 3.06e+03 & 4.22e+04 (4) & 1.05e+05   & 2.97e+09 \\
+               iML1515 & 1877 & 2712 & 633 &  4.65e+03 & 5.65e+04 (5)  & 1.15e+05   & 3.21e+09 \\
+               Recon1 & 2766 & 3741 & 931 & 8.09e+03 & 1.94e+04 (2) & 3.20e+05  & 6.93e+09 \\
+               Recon2D & 5063 & 7440 & 2430 & 2.48e+04  &  5.44e+04 (2)  & $\sim 140$ days & $1.57e$+$11$   \\
+               Recon3D  & 8399 & 13543 & 5335 & 1.03e+05 &  1.44e+05 (2) & -- & -- \\
+               %Recon3D  & 5335 & 103572 &  144400 (2) & $\checkmark$  & $\sim 410$ days &  & 2.28e+11 & \\
+               \hline
+               \end{tabular}%
+         }
+      \end{table}
+   
+   \end{frame}
+
+   \if 0
+   % RENZ ET AL. PAPER
+   \begin{frame}{Find possible targets against SARS-CoV-2}
+      \framesubtitle{a flux sampling application}
+      \bigskip
+      \includegraphics[scale=0.27]{ ../met_nets/resources//covid_paper.png}
+      
+      \begin{singlespace}
+         \begin{itemize}
+            \item \small Renz et al. '20 built the biomass function of Sars-Cov-2 to build a host - virus network
+            \item \small Using FBA they computed an optimal steady state using \\ \small \quad (i) human biomass maintenance,\\ \small \quad (ii) virus growth rate
+            \item \small They found reaction GK1 as a possible anti-viral target.
+         \end{itemize}            
+      \end{singlespace}
+
+   \end{frame}
+
+   % SAMPLING ON THE RENZ ET AL. MODEL 
+   \begin{frame}{Find possible targets against SARS-CoV-2}
+      \framesubtitle{a flux sampling application}      
+
+      \begin{tikzpicture}[overlay,remember picture]
+
+         \node[anchor=north east, xshift=-10pt,yshift=-30pt]
+            at (current page.north east) {
+               \includegraphics[width=20mm]{ ../met_nets/resources//dingo5_transparent.png}
+            };
+      \end{tikzpicture}
+
+
+      \centerline{
+      \includegraphics[scale=0.21]{
+          ../met_nets/resources//density_flux_TYMSULT_fba_2_transparent
+         } 
+      \includegraphics[scale=0.21]{
+          ../met_nets/resources//density_flux_gk1_fba_2_transparent
+         }
+      }
+
+      \begin{itemize}
+         \item Check if the flux distribution of a reaction changes.
+         \item Find possible anti-viral targets and study further.
+      \end{itemize}
+      \vspace*{0.2cm}
+
+      For more about this example case, you may check this \href{https://www.tweag.io/blog/2021-07-14-metabolic-networks/}{blog-post}.
+
+   \end{frame}
+
+   % COPULA
+   \begin{frame}
+      \frametitle{What is the probability of a flux value of a reaction}
+      \framesubtitle{with respect to the flux value of another reaction}
+      \centering
+      \includegraphics[width=95mm]{resources/hex_-_g6pper_transp.png}
+   \end{frame}
+
+   % FLUX SAMPLING APPLICATIONS
+   \begin{frame}{Further applications}
+      \framesubtitle{of metabolic flux sampling}
+
+      \begin{singlespace}
+
+         \begin{columns}[onlytextwidth]
+
+            \column{.5\textwidth}
+               \begin{tikzpicture}[overlay,remember picture]
+                  
+                  \node[anchor=north west, xshift=15, yshift=-100pt]
+                  at (current page.north west) {
+                     \includegraphics[width=55mm]{ ../met_nets/resources//cartoon_wine.jpg}
+
+                  };
+
+                  \node[align = left, above, xshift=-80, yshift=35] at (current page.south) {
+                     \scriptsize Scott, William T., et al. "Metabolic flux sampling \\ 
+                     \scriptsize predicts strain-dependent differences related to \\ 
+                     \scriptsize 
+                     aroma production among commercial wine yeasts." \\
+                     \scriptsize
+                      Microbial cell factories 20.1 (2021): 1-15.   
+                  };
+      
+               \end{tikzpicture}
+
+
+
+            \column{.5\textwidth}
+               \begin{tikzpicture}[overlay,remember picture]
+
+                  \node[anchor=north east, xshift=-45, yshift=-100pt]
+                     at (current page.north east) {
+                        \includegraphics[width=30mm]{ ../met_nets/resources//interactions_transparent.png}
+                     };
+
+                  \node[align = right, above, xshift=95, yshift=65] at (current page.south) {
+                     \small
+                     What about microbial interactions ? 
+                  };
+                  % \node[align = right, above, xshift=-20, yshift=35] at (current page.south) {
+
+                  %    fsfasfhasdf
+
+                  % }
+
+               \end{tikzpicture}
+         \end{columns}
+      \end{singlespace}
+   \end{frame}
+   \fi
+
+   % % dingo Python library
+   % \begin{frame}{\texttt{dingo}: a Python library }
+   %    \framesubtitle{for flux sampling}
+
+   %    \begin{columns}[onlytextwidth]
+
+   %       \column{.48\textwidth}
+   %          \includegraphics[scale=0.1]{ ../met_nets/resources//dingo5_transparent.png}
+         
+   %          \href{https://github.com/GeomScale/dingo}{https://github.com/GeomScale/dingo}
+
+   %       \column{.41\textwidth}
+
+   %          \begin{center}
+   %             \texttt{how to} GCollab notebook
+   %             \includegraphics[scale=0.3]{ ../met_nets/resources//dingo_collab_transparent.png}               
+   %          \end{center}
  
-%    %    \end{columns}
+   %    \end{columns}
 
-%    % \end{frame}
+   % \end{frame}
 
+   % CONCLUSIONS ON MMCS
+   \begin{frame}
+      \frametitle{Conclusions}
+      \framesubtitle{on sampling the flux space of metabolic models}
+      
+      \begin{itemize}
+         \item besides the computational, several challenges from the biological point of view
+         \item essential isnight (knock-out genes, host-microbe interactions etc)
+         \item Recon3D includes $13,543$ reactions ($d=5,335$); sampling the flux space of metabolic models integrating several microbial GEMs is now possible
+      \end{itemize}
+   
+   \end{frame}
 
    % -------------------------
    % CHANGE THE CHAPTER SLIDE: TRISTOMO SWAMP 
@@ -1826,6 +1913,39 @@
       \end{textblock*}
    \end{frame}
 
+   % BIOINFORMATICS ANALYSIS
+   \begin{frame}
+      \frametitle{Bioinformatics analysis}
+      \framesubtitle{from raw data to community \\ composition \& functional potential}
+
+
+         \begin{tikzpicture}[overlay,remember picture]
+
+            \node[anchor=north east, xshift=-25, yshift=-20pt]
+               at (current page.north east) {
+                  \includegraphics[width=60mm]{resources/bioinformatics-analysis-steps.png}
+               };
+      \end{tikzpicture}
+      \begin{textblock*}{6cm}(0.8cm, 3.3cm)
+         \small 
+
+         \begin{itemize}
+
+            \item metagenomic reads were both \\
+            co - assembled and assembled \\
+            at the sample level 
+            \item taxonomic \& functional profiles \\
+            per sample were retrieved \\ 
+            \item MAGs were reconstructed and \\
+            annotated
+
+         \end{itemize}
+
+
+
+      \end{textblock*}
+   \end{frame}
+
    % TAXONOMY COMPOSITION
    \begin{frame}
       \frametitle{Abundances of the main microbial taxa, at the phylum level}
@@ -1856,6 +1976,7 @@
       \includegraphics[width=95mm]{resources/karpathos - Figure 4_transp.png}
    \end{frame}
 
+   % THE S AND N CYCLES
    \begin{frame}
       \frametitle{The S and the N cycle}
       \framesubtitle{using KEGG annotation terms}
@@ -1873,11 +1994,19 @@
    
    \end{frame}
 
-
    % CONCLUSIONS
    \begin{frame}
       \frametitle{Conclusions}
-      \framesubtitle{on the }
+      \framesubtitle{and future work on hypersaline microbial mats}
+
+      \begin{itemize}
+         \item temporal change and seasonal development of the microbial hypersaline mats under study - during winter months,
+         both the salt crust and the layering of the microbial mat disappears - is necessary for the survival of the microorganisms
+         by ensuring oxygenic photosynthesis for a while 
+         \item anaplerotic reactions, that are abundant in our samples, may play an important role in replenishing the intermediates of the TCA cycle
+         \item Metabolic modelling can shed further light on the effects of the environmental challenges on the mat construction 
+      \end{itemize}
+
 
    \end{frame}
 
@@ -2222,38 +2351,39 @@
          \textbf{\textbf{Chapter 7: } Conclusions}
       }
 
+   % CONCLUSIONS
    \begin{frame}
       \frametitle{\textbf{Chapter 7: } Conclusions}
       % \framesubtitle{and future perspectives}
-
+      \small 
       \begin{itemize}
-
+      
          \item Bioinformatics approaches enhance microbial diversity assesment based on HTS data
          \bigskip
          \item Containerization technologies and e-infrastructures provide the means for computational capacity and reproducibility
          \bigskip
          \item High quality metadata enable efficient exploitation of sequencing data in a meta-analysis level
-         
-      \end{itemize}
-   \end{frame}
-
-   \begin{frame}
-      \frametitle{\textbf{Chapter 7: } Conclusions}
-      \framesubtitle{and future perspectives}
-      \begin{itemize}
+         \bigskip
          \item Markov Chain Monte Carlo approaches enable flux sampling in high-dimensional polytopes 
          \bigskip
          \item Hypersaline mats host a great range of novel taxa \& their functioning might be subject to anaplerotic reactions
 
+         
       \end{itemize}
-      \bigskip
-      \begin{block}{Perspective for future work}
+   \end{frame}
+
+   % PERSPECTIVES
+   \begin{frame}
+      \frametitle{Future perspectives}
+
+      \begin{block}{A (bit) more holistic framework}
          \small
          \textit{
             "a combination of quantitative high - throughput experiments and predictive metabolic
             models can elucidate the genotype - phenotype map of microbial metabolic strategies"
          }
-         providing great insight on the evolvability of metabolic decisions and on how such 
+         \bigskip
+         This could provide us with great insight on the evolvability of metabolic decisions and on how such 
          decisions affect microbial coexistence in the communities. 
          
       \end{block}

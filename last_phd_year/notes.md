@@ -86,6 +86,52 @@ that address limitations and on-going computational challenges
 part in microbial community assemblages in hypersaline sediments.
 
 
+## slide 8: CHAPTER 1 
+
+So the first challenges I dealt with were about HTS data analysis and most specifically the analysis of metabarcoding data. 
+
+## slide 9: eDNA 
+
+Briefly speaking, environmental DNA metabarcoding is a widely used method for biodiversiy assessment based on a single marker gene that varies based on the taxonomic group of study. 
+
+Based on that marker gene, one may have a quite detailed overview of the biodiversity of a sample from almost any environment. 
+
+
+## slide 10: challenges in metabarcoding 
+
+The challenges however of the method have a great range 
+starting from the sampling procedures to the analysis of the taxa found along with their relative abundances. 
+
+Two of the most common issues that arise when handling
+metabarcoding data is the various steps of the 
+bioinformatics analysis required to move from the raw sequencing data to a table of taxa along with their relative abundances. 
+
+Multiple tools and databases as well as their continuous versioning makes the analysis challenging especially in terms of FAIRness, meaning to allow to the community to reproduce your analysis in an easy way. 
+
+Another common issue is the presence of sequence reads that in the end of the analysis have not been assigned to a taxon. 
+These known unknowns can be novel taxa of the taxonomic groups 
+or something quite out-of-scope! 
+
+
+## slide 11: PEMA contribution 
+
+So, in the first place I developed a workflow aiming at a
+easy to use, 
+one-stop-shop for the analysis of metabarcoding data. 
+
+And as studies that exploit this approach may range 
+from a few to thousands of samples being scalable was also 
+among my goals. 
+
+To this end, I developed PEMA. 
+
+
+## slide 12: PEMA Implementation 
+
+
+To address the challenges mentioned PEMA takes advantage 
+
+
 
 
 

@@ -15,6 +15,9 @@ to the key parts for implementing each of the software and studies that were per
 
 ## slide 3: microbial ecology in general
 
+
+--> why is micr ecology important?
+
 In general, microbial communities play a fundamental role in forming the world as we know it. 
 
 Indicatively, microbes in their vast diversity and the proccesses that carry out 
@@ -23,14 +26,16 @@ are responsible for the cycles of elements such as carbon and nitrogen.
 Different taxa are present in the various environments forming the taxonomic profile of a community
 and the sum of the processes that this set of taxa supports is called the functional profile of the community. 
 
+
+
+## slide 4: main questions
+
 To decipher the underlying mechanisms that govern these microbial assemblages and their role to the ecosystem, 
 it is fundamental to study the community in multiple levels: 
     - the taxon 
     - the community 
     - the interactions among them 
 
-
-## slide 4: main questions
 
 Therefore, among the main questions of most microbial ecology studies is: 
  * the *who*, meaning the inference of the taxa present in an assemblage along with its relative abundance 
@@ -133,6 +138,29 @@ To address the challenges mentioned PEMA takes advantage
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## slide   -- FUNCTIONS IN MARSH 
+
+that form intermediates of a metabolic pathway. 
+Examples of such are found in the citric acid cycle (TCA cycle).
+Anaplerosis is the act of replenishing TCA cycle intermediates that have been extracted for biosynthesis (in what are called anaplerotic reactions).
 
 
 

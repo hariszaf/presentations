@@ -414,11 +414,10 @@
    % FIGURE OVERVIEW
    \begin{frame}
       \frametitle{Graphical abstract of this PhD thesis}
-
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=25pt, yshift=-20pt]
          at (current page.west) {
-            \includegraphics[width=105mm]{resources/phd_graphical_abstract.png}
+            \includegraphics[width=105mm]{resources/phd_graphical_abstract-main.png}
          };
       \end{tikzpicture}
    \end{frame}
@@ -448,8 +447,9 @@
          \bigskip
 
          \textbf{aim \& contribution:}
-         to present insights from a thorough analysis of the research supported by
-         the IMBBC HPC facility 
+         % to present insights from a thorough analysis of the research supported by
+         % the IMBBC HPC facility 
+         a retrospective analysis of resource allocation and computational methods supported by a regional HPC facility 
          % and some of its latest usage statistics in terms of resource requirements, 
          % computational methods, and data types as well as how the latter contributed in shaping the facility
          % along its lifespan 
@@ -676,9 +676,15 @@
             \item reproducible
          \end{itemize}
 
-      \end{frame}
-
+      \end{frame}   
    \end{darkframes}
+
+   % graph abstract
+   \begin{frame}[plain, noframenumbering]
+      \includegraphics[width=115mm]{resources/phd_graphical_abstract-pema.png}
+   \end{frame}
+
+
 
    % BIOINFORMATICS TRICKS AND HINTS
    \begin{frame}
@@ -959,7 +965,6 @@
                   at (current page.north west) {
                      \includegraphics[width=55mm]{resources/pema_lw.png}
                };
-
          \end{tikzpicture}
 
          \begin{textblock*}{5cm}(7.2cm,4.0cm)
@@ -971,12 +976,16 @@
          \end{textblock*}
 
          \begin{textblock*}{5cm}(1.5cm,8.0cm)
-            \footnotesize LifeWatch ERIC: \\ \href{https://www.lifewatch.eu/}{www.lifewatch.eu/} \\
-            \footnotesize Tesseract VRE Development Portal: \\ \href{https://www.lifewatch.dev/dashboard}{www.lifewatch.dev/dashboard}
+            \tiny LifeWatch ERIC: \\ \href{https://www.lifewatch.eu/}{www.lifewatch.eu/} \\
+            \tiny Tesseract VRE Development Portal: \\ \href{https://www.lifewatch.dev/dashboard}{www.lifewatch.dev/dashboard}
    
          \end{textblock*}
 
-
+         \begin{textblock*}{5cm}(7.5cm,8.0cm)
+            \tiny Elixir Greece: \\ \href{https://elixir-greece.org/}{https://elixir-greece.org/} \\
+            \tiny Hypatia cloud infrastructure: \\ \href{https://hypatia.athenarc.gr/}{https://hypatia.athenarc.gr/}
+   
+         \end{textblock*}
 
       \end{singlespace}
       % RELATED CHAPTER
@@ -997,7 +1006,8 @@
       \begin{itemize}
          \item \textbf{parameters tuning} is essential in metabarcoding analyses;
                \textbf{mock communities} among samples under study benefit to that end
-         \item data derived from \textbf{well-studied} and \textbf{unexplored} environments differ in their analysis
+         % \item data derived from \textbf{well-studied} and \textbf{unexplored} environments differ in their analysis
+         \item workflow managers \& containers enable complex and reproducible workflows 
          \item \textbf{e-infrustuctures} benefit studies with great number of samples and CLI non-familiar users
       \end{itemize}
 
@@ -1100,7 +1110,7 @@
    %    \subsection{DARN: investigating the known unknowns in COI amplicon data}
    % \end{darkframes}
    
-    % AIM OF STUDY
+   % AIM OF STUDY
    \begin{darkframes}
       \begin{frame}
          \frametitle{ \textbf{DARN}}
@@ -1131,9 +1141,15 @@
       \end{frame}
    \end{darkframes}
 
+   % graph abstraxt
+   \begin{frame}[plain, noframenumbering]
+      \includegraphics[width=115mm]{resources/phd_graphical_abstract-darn.png}
+   \end{frame}
+
+
    % SEQUENCES RETRIEVED
    \begin{frame}
-      \frametitle{Methodology / Implementation}
+      \frametitle{Building a COI-oriented tree of life}
       \framesubtitle{sequences retrieved}
 
       \begin{table}[]
@@ -1175,8 +1191,8 @@
 
    % DARN PHYLOGENY TREE
    \begin{frame}
-      \frametitle{Methodology / Implementation}
-      \framesubtitle{Phylogenetic tree of the COI consensus sequences retrieved}
+      \frametitle{Reference phylogenetic tree }
+      \framesubtitle{of the COI consensus sequences retrieved}
       \begin{tikzpicture}[overlay, remember picture]
          \node[anchor=west, xshift=10pt, yshift=-15pt]
          at (current page.west){
@@ -1365,8 +1381,14 @@
          % This improves the efficiency of the random walk in the next phase,
          % we propose an improved variant of Billiard Walk (BW) ; faster arithmetic complexity per step
 
-      \end{frame}
+      \end{frame} 
    \end{darkframes}
+
+   % graph abstract
+   \begin{frame}[plain, noframenumbering]
+      \includegraphics[width=115mm]{resources/phd_graphical_abstract-dingo.png}
+   \end{frame}
+
 
    % DINGO LOGO - SLIDE
    \if 0
@@ -1795,44 +1817,17 @@
       \end{frame}
    \end{darkframes}
 
+   % graph abstract
+   \begin{frame}[plain, noframenumbering]
+      \includegraphics[width=115mm]{resources/phd_graphical_abstract-prego.png}
+   \end{frame}
+
+
    % PREGO TERMINOLOGY
    \begin{frame}
       \frametitle{PREGO and its referring terms}
       \framesubtitle{the fundamental role of ontologies}
       \includegraphics[width=105mm]{resources/prego_triple_associations.png}
-      % RELATED CHAPTER
-      \begin{tikzpicture}[overlay,remember picture]
-         \node[anchor=west, xshift=130pt, yshift=-35pt]
-         at (current page.north) {
-            \includegraphics[width=15mm]{resources/prego_logo.png}
-         };
-      \end{tikzpicture}
-   \end{frame}
-
-   % PREGO METHODOLOGY
-   \begin{frame}
-      \frametitle{Methods / Implementation}
-      \framesubtitle{3 channels of information - 1 framework}
-
-      \begin{singlespace}
-         \begin{tikzpicture}[overlay,remember picture]
-            \node[anchor=north west, xshift=30pt,yshift=-70pt]
-               at (current page.north west) {
-                  \includegraphics[width=105mm]{resources/figure_1_prego_analysis_horizontal_tr.png}
-               };
-            % \node[align = left, above, yshift=30] at (current page.south) {
-            %    \scriptsize 
-            %    from Special Issue  \\  
-            %    \scriptsize
-            %    "Selected Papers from the 9th Conference of the Hellenic Scientific Society MIKROBIOKOSMOS"
-            % };
-
-            % Named Entity Recognition and Comention/Co-occurrence analysis is the
-            % common framework in order to build a weighted association network with nodes being
-            % the entity identifiers. 
-
-         \end{tikzpicture}
-      \end{singlespace}
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=130pt, yshift=-35pt]
@@ -1864,8 +1859,8 @@
    % METADATA CHANNEL
    \begin{frame}
 
-      \frametitle{The \textit{Environmental Samples} and the \textit{Annotated Genomes and Isolates} channels}
-      \framesubtitle{the role of metadata}
+      \frametitle{Publicly available omics data sets}
+      \framesubtitle{and the role of metadata}
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=10pt, yshift=-5mm]
             at (current page.west) {
@@ -1879,6 +1874,39 @@
             \includegraphics[width=15mm]{resources/prego_logo.png}
          };
       \end{tikzpicture} 
+   \end{frame}
+
+   % PREGO METHODOLOGY
+   \begin{frame}
+      \frametitle{PREGO methodology}
+      \framesubtitle{3 channels of information - 1 framework}
+
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
+            \node[anchor=north west, xshift=30pt,yshift=-70pt]
+               at (current page.north west) {
+                  \includegraphics[width=105mm]{resources/figure_1_prego_analysis_horizontal_tr.png}
+               };
+            % \node[align = left, above, yshift=30] at (current page.south) {
+            %    \scriptsize 
+            %    from Special Issue  \\  
+            %    \scriptsize
+            %    "Selected Papers from the 9th Conference of the Hellenic Scientific Society MIKROBIOKOSMOS"
+            % };
+
+            % Named Entity Recognition and Comention/Co-occurrence analysis is the
+            % common framework in order to build a weighted association network with nodes being
+            % the entity identifiers. 
+
+         \end{tikzpicture}
+      \end{singlespace}
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/prego_logo.png}
+         };
+      \end{tikzpicture}
    \end{frame}
 
    % RESULTS: ASSOCIATIONS
@@ -1993,11 +2021,11 @@
 
       \small
       \begin{itemize}
-         \item Similar number of molecular functions in all cases indicates the robustness of the main
-         metabolic processes required for life
-         \item The \textit{Literature} provide us with a great number of high-quality associations, while 
-         the \textit{Environmental Samples} one will gain more and more ground as 
-         omics' dataset keep increasing exponentially, retrieving associations that might not be described in the corresponding literature
+         \item metadata can give substantial added value in experimental data
+         \item taxonomy and ontological-related challenges limit data integration methods
+         \item data integration methods may lead to associations not mentioned in the literature
+         \item the \textit{Environmental Samples} channel will provide more and more associations as 
+         omics'dataset keep increasing exponentially
       \end{itemize}
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
@@ -2050,9 +2078,12 @@
          % A series of 280 MAGs were reconstructed most of them representing novel taxa. 
          % Interestingly, it was not Cyanobacteria responsible for the 
          % Communities' functioning might be subject to anaplerotic reactions.
-      \end{frame}
-
+      \end{frame}   
    \end{darkframes}
+   % graph abstract
+   \begin{frame}[plain, noframenumbering]
+      \includegraphics[width=115mm]{resources/phd_graphical_abstract-marsh.png}
+   \end{frame}
 
    % TRISTOMO SAMPLING
    \begin{frame}
@@ -2318,6 +2349,12 @@
             \textbf{Zafeiropoulos, H.}, Gargan, L., Hintikka, S., Pavloudi, C. \& Carlsson, J. (2021). The Dark mAtteR iNvestigator (DARN) tool: getting to know the known unknowns in COI amplicon data. \href{https://mbmg.pensoft.net/article/69657/list/9/}{Metabarcoding and Metagenomics, 5, e69657.}
 
          \tiny
+         \bibitem{santorini}
+            Polymenakou, P.N., Nomikou, P., \textbf{Zafeiropoulos, H.}, ..., Kyrpides, N.C., Kotoulas, G. \& Magoulas, A. (2021). 
+            The santorini volcanic complex as a valuable source of enzymes for bioenergy. 
+            \href{https://doi.org/10.3390/en14051414}{Energies, 14(5), p.1414.}
+   
+         \tiny
          \bibitem{mmcs2021}
             Chalkis, A., Fisikopoulos, V., Tsigaridas, E. \& \textbf{Zafeiropoulos, H.} (2021). Geometric algorithms for sampling the flux space of metabolic networks, \href{ https://drops.dagstuhl.de/opus/volltexte/2021/13820/}{37th International Symposium on Computational Geometry (SoCG 2021).}
 
@@ -2326,28 +2363,25 @@
             \textbf{Zafeiropoulos, H.}, Gioti, A., Ninidakis, S., Potirakis, A., Paragkamian, S., ... \& Pafilis, E. (2021). 0s and 1s in marine molecular research: a regional HPC perspective. \href{https://academic.oup.com/gigascience/article/10/8/giab053/6353916}{GigaScience, 10(8), giab053.}
 
          \tiny
-         \bibitem{santorini}
-            Polymenakou, P.N., Nomikou, P., \textbf{Zafeiropoulos, H.}, ..., Kyrpides, N.C., Kotoulas, G. \& Magoulas, A. (2021). 
-            The santorini volcanic complex as a valuable source of enzymes for bioenergy. 
-            \href{https://doi.org/10.3390/en14051414}{Energies, 14(5), p.1414.}
-
-         \tiny
          \bibitem{pema2020}
          \textbf{Zafeiropoulos, H.}, Viet, H. Q., Vasileiadou, K., Potirakis, A., Arvanitidis, C., Topalis, P., Pavloudi, C. \& Pafilis, E. (2020). PEMA: a flexible Pipeline for Environmental DNA Metabarcoding Analysis of the 16S/18S ribosomal RNA, ITS, and COI marker genes. \href{https://academic.oup.com/gigascience/article/9/3/giaa022/5803335}{GigaScience, 9(3), giaa022.}
- 
-         \tiny	
-         \bibitem{karpathos-marsh}
-            Pavloudi, C. \& \textbf{Zafeiropoulos, H.} (2022) Deciphering the community structure and the functional potential of a hypersaline marsh microbial mat community~\textbf{\textit{(under review at FEMS Microbiology Ecology)}}
-
-         \tiny
-         \bibitem{cell-systems}
-            Garza, D.R., Gonze, D., \textbf{Zafeiropoulos, H.}, Liu, B. \& Faust, K., (2022) Metabolic models of human gut microbiota: advances and challenges \textbf{\textit{(under review at Cell systems)}} 
 
          \tiny 
          \bibitem{historical-data}
          Paragkamian, S., Sarafidou, G., ..., \textbf{Zafeiropoulos, H.}, Arvanitidis, C., Pafilis, E. \& Gerovasileiou, V. 
          Automating the curation process of historical literature on marine biodiversity using text mining: the DECO workflow \textbf{\textit{(accepted in Frontiers in Marine Science)}}
 
+         \tiny	
+         \bibitem{karpathos-marsh}
+         Pavloudi, C. \& \textbf{Zafeiropoulos, H.} (2022) Deciphering the community structure and the functional potential of a hypersaline marsh microbial mat community~\textbf{\textit{(under review at FEMS Microbiology Ecology)}}
+
+         \tiny
+         \bibitem{cell-systems}
+         Garza, D.R., Gonze, D., \textbf{Zafeiropoulos, H.}, Liu, B. \& Faust, K., (2022) Metabolic models of human gut microbiota: advances and challenges \textbf{\textit{(under review at Cell systems)}} 
+
+         \tiny
+         \bibitem{dingo}
+         Chalkis, A., Fisikopoulos, V., Tsigaridas, E. \& \textbf{Zafeiropoulos, H.} dingo: a Python library for metabolic networks analysis \textit{\textbf{(under preparation)}}
 
       \end{thebibliography}
 
@@ -2535,497 +2569,497 @@
 
 
 
-   % % INFRASTUCTURES
-   % \begin{frame}
-   %    \frametitle{Computing infrastructures}
-   %    \framesubtitle{an alternative for the most!}
+   % INFRASTUCTURES
+   \begin{frame}
+      \frametitle{Computing infrastructures}
+      \framesubtitle{an alternative for the most!}
    
-   %    \begin{tikzpicture}[overlay,remember picture]
+      \begin{tikzpicture}[overlay,remember picture]
 
-   %       \node[anchor= west, xshift=10pt]
-   %          at (current page.west){
-   %             \includegraphics[width=60mm]{resources/marine-genomic-observatories.png}
-   %          }; 
+         \node[anchor= west, xshift=10pt]
+            at (current page.west){
+               \includegraphics[width=60mm]{resources/marine-genomic-observatories.png}
+            }; 
 
-   %          \node[anchor= west, xshift=10pt, yshift=-90pt]
-   %          at (current page.west){
-   %             \includegraphics[width=35mm]{resources/Elixir-Europe-logo-1.png}
-   %          };
+            \node[anchor= west, xshift=10pt, yshift=-90pt]
+            at (current page.west){
+               \includegraphics[width=35mm]{resources/Elixir-Europe-logo-1.png}
+            };
 
-   %          \node[anchor= west, xshift=160pt, yshift=-90pt]
-   %          at (current page.west){
-   %             \includegraphics[width=50mm]{resources/lw_logo.png}
-   %          };
+            \node[anchor= west, xshift=160pt, yshift=-90pt]
+            at (current page.west){
+               \includegraphics[width=50mm]{resources/lw_logo.png}
+            };
 
-   %    \end{tikzpicture}
+      \end{tikzpicture}
 
 
-   %    \begin{textblock*}{5cm}(7.4cm, 3.0cm)
+      \begin{textblock*}{5cm}(7.4cm, 3.0cm)
 
-   %       \small We will develop a workflow  \\
-   %       \small for the analysis of Genomic \\ 
-   %       \small Observatories (GOs) data \\
-   %       \small that will allow researchers \\ 
-   %       \small to deal better with the  \\
-   %       \small increasing amount of data
+         \small We will develop a workflow  \\
+         \small for the analysis of Genomic \\ 
+         \small Observatories (GOs) data \\
+         \small that will allow researchers \\ 
+         \small to deal better with the  \\
+         \small increasing amount of data
 
-   %    \end{textblock*}
+      \end{textblock*}
    
-   % \end{frame}
+   \end{frame}
 
 
-   % % ----------- PEMA 
-   % % PHYLOGENY TREE
-   % \begin{frame}
-   %    \frametitle{PEMA features}
-   %    \framesubtitle{phylogeny-based taxonomy assigment for the case of \\ 16S rRNA gene}
-   %    \begin{singlespace}
-   %       \begin{tikzpicture}[overlay,remember picture]
-   %          \node[anchor=west, xshift=30pt,yshift=-165pt]
-   %             at (current page.north west) {
-   %                \includegraphics[width=104mm]{resources/pema_tree.png}
-   %             };
+   % ----------- PEMA 
+   % PHYLOGENY TREE
+   \begin{frame}
+      \frametitle{PEMA features}
+      \framesubtitle{phylogeny-based taxonomy assigment for the case of \\ 16S rRNA gene}
+      \begin{singlespace}
+         \begin{tikzpicture}[overlay,remember picture]
+            \node[anchor=west, xshift=30pt,yshift=-165pt]
+               at (current page.north west) {
+                  \includegraphics[width=104mm]{resources/pema_tree.png}
+               };
 
-   %       \end{tikzpicture}
-   %    \end{singlespace}
+         \end{tikzpicture}
+      \end{singlespace}
 
-   %    % RELATED CHAPTER
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=130pt, yshift=-35pt]
-   %       at (current page.north) {
-   %          \includegraphics[width=15mm]{resources/pema_logo_cut.png}
-   %       };
-   %    \end{tikzpicture}
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/pema_logo_cut.png}
+         };
+      \end{tikzpicture}
 
-   % \end{frame}
-
-
-
-   % % ----------- PREGO
-   % % SLIDE FOR POSIDONIA
-   % \begin{frame}
-   %    \frametitle{A real case hypothesis generation scenario}
-   %    \framesubtitle{\textit{Posidonia} and its microbiome}
-
-   %    \begin{singlespace}
-   %       \begin{columns}[onlytextwidth]
-
-   %          \column{.5\textwidth}
-
-   %            \includegraphics[width=55mm]{resources/posidonia.jpg}
-
-   %          \column{.5\textwidth}
-   %             \begin{tikzpicture}[overlay,remember picture]
-
-
-   %                \node[align = right, above, xshift=75, yshift=55] at (current page.south) {
-   %                   \small
-   %                   What about \textbf{\textit{Posidonia}} ? \\
-   %                   \small
-   %                   Literature suggests that \\ Planctomycetes \\
-   %                   \small
-   %                   and especially \textit{Blastopirellula} \\
-   %                   \small
-   %                   and \textit{Rhodopirellula} \\ are commonly \\
-   %                   \small 
-   %                   found in its microbiome. \\
-   %                   Why so ? \\
-   %                   \small
-   %                   Let us have a look \href{https://prego.hcmr.gr/PregoAnalysis?knowledge=10&experiments=10&textmining=10&type1=-2&id1=265488}{here}!
-
-   %                };
-
-   %             \end{tikzpicture}
-
-   %       \end{columns}
-   %    \end{singlespace}
-   %    % RELATED CHAPTER
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=130pt, yshift=-35pt]
-   %       at (current page.north) {
-   %          \includegraphics[width=15mm]{resources/chapter3.png}
-   %       };
-   %    \end{tikzpicture}
+   \end{frame}
 
 
 
-   % \end{frame}
+   % ----------- PREGO
+   % SLIDE FOR POSIDONIA
+   \begin{frame}
+      \frametitle{A real case hypothesis generation scenario}
+      \framesubtitle{\textit{Posidonia} and its microbiome}
 
-   % % SCORING SCHEME 
-   % \begin{frame}
-   %    \frametitle{Co-mentioning and scoring scheme }
-   %    \framesubtitle{which are the most worthy and relevant associations}
+      \begin{singlespace}
+         \begin{columns}[onlytextwidth]
 
-   %    \small
-   %    \begin{itemize}
-   %       \item [$\rightarrow$] genome annotation oriented associations: fixed scores
-   %       \item [$\rightarrow$] associations in the \textit{Environmental Samples} channel are scored based on the number of samples they co-occur. 
-   %       \item [$\rightarrow$] similarly, in the \textit{Literature} channel, based on the number of publications
-   %    \end{itemize}
-   %    % Thus, for each entity x, the number of samples is calculated as the background and a number of samples of the associated entity (metadata background) 
-   %    % c.,y (see Table A1). Each association between entities x, y has a number of samples, cx,y that they co-occur. 
+            \column{.5\textwidth}
+
+              \includegraphics[width=55mm]{resources/posidonia.jpg}
+
+            \column{.5\textwidth}
+               \begin{tikzpicture}[overlay,remember picture]
+
+
+                  \node[align = right, above, xshift=75, yshift=55] at (current page.south) {
+                     \small
+                     What about \textbf{\textit{Posidonia}} ? \\
+                     \small
+                     Literature suggests that \\ Planctomycetes \\
+                     \small
+                     and especially \textit{Blastopirellula} \\
+                     \small
+                     and \textit{Rhodopirellula} \\ are commonly \\
+                     \small 
+                     found in its microbiome. \\
+                     Why so ? \\
+                     \small
+                     Let us have a look \href{https://prego.hcmr.gr/PregoAnalysis?knowledge=10&experiments=10&textmining=10&type1=-2&id1=265488}{here}!
+
+                  };
+
+               \end{tikzpicture}
+
+         \end{columns}
+      \end{singlespace}
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/chapter3.png}
+         };
+      \end{tikzpicture}
+
+
+
+   \end{frame}
+
+   % SCORING SCHEME 
+   \begin{frame}
+      \frametitle{Co-mentioning and scoring scheme }
+      \framesubtitle{which are the most worthy and relevant associations}
+
+      \small
+      \begin{itemize}
+         \item [$\rightarrow$] genome annotation oriented associations: fixed scores
+         \item [$\rightarrow$] associations in the \textit{Environmental Samples} channel are scored based on the number of samples they co-occur. 
+         \item [$\rightarrow$] similarly, in the \textit{Literature} channel, based on the number of publications
+      \end{itemize}
+      % Thus, for each entity x, the number of samples is calculated as the background and a number of samples of the associated entity (metadata background) 
+      % c.,y (see Table A1). Each association between entities x, y has a number of samples, cx,y that they co-occur. 
  
-   %    \begin{columns}[onlytextwidth]
-   %       \column{.6\textwidth}
-   %          \begin{table}[ht]
-   %             \begin{tabular}{c|llll}
-   %              & \multicolumn{4}{l}{Y = y} \\ \cline{2-5} 
-   %             \multirow{4}{*}{X = x} &  & Yes & No & Total \\ \cline{3-5} 
-   %              & \multicolumn{1}{l|}{Yes} & $c_{x,y}$ & $c_{x,0}$ & $c_{x,.}$ \\
-   %              & \multicolumn{1}{l|}{No} & $c_{0,y}$ & $c_{0,0}$ & $c_{0,.}$ \\
-   %              & \multicolumn{1}{l|}{Total} & $c_{.,y}$ & $c_{.,0}$ & $c_{.,.}$
-   %             \end{tabular}
-   %          \end{table}
+      \begin{columns}[onlytextwidth]
+         \column{.6\textwidth}
+            \begin{table}[ht]
+               \begin{tabular}{c|llll}
+                & \multicolumn{4}{l}{Y = y} \\ \cline{2-5} 
+               \multirow{4}{*}{X = x} &  & Yes & No & Total \\ \cline{3-5} 
+                & \multicolumn{1}{l|}{Yes} & $c_{x,y}$ & $c_{x,0}$ & $c_{x,.}$ \\
+                & \multicolumn{1}{l|}{No} & $c_{0,y}$ & $c_{0,0}$ & $c_{0,.}$ \\
+                & \multicolumn{1}{l|}{Total} & $c_{.,y}$ & $c_{.,0}$ & $c_{.,.}$
+               \end{tabular}
+            \end{table}
 
-   %          \column{.4\textwidth}
-   %             Environmental samples score: 
+            \column{.4\textwidth}
+               Environmental samples score: 
 
-   %                \begin{equation}
-   %                   score_{x,y} = 2.0*\sqrt{\frac{c_{x,y}}{c_{.,y}}}^{ \:a}
-   %                \end{equation}
-   %                % The exponents on the numerator and denominator equal to 0 . 5 and to 0 . 1, respectively, 
-   %                % in order to reduce the rapid increase of score.
+                  \begin{equation}
+                     score_{x,y} = 2.0*\sqrt{\frac{c_{x,y}}{c_{.,y}}}^{ \:a}
+                  \end{equation}
+                  % The exponents on the numerator and denominator equal to 0 . 5 and to 0 . 1, respectively, 
+                  % in order to reduce the rapid increase of score.
 
-   %    \end{columns}
-   %    % RELATED CHAPTER
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=130pt, yshift=-35pt]
-   %       at (current page.north) {
-   %          \includegraphics[width=15mm]{resources/chapter3.png}
-   %       };
-   %    \end{tikzpicture}
-   % \end{frame}
+      \end{columns}
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/chapter3.png}
+         };
+      \end{tikzpicture}
+   \end{frame}
 
-   % % DEVOPS
-   % \begin{frame}
+   % DEVOPS
+   \begin{frame}
 
-   %    \frametitle{Building a knowledge-base}
-   %    \framesubtitle{development and information technology operations}
+      \frametitle{Building a knowledge-base}
+      \framesubtitle{development and information technology operations}
 
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=south west, xshift=10pt,yshift=30pt]
-   %          at (current page.south west) {
-   %             \includegraphics[width=120mm]{resources/prego_boots.png}
-   %          };
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=south west, xshift=10pt,yshift=30pt]
+            at (current page.south west) {
+               \includegraphics[width=120mm]{resources/prego_boots.png}
+            };
 
-   %          \node[anchor=south west, xshift=5pt,yshift=5pt]
-   %          at (current page.south west) {
-   %             \includegraphics[width=35mm]{resources/devops.png}
-   %          };
-   %    \end{tikzpicture}
-   % \end{frame}
+            \node[anchor=south west, xshift=5pt,yshift=5pt]
+            at (current page.south west) {
+               \includegraphics[width=35mm]{resources/devops.png}
+            };
+      \end{tikzpicture}
+   \end{frame}
 
-   % % -----------  MCMC ALGORITHM
+   % -----------  MCMC ALGORITHM
 
-   % % MOVING FROM ODEs TO CONSTRAINT MODELING
-   % \begin{frame}
-   %    \frametitle{From concentrations to fluxes}
-   %    \framesubtitle{to study changing environments}
+   % MOVING FROM ODEs TO CONSTRAINT MODELING
+   \begin{frame}
+      \frametitle{From concentrations to fluxes}
+      \framesubtitle{to study changing environments}
 
-   %    We can describe the mass balance of a chemical compound as the difference between the sum of the 
-   %    fluxes of all the reactions that form it and the sum of all that degrade it. 
+      We can describe the mass balance of a chemical compound as the difference between the sum of the 
+      fluxes of all the reactions that form it and the sum of all that degrade it. 
 
-   %    \bigskip 
+      \bigskip 
 
-   %    $\frac {d\omega_i}{dt} = \sum \limits_{k} s_{ik} v_k =  \langle  s_{i} , v \rangle  $
+      $\frac {d\omega_i}{dt} = \sum \limits_{k} s_{ik} v_k =  \langle  s_{i} , v \rangle  $
 
-   %    \bigskip
+      \bigskip
 
-   %    and thus:
+      and thus:
 
-   %    \bigskip 
+      \bigskip 
 
-   %    $\frac {d\omega}{dt} = Sv$
-   %    % RELATED CHAPTER
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=130pt, yshift=-35pt]
-   %       at (current page.north) {
-   %          \includegraphics[width=15mm]{resources/chapter4.png}
-   %       };
-   %    \end{tikzpicture}
+      $\frac {d\omega}{dt} = Sv$
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/chapter4.png}
+         };
+      \end{tikzpicture}
 
-   % \end{frame}
+   \end{frame}
 
-   % % GET FULL DIM POLYTOPE
-   % \begin{frame}
-   %    \frametitle{The region of steady states}
-   %    \framesubtitle{moving to full dimensional polytope}
+   % GET FULL DIM POLYTOPE
+   \begin{frame}
+      \frametitle{The region of steady states}
+      \framesubtitle{moving to full dimensional polytope}
 
-   %    \begin{columns}[onlytextwidth]
+      \begin{columns}[onlytextwidth]
 
-   %       \column{.4\textwidth}
-   %       \centering
+         \column{.4\textwidth}
+         \centering
 
-   %          \small
-   %          The \textit{constraints} on the reactions fluxes.
-   %           \begin{equation}
-   %             \begin{split}
-   %              Sv=0, \\ 
-   %              v_{lb} \leq v \leq v_{ub}
-   %             \end{split}
-   %          \label{eq:fba}
-   %          \end{equation}
+            \small
+            The \textit{constraints} on the reactions fluxes.
+             \begin{equation}
+               \begin{split}
+                Sv=0, \\ 
+                v_{lb} \leq v \leq v_{ub}
+               \end{split}
+            \label{eq:fba}
+            \end{equation}
  
 
-   %          \bigskip
-   %          $S \in \mathbb{R}^{m \times n}, v \in \mathbb{R}^{n}$
+            \bigskip
+            $S \in \mathbb{R}^{m \times n}, v \in \mathbb{R}^{n}$
 
 
-   %       \column{0.2\textwidth}
-   %       \centering
-   %          $\underleftrightarrow{v = Nx}$
+         \column{0.2\textwidth}
+         \centering
+            $\underleftrightarrow{v = Nx}$
 
-   %       \column{.4\textwidth}
-   %       \centering
+         \column{.4\textwidth}
+         \centering
 
-   %          As a \textit{full dimensional} polytope
+            As a \textit{full dimensional} polytope
 
-   %          \includegraphics[width=30mm]{../met_nets/resources/3dpoly.svg.png}
+            \includegraphics[width=30mm]{../met_nets/resources/3dpoly.svg.png}
 
-   %          $P := \{x \in \mathbb{R}^d | Ax \leq b\}$
+            $P := \{x \in \mathbb{R}^d | Ax \leq b\}$
 
-   %    \end{columns}
+      \end{columns}
 
-   %    \bigskip
+      \bigskip
 
-   %    \footnotesize
-   %    $N\in\mathbb{R}^{n\times d}$ denotes the matrix of the null space of $S$,
-   %    i.e. $S N = 0_{m \times d}$. \bigskip
+      \footnotesize
+      $N\in\mathbb{R}^{n\times d}$ denotes the matrix of the null space of $S$,
+      i.e. $S N = 0_{m \times d}$. \bigskip
 
-   %    \footnotesize
-   %    By replacing $v$ with $Nx$ in Equation~\ref{eq:fba}, we get the full dimensional polytope $P$,  
-   %    where 
-   %    $A = \begin{pmatrix} I_n N \\ -I_n N\end{pmatrix}$
-   %    and 
-   %    $b = \begin{pmatrix} v_{ub} \\ v_{lb} \end{pmatrix}  N$, (in $\mathbb{R}^d$).
-   %    % RELATED CHAPTER
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=130pt, yshift=-35pt]
-   %       at (current page.north) {
-   %          \includegraphics[width=15mm]{resources/chapter4.png}
-   %       };
-   %    \end{tikzpicture}
+      \footnotesize
+      By replacing $v$ with $Nx$ in Equation~\ref{eq:fba}, we get the full dimensional polytope $P$,  
+      where 
+      $A = \begin{pmatrix} I_n N \\ -I_n N\end{pmatrix}$
+      and 
+      $b = \begin{pmatrix} v_{ub} \\ v_{lb} \end{pmatrix}  N$, (in $\mathbb{R}^d$).
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/chapter4.png}
+         };
+      \end{tikzpicture}
 
-   % \end{frame}
+   \end{frame}
 
-   % % METRICS
-   % \begin{frame}
-   %    \frametitle{Random walk performance metrics}
-   %    \framesubtitle{}
+   % METRICS
+   \begin{frame}
+      \frametitle{Random walk performance metrics}
+      \framesubtitle{}
       
-   %    \begin{itemize}
-   %       \item \textbf{cost per iteration:} the number of operations the algorithm needs to sample a single point
-   %       \item \textbf{mixing time:} the number of samples the algorithm needs to burn in order to lose dependency from previous iterations (i.i.d)
-   %       \item \textbf{cost per sample:} the total number of operations the algorithm needs to sample an i.i.d point
+      \begin{itemize}
+         \item \textbf{cost per iteration:} the number of operations the algorithm needs to sample a single point
+         \item \textbf{mixing time:} the number of samples the algorithm needs to burn in order to lose dependency from previous iterations (i.i.d)
+         \item \textbf{cost per sample:} the total number of operations the algorithm needs to sample an i.i.d point
 
-   %    \end{itemize}
+      \end{itemize}
 
-   %    MCMC Convergence diagnostics
+      MCMC Convergence diagnostics
 
-   %    \begin{itemize}
-   %       \item \textbf{Effective Sample Size (ESS): } 
-   %       % measures the information content, or effectiveness of a sample chain
-   %       % can be defined as the minimum size of a set of posterior samples (taken directly from the posterior), 
-   %       % which have the same efficiency (measure of quality) in the posterior density estimation as a given chain of samples obtained from MCMC sampling
+      \begin{itemize}
+         \item \textbf{Effective Sample Size (ESS): } 
+         % measures the information content, or effectiveness of a sample chain
+         % can be defined as the minimum size of a set of posterior samples (taken directly from the posterior), 
+         % which have the same efficiency (measure of quality) in the posterior density estimation as a given chain of samples obtained from MCMC sampling
 
-   %       %  a function proportional to the ratio between the
-   %       % variance of the ideal Monte Carlo estimator (drawing samples di-
-   %       % rectly from the target) over the variance of the estimator obtained
-   %       % by MCMC or IS techniques, using the same number of samples in
-   %       % both estimators.
+         %  a function proportional to the ratio between the
+         % variance of the ideal Monte Carlo estimator (drawing samples di-
+         % rectly from the target) over the variance of the estimator obtained
+         % by MCMC or IS techniques, using the same number of samples in
+         % both estimators.
 
-   %       the number of effectively independent draws from
-   %       the target distribution that the Markov chain is equivalent to
+         the number of effectively independent draws from
+         the target distribution that the Markov chain is equivalent to
 
-   %       \item potential scale reduction factor (PSRF)
+         \item potential scale reduction factor (PSRF)
          
-   %    \end{itemize}
+      \end{itemize}
    
-   % \end{frame}
+   \end{frame}
 
-   % % BILLIARD WALK
-   % \begin{frame}
-   %    \frametitle{Billiard walk}
-   %    \framesubtitle{for random sampling}
+   % BILLIARD WALK
+   \begin{frame}
+      \frametitle{Billiard walk}
+      \framesubtitle{for random sampling}
 
-   %    \begin{columns}[t, totalwidth=7cm]
+      \begin{columns}[t, totalwidth=7cm]
 
-   %       \column{.3\textwidth}
-   %          \includegraphics[width=27mm]{../met_nets/resources/bill1.png}
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill1.png}
 
-   %       \column{.3\textwidth}
-   %          \includegraphics[width=27mm]{../met_nets/resources/bill2.png}
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill2.png}
 
-   %    \end{columns}
+      \end{columns}
 
-   %    \bigbreak
+      \bigbreak
 
 
-   %    \begin{columns}[t, totalwidth=7cm]
+      \begin{columns}[t, totalwidth=7cm]
 
-   %       \column{.3\textwidth}
-   %          \includegraphics[width=27mm]{../met_nets/resources/bill3.png}
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill3.png}
 
-   %       \column{.3\textwidth}
-   %          \includegraphics[width=27mm]{../met_nets/resources/bill4.png}
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill4.png}
 
-   %    \end{columns}
+      \end{columns}
 
-   %    \bigbreak
+      \bigbreak
 
-   %    \begin{columns}[t, totalwidth=7cm]
+      \begin{columns}[t, totalwidth=7cm]
 
-   %       \column{.3\textwidth}
-   %          \includegraphics[width=27mm]{../met_nets/resources/bill5.png}
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill5.png}
 
-   %       \column{.3\textwidth}
-   %          \includegraphics[width=27mm]{../met_nets/resources/bill6.png}
+         \column{.3\textwidth}
+            \includegraphics[width=27mm]{../met_nets/resources/bill6.png}
 
-   %    \end{columns}
+      \end{columns}
 
-   %    \begin{textblock*}{8.0cm}(8.5cm, 3.0cm)
-   %       \footnotesize Generate the length of the \\ trajectory $L \sim D$. \\
-   %       \bigbreak
-   %       \footnotesize Pick a uniform direction $v$ \\ to define the trajectory. \\
-   %       \bigbreak
-   %       \footnotesize The trajectory reflects on \\ the boundary if necessary. \\
-   %       \bigbreak
-   %       \footnotesize Return the end of the \\ trajectory as $p_i+1$.
-   %    \end{textblock*}
-   %    % RELATED CHAPTER
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=130pt, yshift=-35pt]
-   %       at (current page.north) {
-   %          \includegraphics[width=15mm]{resources/chapter4.png}
-   %       };
-   %    \end{tikzpicture}
+      \begin{textblock*}{8.0cm}(8.5cm, 3.0cm)
+         \footnotesize Generate the length of the \\ trajectory $L \sim D$. \\
+         \bigbreak
+         \footnotesize Pick a uniform direction $v$ \\ to define the trajectory. \\
+         \bigbreak
+         \footnotesize The trajectory reflects on \\ the boundary if necessary. \\
+         \bigbreak
+         \footnotesize Return the end of the \\ trajectory as $p_i+1$.
+      \end{textblock*}
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/chapter4.png}
+         };
+      \end{tikzpicture}
 
    
-   % \end{frame}
+   \end{frame}
 
-   % % RENZ ET AL. PAPER
-   % \begin{frame}{Find possible targets against SARS-CoV-2}
-   %    \framesubtitle{a flux sampling application}
-   %    \bigskip
-   %    \includegraphics[scale=0.27]{ ../met_nets/resources//covid_paper.png}
+   % RENZ ET AL. PAPER
+   \begin{frame}{Find possible targets against SARS-CoV-2}
+      \framesubtitle{a flux sampling application}
+      \bigskip
+      \includegraphics[scale=0.27]{ ../met_nets/resources//covid_paper.png}
       
-   %    \begin{singlespace}
-   %       \begin{itemize}
-   %          \item \small Renz et al. '20 built the biomass function of Sars-Cov-2 to build a host - virus network
-   %          \item \small Using FBA they computed an optimal steady state using \\ \small \quad (i) human biomass maintenance,\\ \small \quad (ii) virus growth rate
-   %          \item \small They found reaction GK1 as a possible anti-viral target.
-   %       \end{itemize}            
-   %    \end{singlespace}
+      \begin{singlespace}
+         \begin{itemize}
+            \item \small Renz et al. '20 built the biomass function of Sars-Cov-2 to build a host - virus network
+            \item \small Using FBA they computed an optimal steady state using \\ \small \quad (i) human biomass maintenance,\\ \small \quad (ii) virus growth rate
+            \item \small They found reaction GK1 as a possible anti-viral target.
+         \end{itemize}            
+      \end{singlespace}
 
-   % \end{frame}
+   \end{frame}
 
-   % % SAMPLING ON THE RENZ ET AL. MODEL 
-   % \begin{frame}{Find possible targets against SARS-CoV-2}
-   %    \framesubtitle{a flux sampling application}      
+   % SAMPLING ON THE RENZ ET AL. MODEL 
+   \begin{frame}{Find possible targets against SARS-CoV-2}
+      \framesubtitle{a flux sampling application}      
 
-   %    \begin{tikzpicture}[overlay,remember picture]
+      \begin{tikzpicture}[overlay,remember picture]
 
-   %       \node[anchor=north east, xshift=-10pt,yshift=-30pt]
-   %          at (current page.north east) {
-   %             \includegraphics[width=20mm]{ ../met_nets/resources//dingo5_transparent.png}
-   %          };
-   %    \end{tikzpicture}
-
-
-   %    \centerline{
-   %    \includegraphics[scale=0.21]{
-   %        ../met_nets/resources//density_flux_TYMSULT_fba_2_transparent
-   %       } 
-   %    \includegraphics[scale=0.21]{
-   %        ../met_nets/resources//density_flux_gk1_fba_2_transparent
-   %       }
-   %    }
-
-   %    \begin{itemize}
-   %       \item Check if the flux distribution of a reaction changes.
-   %       \item Find possible anti-viral targets and study further.
-   %    \end{itemize}
-   %    \vspace*{0.2cm}
-
-   %    For more about this example case, you may check this \href{https://www.tweag.io/blog/2021-07-14-metabolic-networks/}{blog-post}.
-
-   % \end{frame}
-
-   % % FLUX SAMPLING APPLICATIONS
-   % \begin{frame}{Further applications}
-   %    \framesubtitle{of metabolic flux sampling}
-
-   %    \begin{singlespace}
+         \node[anchor=north east, xshift=-10pt,yshift=-30pt]
+            at (current page.north east) {
+               \includegraphics[width=20mm]{ ../met_nets/resources//dingo5_transparent.png}
+            };
+      \end{tikzpicture}
 
 
-   %       \begin{columns}[onlytextwidth]
-   %          \column{.5\textwidth}
-   %             \begin{tikzpicture}[overlay,remember picture]
-   %                \node[anchor=north west, xshift=15, yshift=-100pt]
-   %                at (current page.north west) {
-   %                   \includegraphics[width=55mm]{ ../met_nets/resources//cartoon_wine.jpg}
-   %                };
-   %                \node[align = left, above, xshift=-80, yshift=35] at (current page.south) {
-   %                   \scriptsize Scott, William T., et al. "Metabolic flux sampling \\ 
-   %                   \scriptsize predicts strain-dependent differences related to \\ 
-   %                   \scriptsize 
-   %                   aroma production among commercial wine yeasts." \\
-   %                   \scriptsize
-   %                    Microbial cell factories 20.1 (2021): 1-15.   
-   %                };
-   %             \end{tikzpicture}
+      \centerline{
+      \includegraphics[scale=0.21]{
+          ../met_nets/resources//density_flux_TYMSULT_fba_2_transparent
+         } 
+      \includegraphics[scale=0.21]{
+          ../met_nets/resources//density_flux_gk1_fba_2_transparent
+         }
+      }
+
+      \begin{itemize}
+         \item Check if the flux distribution of a reaction changes.
+         \item Find possible anti-viral targets and study further.
+      \end{itemize}
+      \vspace*{0.2cm}
+
+      For more about this example case, you may check this \href{https://www.tweag.io/blog/2021-07-14-metabolic-networks/}{blog-post}.
+
+   \end{frame}
+
+   % FLUX SAMPLING APPLICATIONS
+   \begin{frame}{Further applications}
+      \framesubtitle{of metabolic flux sampling}
+
+      \begin{singlespace}
 
 
-   %          \column{.5\textwidth}
-   %             \begin{tikzpicture}[overlay,remember picture]
-   %                \node[anchor=north east, xshift=-45, yshift=-100pt]
-   %                   at (current page.north east) {
-   %                      \includegraphics[width=30mm]{ ../met_nets/resources//interactions_transparent.png}
-   %                   };
-   %                \node[align = right, above, xshift=95, yshift=65] at (current page.south) {
-   %                   \small
-   %                   What about microbial interactions ? 
-   %                };
-   %             \end{tikzpicture}
-   %       \end{columns}
-   %    \end{singlespace}
-   % \end{frame}
+         \begin{columns}[onlytextwidth]
+            \column{.5\textwidth}
+               \begin{tikzpicture}[overlay,remember picture]
+                  \node[anchor=north west, xshift=15, yshift=-100pt]
+                  at (current page.north west) {
+                     \includegraphics[width=55mm]{ ../met_nets/resources//cartoon_wine.jpg}
+                  };
+                  \node[align = left, above, xshift=-80, yshift=35] at (current page.south) {
+                     \scriptsize Scott, William T., et al. "Metabolic flux sampling \\ 
+                     \scriptsize predicts strain-dependent differences related to \\ 
+                     \scriptsize 
+                     aroma production among commercial wine yeasts." \\
+                     \scriptsize
+                      Microbial cell factories 20.1 (2021): 1-15.   
+                  };
+               \end{tikzpicture}
 
 
-   % % ------ MARSH KARPATHOS
-
-   % % TAXONOMY COMPOSITION
-   % \begin{frame}
-   %    \frametitle{Abundances of the main microbial taxa, at the phylum level}
-   %    \framesubtitle{based on 16S rRNA amplicon data}
-   %    \centering
-   %    \includegraphics[width=85mm]{resources/Figure 2.png}
-   %    % RELATED CHAPTER
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=130pt, yshift=-35pt]
-   %       at (current page.north) {
-   %          \includegraphics[width=15mm]{resources/usecase.png}
-   %       };
-   %    \end{tikzpicture}
-
-   % \end{frame}
+            \column{.5\textwidth}
+               \begin{tikzpicture}[overlay,remember picture]
+                  \node[anchor=north east, xshift=-45, yshift=-100pt]
+                     at (current page.north east) {
+                        \includegraphics[width=30mm]{ ../met_nets/resources//interactions_transparent.png}
+                     };
+                  \node[align = right, above, xshift=95, yshift=65] at (current page.south) {
+                     \small
+                     What about microbial interactions ? 
+                  };
+               \end{tikzpicture}
+         \end{columns}
+      \end{singlespace}
+   \end{frame}
 
 
-   % % FUNCTIONAL POTENIAL 
-   % \begin{frame}
-   %    \frametitle{Metabolic pathways per biogeochemical cycle}
-   %    \framesubtitle{and their relative abundance at each sample}
-   %    \centering
-   %    \includegraphics[width=95mm]{resources/karpathos - Figure 4_transp.png}
-   %    % RELATED CHAPTER
-   %    \begin{tikzpicture}[overlay,remember picture]
-   %       \node[anchor=west, xshift=130pt, yshift=-35pt]
-   %       at (current page.north) {
-   %          \includegraphics[width=15mm]{resources/usecase.png}
-   %       };
-   %    \end{tikzpicture}
+   % ------ MARSH KARPATHOS
 
-   % \end{frame}
+   % TAXONOMY COMPOSITION
+   \begin{frame}
+      \frametitle{Abundances of the main microbial taxa, at the phylum level}
+      \framesubtitle{based on 16S rRNA amplicon data}
+      \centering
+      \includegraphics[width=85mm]{resources/Figure 2.png}
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/usecase.png}
+         };
+      \end{tikzpicture}
+
+   \end{frame}
+
+
+   % FUNCTIONAL POTENIAL 
+   \begin{frame}
+      \frametitle{Metabolic pathways per biogeochemical cycle}
+      \framesubtitle{and their relative abundance at each sample}
+      \centering
+      \includegraphics[width=95mm]{resources/karpathos - Figure 4_transp.png}
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/usecase.png}
+         };
+      \end{tikzpicture}
+
+   \end{frame}
 
 
 

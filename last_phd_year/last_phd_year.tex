@@ -1685,7 +1685,18 @@
    \begin{frame}
       \frametitle{Flux sampling output}
       \framesubtitle{marginal distributions and copulas}
-      \includegraphics[width=110mm]{resources/copulas_cropped_transp.png}
+
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=20pt, yshift=-30]
+         at (current page.west) {
+            \includegraphics[width=52mm]{resources/hex_-_g6pper_transp_tr.png}
+         };
+         \node[anchor=east, xshift=62pt, yshift=-15pt]
+         at (current page.east) {
+            \includegraphics[width=105mm]{resources/copulas_cropped_transp_part.png}
+         };
+      \end{tikzpicture}
+
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=130pt, yshift=-35pt]
@@ -1700,10 +1711,11 @@
    \begin{frame}
       \frametitle{Conclusions}
       \framesubtitle{on sampling the flux space of metabolic models}
-      
+      \small
       \begin{itemize}
          \item flux sampling provides essential insight (knock-out genes, host-microbe interactions etc)
-         \item our multiphase MCMC algorithm enables sampling on the so-far largest metabolic model (Recon3D including $13,543$ reactions; $d=5,335$) is now possible
+         \item manual curation of the models is essential 
+         \item our multiphase MCMC algorithm enables sampling on the so-far largest metabolic model ($13,543$ reactions; $d=5,335$)
          \item sampling the flux space of community metabolic models is now possible
       \end{itemize}
 
@@ -1738,7 +1750,6 @@
       \end{columns}
    \end{frame}
    \fi 
-
 
    % -------------------------------------
    % CHANGE THE CHAPTER SLIDE: PREGO
@@ -1821,7 +1832,6 @@
    \begin{frame}[plain, noframenumbering]
       \includegraphics[width=115mm]{resources/phd_graphical_abstract-prego.png}
    \end{frame}
-
 
    % PREGO TERMINOLOGY
    \begin{frame}
@@ -2080,6 +2090,7 @@
          % Communities' functioning might be subject to anaplerotic reactions.
       \end{frame}   
    \end{darkframes}
+   
    % graph abstract
    \begin{frame}[plain, noframenumbering]
       \includegraphics[width=115mm]{resources/phd_graphical_abstract-marsh.png}
@@ -2560,14 +2571,9 @@
    \end{darkframes}
 
 
-
-
-   % % --------------------------------------------------
-   % %                  EXTRA SLIDES
-   % % --------------------------------------------------
-
-
-
+   % --------------------------------------------------
+   %                  EXTRA SLIDES
+   % --------------------------------------------------
 
    % INFRASTUCTURES
    \begin{frame}
@@ -2607,7 +2613,6 @@
    
    \end{frame}
 
-
    % ----------- PEMA 
    % PHYLOGENY TREE
    \begin{frame}
@@ -2632,7 +2637,6 @@
       \end{tikzpicture}
 
    \end{frame}
-
 
 
    % ----------- PREGO
@@ -3025,7 +3029,6 @@
       \end{singlespace}
    \end{frame}
 
-
    % ------ MARSH KARPATHOS
 
    % TAXONOMY COMPOSITION
@@ -3044,7 +3047,6 @@
 
    \end{frame}
 
-
    % FUNCTIONAL POTENIAL 
    \begin{frame}
       \frametitle{Metabolic pathways per biogeochemical cycle}
@@ -3060,9 +3062,6 @@
       \end{tikzpicture}
 
    \end{frame}
-
-
-
 
 \end{document}
 

@@ -534,7 +534,13 @@ Once the algorithm converges, the samples found are mapped back in the initial p
 
 ### slide 28: sampling output 
 
-This way, we may get the the flux distribution of any reaction of the model 
+Here 
+
+This way, we may get the the flux distribution of any reaction of the model; 
+for example, in this case, we may see that the flux of the hexokinase reaction 
+
+
+
 as well as to observe how a flux reaction changes based on the  value of another reaction. 
 
 Howe

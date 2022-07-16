@@ -37,7 +37,7 @@
    Haris Zafeiropoulos \\ 
    \scriptsize PhD candidate
 }
-
+% <!-- considere adding 3 mpamies -->
 
 %% These additional packages are used within the document:
 \usepackage{ragged2e}                                       % `\justifying` text
@@ -376,14 +376,16 @@
                \begin{textblock*}{5cm}(0.8cm, 3.5cm)
                   \scriptsize
                   \begin{itemize}
-                     \item sequencing technology oriented           % genetic variance, broken pieces, alive and dead 
-                     \item \textbf{eDNA-}, sample process-, primers-, PCR-oriented       % resolytion, primets, pcr biases 
-                     \item \textbf{complex bioinformatics analysis}
-                     \item \textbf{analysis reproducibility}
+
                      \item \textbf{computing requirements}            % storage, memory, algorithm 
-                     \item \textbf{algorithm-oriented} 
-                     \item versioning of reference databases \& tools 
-                     \item standards, ontologies
+                     \bigskip
+                     \item \textbf{multi-step analyses}
+                     \item \textbf{reproducibility}
+                     \bigskip
+                     \item \textbf{eDNA and PCR limitations}
+                     \bigskip
+                     \item \textbf{algorithmic - oriented}
+                     \bigskip
                      \item \textbf{data integration applications} 
                   \end{itemize}
 
@@ -459,6 +461,7 @@
    \end{darkframes}
 
    % ZORBAS SCHEME
+   \if 0
    \begin{frame}
    
       \frametitle{Zorbas: the HPC facility of IMBBC}
@@ -483,6 +486,7 @@
          };
       \end{tikzpicture}
    \end{frame}
+   \fi
 
    % ZORBAS PROJECT RESOURCES
    \begin{frame}
@@ -519,7 +523,6 @@
    %    % \textbf{Chapter 2}: 
    %    Software development to support HTS-oriented methods for microbial diversity assessment
    %    }
-
 
    % MARKER GENES - BIOINFO STEPS
    \if 0
@@ -684,8 +687,6 @@
       \includegraphics[width=115mm]{resources/phd_graphical_abstract-pema.png}
    \end{frame}
 
-
-
    % BIOINFORMATICS TRICKS AND HINTS
    \begin{frame}
       \frametitle{Methods / Implementation}
@@ -812,7 +813,7 @@
 
    % MOCK COMMUNITIES 16S RESULTS
    \begin{frame}
-      \frametitle{Results: tuning effetcts}
+      \frametitle{Results: tuning effects}
       \framesubtitle{in mock communities}
 
       \footnotesize Mock communities using the 16S rRNA gene and multiple parameter sets \\ 
@@ -881,7 +882,7 @@
             \item new code architecture
             \item 12S rRNA now supported
             \item retrieves NCBI Tax IDs
-            \item custom dbs for taxonomy assignment
+            \item custom Dbs for taxonomy assignment
          \end{itemize}
       \end{textblock*}
    \end{singlespace}
@@ -954,10 +955,10 @@
    \end{frame}
    \fi 
 
-   % % PEMA @ LW ERIC
+   % PEMA @ LW ERIC
    \begin{frame}
       \frametitle{Moving at the large scale}
-      \framesubtitle{PEMA @ infrustuctures}
+      \framesubtitle{PEMA @ infrustructures}
       \begin{singlespace}
          \begin{tikzpicture}[overlay,remember picture]
        
@@ -969,9 +970,9 @@
 
          \begin{textblock*}{5cm}(7.2cm,4.0cm)
             \begin{enumerate}
-               \item \small Web - interface make analysis even easier
-               \item \small researchers without access to HPC/clouds etc are now able to run big scale analyses
-               \item \small Combine with other tools
+               \item \small web - interface make analysis even easier
+               \item \small researchers without access to HPC/clouds are now able to run big scale analyses
+               \item \small combine with other tools
             \end{enumerate}
          \end{textblock*}
 
@@ -1202,10 +1203,10 @@
 
       \begin{textblock*}{7cm}(7.0cm, 4.5cm)
          
-         the consensus sequences have  \\ 
+         The consensus sequences have  \\ 
          been placed in their corresponding \\ 
          taxonomic branches, proving \\
-         the tree valid
+         the tree valid.
 
       \end{textblock*}
       % RELATED CHAPTER
@@ -1259,7 +1260,7 @@
    % DARN OUTPUT
    \begin{frame}
       \frametitle{DARN using real-world data}
-      \framesubtitle{with multiple sample types, primers, PCR protocols and bioinormatics pipelines}
+      \framesubtitle{with multiple sample types, primers, PCR protocols and bioinformatics pipelines}
 
       \begin{tikzpicture}[overlay, remember picture]
          \node[anchor=west, xshift=-30pt, yshift=-65pt]
@@ -1348,7 +1349,7 @@
          \framesubtitle{a new MCMC algorithm for sampling the flux Space of metabolic networks }
 
          \begin{tikzpicture}[overlay,remember picture]
-            \node[anchor=east, xshift=-294,yshift=42pt]
+            \node[anchor=east, xshift=-274,yshift=20pt]
                at (current page.east) {
                   \includegraphics[width=14mm]{resources/how-yellow.png}
                };
@@ -1356,11 +1357,27 @@
 
          \small
 
-         \textbf{challenge category: } algorithm-oriented
 
-         \bigskip
+         \begin{textblock*}{7cm}(4.0cm, 2.9cm)
+            \small
+            \textbf{challenge category: } algorithm-oriented \\
+            \bigskip
+            \textbf{aim \& contribution: } support flux sampling at high dimensional polytopes 
+            such as those of complex organisms and multispecies and/or host-microbe communities 
+         \end{textblock*}
 
-         \textbf{aim \& contribution: }
+         \begin{textblock*}{10cm}(1.5cm, 5.7cm)
+            \begin{block}{Definitions}
+               \footnotesize
+               \begin{itemize}
+                  \item \textit{flux}: the rate of turnover of molecules through a reaction
+                  \item \textit{polytope}: a bounded polyhedron
+                  \item \textit{flux sampling}: calculation of a sufficiently large number of uniformly distributed points in the polytope derived from a metabolic model
+               \end{itemize}
+            \end{block}
+               
+         \end{textblock*}
+
 
          % Flux sampling is a computationally intensive task, especially as the dimension of the 
          % polytopes derived from the metabolic model under study increases. 
@@ -1372,8 +1389,7 @@
 
          % Therefore, 
 
-         support flux sampling at high dimensional polytopes 
-         such as those of complex organisms and multispecies and/or host-microbe communities 
+
          % we introduce a Multi-phase Monte Carlo Sampling (MMCS) algorithm. 
 
          % Our MMCS algorithm splits the sampling procedure in phases where, starting from $P$ , 
@@ -1422,9 +1438,9 @@
 
             \node[align = left, above, xshift=-80, yshift=10] at (current page.east) {
                   \footnotesize Metabolic models allow us \\ 
-                  \footnotesize to move from a metabolic map \\ to mathematical structures \\
+                  \footnotesize to move from a metabolic map to \\ mathematical structures \\
                   \footnotesize the study of which may provide \\ 
-                  \small fundamental biological insight
+                  \small fundamental biological insight.
                };
 
             \node[anchor=north west, xshift=160pt,yshift=-125pt]
@@ -1436,7 +1452,7 @@
                at (current page.north west) {
                \tiny Figure from: Heirendt et al. Nature protocols 14.3 (2019): 639-702.
                };
-
+            % GEM STANDS FOR... 
          \end{tikzpicture}
       \end{singlespace}
 
@@ -1502,7 +1518,7 @@
                \footnotesize In a \textbf{steady state} \\
                \footnotesize the production rate \\
                \footnotesize of each metabolite \\ \bigskip
-               \footnotesize equals its consumption rate \\  
+               \footnotesize equals its consumption rate. \\
 
                \footnotesize The \textbf{flux vector}
                \footnotesize is a vector with \\
@@ -1565,26 +1581,18 @@
                at (current page.north west) {
                   \includegraphics[width=100mm]{ ../met_nets/resources/space_fba_sampling.png}
                };
+         \end{tikzpicture}
 
-               % \node[align = left, above, yshift=10] at (current page.south) {
-               %    \scriptsize 
-               %    Figure from: Heirendt et al. Nature protocols 14.3 (2019): 639-702.
-               % };
 
-            \end{tikzpicture}
-
-         \bigskip  \justifying  \bigskip
-         \bigskip  \justifying  \bigskip
-         \bigskip  \justifying  \bigskip
-
+         \begin{textblock*}{10cm}(1.2cm, 6.5cm)
             \begin{itemize}
-               \item \small 
-               enables the analysis of GEMs without the need of an objective function
-               \item \small
-               determines the feasible solution spaces for fluxes in a network based on a set of conditions as well as the probability of obtaining a solution               
+            \item \small enables the analysis of GEMs without the need of an objective function
+            \item \small determines the feasible solution spaces for fluxes in a network based on a set of conditions as well as the probability of obtaining a solution
             \end{itemize}
+         \end{textblock*}
 
       \end{singlespace}
+
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=130pt, yshift=-35pt]
@@ -1715,7 +1723,7 @@
       \begin{itemize}
          \item flux sampling provides essential insight (knock-out genes, host-microbe interactions etc)
          \item manual curation of the models is essential 
-         \item our multiphase MCMC algorithm enables sampling on the so-far largest metabolic model ($13,543$ reactions; $d=5,335$)
+         \item our multiphase MCMC algorithm enables sampling on the so-far largest metabolic model ($13543$ reactions; $d=5335$)
          \item sampling the flux space of community metabolic models is now possible
       \end{itemize}
 
@@ -1869,7 +1877,7 @@
    % METADATA CHANNEL
    \begin{frame}
 
-      \frametitle{Publicly available omics data sets}
+      \frametitle{Publicly available omics datasets}
       \framesubtitle{and the role of metadata}
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=10pt, yshift=-5mm]
@@ -1921,7 +1929,7 @@
 
    % RESULTS: ASSOCIATIONS
    \begin{frame}
-      \frametitle{Source databases that are integrated in PREGO }
+      \frametitle{Source databases integrated in PREGO }
       % Associations between entities of PREGO
       \framesubtitle{and the number of items retrieved}
 
@@ -1994,7 +2002,7 @@
    % PREGO EXAMPLE - SCREENSHOTS
    \begin{frame}
       \frametitle{PREGO in action}
-      \framesubtitle{looking for environments a taxon is present}
+      \framesubtitle{with a taxon as an entry point}
 
       \begin{tikzpicture}[overlay,remember picture]
 
@@ -2032,10 +2040,9 @@
       \small
       \begin{itemize}
          \item metadata can give substantial added value in experimental data
-         \item taxonomy and ontological-related challenges limit data integration methods
+         % \item taxonomy and ontological-related challenges limit data integration methods
          \item data integration methods may lead to associations not mentioned in the literature
-         \item the \textit{Environmental Samples} channel will provide more and more associations as 
-         omics'dataset keep increasing exponentially
+         \item more and more valid associations as omics' dataset keep increasing exponentially and metadata standards gain space
       \end{itemize}
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
@@ -2081,7 +2088,7 @@
 
 
          To exploit state-of-the-art methods to identify taxa and functions that play a key
-         part in microbial community assemblages in hypersaline sediments \\ \bigskip 
+         part in microbial community assemblages in hypersaline sediments. \\ \bigskip 
          
          % Both amplicon and metagenome analysis was conducted to investigate the composition and the functional 
          % potential of microbial communities from the Tristomo marsh (Karpathos island, Greece)
@@ -2102,30 +2109,46 @@
       \framesubtitle{a seasonal brackish water marsh}
 
       \begin{tikzpicture}[overlay,remember picture]
-            \node[anchor=north east, xshift=-25, yshift=-80pt]
+            \node[anchor=north east, xshift=-5, yshift=-70pt]
                at (current page.north east) {
                   \includegraphics[width=55mm]{resources/karpathos - Figure 1.png}
                };
       \end{tikzpicture}
 
-      \begin{textblock*}{6cm}(1.0cm, 3.0cm)
-         \small 
+      \begin{textblock*}{6cm}(0.9cm, 3.0cm)
+         \footnotesize
 
-         Type of samples: 
 
-         \begin{itemize}
-            \item from clearly observed mats, \\ top - bottom layers
-            \item if no clearly observed mats \\ samples with no slicing 
-            \item aggregate samples
-         \end{itemize}
-
+         \begin{table}[]
+            \begin{tabular}{lll}
+            \hline
+            \textbf{Sample} & \textbf{Type} & \textbf{Season} \\ \hline
+            Elos01 & top & summer \\
+            Elos02 & bottom & summer \\
+            Elos03 & orange aggregate & summer \\
+            Elos07 & pink aggregate & summer \\
+            Elos10 & combined* & winter \\
+            Elos12 & combined & winter
+            \end{tabular}
+         \end{table}
          \bigskip
+         *combined: samples with no slicing
 
-         Sampling time points: \\
-         \begin{itemize}
-            \item July 2018 
-            \item November 2019
-         \end{itemize}
+         % Type of samples: 
+
+         % \begin{itemize}
+         %    \item clearly observed mats, \\ (top - bottom layers)
+         %    \item no clearly observed mats \\ (samples with no slicing)
+         %    \item aggregate samples
+         % \end{itemize}
+
+         % \bigskip
+
+         % Sampling time points: \\
+         % \begin{itemize}
+         %    \item July 2018 
+         %    \item November 2019
+         % \end{itemize}
 
 
       \end{textblock*}
@@ -2198,7 +2221,7 @@
       \end{tikzpicture}
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
-         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         \node[anchor=west, xshift=130pt, yshift=-55pt]
          at (current page.north) {
             \includegraphics[width=15mm]{resources/usecase.png}
          };
@@ -2221,6 +2244,7 @@
                \includegraphics[width=63mm]{resources/Figure 6.png}
             };
       \end{tikzpicture}
+
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=130pt, yshift=-35pt]
@@ -2228,6 +2252,24 @@
             \includegraphics[width=15mm]{resources/usecase.png}
          };
       \end{tikzpicture}
+
+
+      \begin{textblock*}{4cm}(6.6cm, 0.5cm)
+         \tiny
+         \begin{table}[]
+            \begin{tabular}{lll}
+            \hline
+            \textbf{Sample} & \textbf{Type} & \textbf{Season} \\ \hline
+            Elos01 & top & summer \\
+            Elos02 & bottom & summer \\
+            Elos03 & orange aggregate & summer \\
+            Elos07 & pink aggregate & summer \\
+            Elos10 & combined & winter \\
+            Elos12 & combined & winter
+            \end{tabular}
+            \end{table}
+
+      \end{textblock*}
 
    \end{frame}
 
@@ -2238,10 +2280,11 @@
 
       \begin{itemize}
          \small
-         \item seasonality plays a key-role for the microbial mats under study to survive, ensuring oxygenic photosynthesis for a while 
+         \item shotgun metagenomics are a poweful tool in the discovery of novel taxa 
+         \item seasonality plays a key-role for the mats under study, ensuring oxygenic photosynthesis 
          % - during winter months, both the salt crust and the layering of the microbial mat disappears - 
-         \item anaplerotic reactions, that are abundant in our samples, may play an important role in replenishing the intermediates of the TCA cycle
-         \item metabolic modelling can shed further light on the effects of the environmental challenges on the mat construction 
+         \item anaplerotic reactions may play a key-role in replenishing the intermediates of the TCA cycle
+         \item metabolic modelling can shed further light on the mechanisms governing the mat communities
       \end{itemize}
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
@@ -2267,15 +2310,15 @@
       \small 
       \begin{itemize}
       
-         \item Bioinformatics approaches enhance microbial diversity assesment based on HTS data
+         \item Bioinformatics approaches enhance microbial diversity assesment based on HTS data.
          \bigskip
-         \item Containerization technologies and e-infrastructures provide the means for computational capacity and reproducibility
+         \item Containerization technologies and e-infrastructures provide the means for computational capacity and reproducibility.
          \bigskip
-         \item High quality metadata enable efficient exploitation of sequencing data in a meta-analysis level
+         \item High quality metadata enable efficient exploitation of sequencing data in a meta-analysis level.
          \bigskip
-         \item Markov Chain Monte Carlo approaches enable flux sampling in high-dimensional polytopes 
+         \item Markov Chain Monte Carlo approaches enable flux sampling in high-dimensional polytopes.
          \bigskip
-         \item Hypersaline mats host a great range of novel taxa \& their functioning might be subject to anaplerotic reactions
+         \item Hypersaline mats host a great range of novel taxa \& their functioning might be subject to anaplerotic reactions.
       \end{itemize}
       \end{textblock*}
    \end{singlespace}
@@ -2309,7 +2352,7 @@
    % SOFTWARE CONTRIBUTIONS
    \begin{frame}
       \frametitle{Wrap-up}
-      \framesubtitle{software tools}
+      \framesubtitle{software}
 
       \begin{columns}[onlytextwidth]
 
@@ -2347,7 +2390,8 @@
    \end{frame}
 
    % PUBLICATIONS FRAME
-   \begin{frame}[label=bibliography]{Publications}
+   \begin{frame}[label=bibliography]{Wrap-up}
+      \framesubtitle{publications}
       
       \begin{thebibliography}{9}
 
@@ -2415,13 +2459,13 @@
    
          \column{0.36\textwidth}
             \includegraphics[width=35mm]{resources/Acronym_Environment_RECONNECT_transp.png}
-            \includegraphics[width=27mm]{resources/eosclogo.png}
+            \includegraphics[width=25mm]{resources/eosclogo.png}
             \includegraphics[width=30mm]{resources/Elixir-Europe-logo-1.png}
 
          \column{0.33\textwidth}
-            \includegraphics[width=27mm]{resources/embo_logo.png}
-            \includegraphics[width=27mm]{resources/dnaquanet.png}
-            \includegraphics[width=24mm]{resources/GSoC_logo.svg.png}
+            \includegraphics[width=26mm]{resources/embo_logo.png}
+            \includegraphics[width=24mm]{resources/dnaquanet_crop.png}
+            \includegraphics[width=20mm]{resources/GSoC_logo.svg.png}
 
       \end{columns}
 
@@ -2439,12 +2483,12 @@
       \begin{textblock*}{4.0cm}(1.2cm, 2.5cm)
          \footnotesize
          \textbf{My promotors: }\\
-            \href{http://lab42open.hcmr.gr/people/evangelospafilis/}{Dr. Pafilis E.} \\
-            \href{http://computational-genomics.weebly.com/}{Prof. Nikolaou Chr.} \\
-            \href{https://ladoukakis.weebly.com/}{Prof. Ladoukakis} \\
+           \href{https://ladoukakis.weebly.com/}{Prof. Emmanuel Ladoukakis} \\
+            \href{http://computational-genomics.weebly.com/}{Prof. Christoforos Nikolaou} \\
+            \href{http://lab42open.hcmr.gr/people/evangelospafilis/}{Dr. Evangelos Pafilis} \\
          \bigskip
-         \textbf{the rest of my 7-member \\ committee:} \\
-            \href{http://www.biology.uoc.gr/labweb/lika/}{Prof. Dina Lika} \\
+         \textbf{the rest committee \\ members:} \\
+            \href{http://www.biology.uoc.gr/labweb/lika/}{Prof. Konstadia (Dina) Lika} \\
             \href{https://www.biology.uoc.gr/el/personnel/7714}{Prof. Panagiotis Sarris} \\
             \href{https://sites.google.com/view/lab-area52}{Prof. Jens Carlsson} \\
             \href{http://msysbiology.com/}{Prof. Karoline Faust} \\
@@ -2474,14 +2518,14 @@
 
          \footnotesize \textbf{Special thanks to:} \\
 
-         \footnotesize \href{https://imbbc.hcmr.gr/user/s-paragkamian/}{PhD Paragkamian S.} \\
-         \footnotesize \href{https://sites.google.com/view/lab-area52/home/meet-the-team?authuser=0}{Dr. Gargan L.} \\
-         \footnotesize \href{https://www.researchgate.net/profile/Sanni-Hintikka}{Dr. Hintikka S.} \\
-         \footnotesize \href{https://imbbc.hcmr.gr/user/sninidakis/}{Mr. Ninidakis St.} \\
-         \footnotesize \href{https://imbbc.hcmr.gr/user/potant/}{Mr. Potirakis Ant.} \\
-         \footnotesize \href{https://tolischal.github.io/}{Dr. Chalkis A.} \\
-         \footnotesize \href{https://vissarion.github.io/}{Dr. Fisikopoulos V.} \\ 
-         \footnotesize \href{https://who.paris.inria.fr/Elias.Tsigaridas/}{Prof. Tsigaridas E.} \\
+         \footnotesize \href{https://imbbc.hcmr.gr/user/s-paragkamian/}{drs. Savvas Paragkamian} \\
+         \footnotesize \href{https://sites.google.com/view/lab-area52/home/meet-the-team?authuser=0}{Dr. Laura Gargan} \\
+         \footnotesize \href{https://www.researchgate.net/profile/Sanni-Hintikka}{Dr. Sanni Hintikka} \\
+         \footnotesize \href{https://imbbc.hcmr.gr/user/sninidakis/}{Mr. Stelios Ninidakis} \\
+         \footnotesize \href{https://imbbc.hcmr.gr/user/potant/}{Mr. Antonis Potirakis} \\
+         \footnotesize \href{https://tolischal.github.io/}{Dr. Apostolos Chalkis} \\
+         \footnotesize \href{https://vissarion.github.io/}{Dr. Vissarion Fisikopoulos} \\ 
+         \footnotesize \href{https://who.paris.inria.fr/Elias.Tsigaridas/}{Prof. Elias Tsigaridas} \\
          
       \end{textblock*}
 
@@ -2490,7 +2534,7 @@
          \footnotesize
          \textbf{My mojo:}\\
          \footnotesize 
-         \href{https://cpavloud.github.io/mysite/projects/}{Dr. Pavloudi C.} \\ 
+         \href{https://cpavloud.github.io/mysite/projects/}{Dr. Christina Pavloudi} \\ 
 
          \bigskip 
 
@@ -2604,10 +2648,10 @@
 
          \small We will develop a workflow  \\
          \small for the analysis of Genomic \\ 
-         \small Observatories (GOs) data \\
+         \small Observatories data \\
          \small that will allow researchers \\ 
          \small to deal better with the  \\
-         \small increasing amount of data
+         \small increasing amount of data.
 
       \end{textblock*}
    
@@ -2655,22 +2699,17 @@
             \column{.5\textwidth}
                \begin{tikzpicture}[overlay,remember picture]
 
-
+                  \small
                   \node[align = right, above, xshift=75, yshift=55] at (current page.south) {
-                     \small
-                     What about \textbf{\textit{Posidonia}} ? \\
-                     \small
+                     
+                     What about \textbf{\textit{Posidonia}} ? \\ \bigskip
+
                      Literature suggests that \\ Planctomycetes \\
-                     \small
                      and especially \textit{Blastopirellula} \\
-                     \small
                      and \textit{Rhodopirellula} \\ are commonly \\
-                     \small 
                      found in its microbiome. \\
                      Why so ? \\
-                     \small
                      Let us have a look \href{https://prego.hcmr.gr/PregoAnalysis?knowledge=10&experiments=10&textmining=10&type1=-2&id1=265488}{here}!
-
                   };
 
                \end{tikzpicture}
@@ -2681,7 +2720,7 @@
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=130pt, yshift=-35pt]
          at (current page.north) {
-            \includegraphics[width=15mm]{resources/chapter3.png}
+            \includegraphics[width=15mm]{resources/prego_logo.png}
          };
       \end{tikzpicture}
 
@@ -2696,9 +2735,10 @@
 
       \small
       \begin{itemize}
-         \item [$\rightarrow$] genome annotation oriented associations: fixed scores
-         \item [$\rightarrow$] associations in the \textit{Environmental Samples} channel are scored based on the number of samples they co-occur. 
-         \item [$\rightarrow$] similarly, in the \textit{Literature} channel, based on the number of publications
+         % \item [$\rightarrow$]
+         \item genome annotation oriented associations: fixed scores
+         \item associations in the \textit{Environmental Samples} channel are scored based on the number of samples in which they co-occur
+         \item similarly, in the \textit{Literature} channel, based on the number of publications
       \end{itemize}
       % Thus, for each entity x, the number of samples is calculated as the background and a number of samples of the associated entity (metadata background) 
       % c.,y (see Table A1). Each association between entities x, y has a number of samples, cx,y that they co-occur. 
@@ -2846,6 +2886,25 @@
 
    \end{frame}
 
+   % Geometry
+   \begin{frame}
+      \frametitle{Computational geometry basics}
+
+      \footnotesize
+      A powerful approach to
+      obtain well \textbf{roundness} is to put $P$ in \emph{near isotropic position}. 
+      In
+      general, $K \subset \mathbb{R}^d$ is in isotropic position if the uniform distribution
+      over $K$ is in isotropic position, that is $\mathbb{E}_{X\sim K}[X] = 0$ and
+      $\mathbb{E}_{X\sim K}[X^TX] = I_d$, where $I_d$ is the $d\times d$ identity
+      matrix. \\
+      \bigskip
+      Thus, to put a polytope $P$ into isotropic position one has to generate
+      a set of uniform points in its interior and apply to $P$ the transformation that
+      maps the point-set to isotropic position; then iterate this procedure until $P$
+      is in $c$-isotropic position for a constant~$c$.
+   \end{frame}
+
    % METRICS
    \begin{frame}
       \frametitle{Random walk performance metrics}
@@ -2858,7 +2917,7 @@
 
       \end{itemize}
 
-      MCMC Convergence diagnostics
+      MCMC convergence diagnostics:
 
       \begin{itemize}
          \item \textbf{Effective Sample Size (ESS): } 
@@ -2875,7 +2934,7 @@
          the number of effectively independent draws from
          the target distribution that the Markov chain is equivalent to
 
-         \item potential scale reduction factor (PSRF)
+         \item \textbf{Potential Scale Reduction Factor (PSRF)}
          
       \end{itemize}
    
@@ -2949,9 +3008,9 @@
       
       \begin{singlespace}
          \begin{itemize}
-            \item \small Renz et al. '20 built the biomass function of Sars-Cov-2 to build a host - virus network
-            \item \small Using FBA they computed an optimal steady state using \\ \small \quad (i) human biomass maintenance,\\ \small \quad (ii) virus growth rate
-            \item \small They found reaction GK1 as a possible anti-viral target.
+            \item \small Renz \textit{et al.} 2020 built the biomass function of SARS-Cov-2 to build a host - virus network
+            \item \small Using FBA they computed an optimal steady state using \\ \small \quad (i) human biomass maintenance\\ \small \quad (ii) virus growth rate
+            \item \small They found reaction GK1 as a possible anti-viral target
          \end{itemize}            
       \end{singlespace}
 
@@ -3004,7 +3063,7 @@
                      \includegraphics[width=55mm]{ ../met_nets/resources//cartoon_wine.jpg}
                   };
                   \node[align = left, above, xshift=-80, yshift=35] at (current page.south) {
-                     \scriptsize Scott, William T., et al. "Metabolic flux sampling \\ 
+                     \scriptsize Scott, William T., \textit{et al.} "Metabolic flux sampling \\ 
                      \scriptsize predicts strain-dependent differences related to \\ 
                      \scriptsize 
                      aroma production among commercial wine yeasts." \\
@@ -3064,8 +3123,6 @@
    \end{frame}
 
 \end{document}
-
-
 
 
    % % -------------------------------------

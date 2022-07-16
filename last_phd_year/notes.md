@@ -15,10 +15,10 @@ and metabolic modeling.
 <!-- Moreover, even if metabolic modeling has been providing with great insight for over the last 30 years,
 it is only recently that has been used at the microbial community level.  -->
 
-In the next 40' I will try to highlight: 
+<!-- In the next 40' I will try to highlight: 
 * how each of my disseration's chapters 
 contributes ,as well as 
-* the key parts for implementing each of the software and studies that were performed
+* the key parts for implementing each of the software and studies that were performed -->
 
 
 ## INTRODUCTION
@@ -43,17 +43,18 @@ The study of microbial communities can help us in various ways:
 * to improve our lives; by facilitating food production, bio-engineering of useful products and so on and so forth
 
 
+
 ### slide 2: main questions
 
-Different taxa are present in the various environments forming the taxonomic profile of a community
-and the sum of the processes that this set of taxa supports is called the functional profile of the community. 
+<!-- Different taxa are present in the various environments forming the taxonomic profile of a community
+and the sum of the processes that this set of taxa supports is called the functional profile of the community.  -->
 
 <!-- To decipher the underlying mechanisms that govern these microbial assemblages and their role to the ecosystem, 
 it is fundamental to study the community at both the taxon 
 but the community 
 * the interactions among them  -->
 
-Therefore, among the main questions of most microbial ecology studies is: 
+Among the main questions of most microbial ecology studies is: 
 
 * the *who*, meaning the inference of the taxa present in an assemblage along with its relative abundance 
 * the *where*, denoting the environment from where a sample was taken
@@ -81,6 +82,16 @@ The Reverse Ecology framework uses
 advances from both 
 systems biology and genomic metabolic modeling to implement community ecology studies with
 no *a priori* assumptions about the organisms under consideration.
+
+Thus, we can now get the taxonomic profile of a community using HTS techniques and thanks to bioinformatics 
+methods we can also get the functions supported from them. 
+Moreover, Metagenome Assembled Genomes (MAGs) can be reconstructed; this has led to the discovery of a great number of novel taxa. 
+
+Moreover, given a complete genome, the metabolic network of a strain can be now reconstructed in semi-automatic ways. 
+
+From there, using among other methods and the one of Constraint Based Analysis we can study both the ecology of a single strain 
+as well as the interactions at the community level.
+
 
 <!-- By moving from the taxon to the community level, Reverse Ecology set a new era for the study of microbial community ecology too.  -->
 
@@ -123,14 +134,15 @@ part in microbial community assemblages in hypersaline sediments.
 
 ### slide 6: graphical abstract
 
-Here is a graphical overview of my PhD-related work 
-You can see the 4 main questions for microbial ecology 
+Here is a graphical overview of my PhD-related work that will help us 
+keep in mind how the different studies to presented, are related to the main questions of microbial ecology.
+<!-- You can see the 4 main questions for microbial ecology 
 along with 
 the methods and the 
 software developed during this PhD to address 
 challenges related to each of them. 
-In the end, our first results and conclusions reg.
-the Tristomo marsh use case will be presented. 
+In the end, our first results and conclusions reg. -->
+<!-- the Tristomo marsh use case will be presented.  -->
 <!-- and thus the structure of this presentation is shown. -->
 
 <!-- Computing requirements can be quite a limitation when it comes to HTS data analysis.  -->
@@ -159,7 +171,6 @@ of the hypersaline Tristomo marsh in Karpathos will be discussed  -->
 <!-- highlighting 
 the benefits of bioinformatics approaches such as those mentioned as well as 
 their potential -->
-. 
 
 
 ------------------------
@@ -177,15 +188,15 @@ owing mostly, to the sheer volume of the data and to the computational complexit
 High Performance Computing aims at the optimal incorporation of technology, and methodology to achieve the greatest computing capability possible.
 
 To highlight the value of such computing environments, we studied 
-the IMBBC HPC facility and its decennial story. 
+the IMBBC HPC facility called Zorba and its decennial story. 
 
 <!-- European Centres (Tier 0), (ii) national centers (Tier 1), and (iii) regional centers (Tier 2) -->
 
-### slide 8: Zorbas architecture 
+<!-- ### slide 8: Zorbas architecture 
 
 
-<!-- High Performance Computing environments may support the needs of a great range of 
-bioinformatics analyses enabling large scaling. -->
+High Performance Computing environments may support the needs of a great range of 
+bioinformatics analyses enabling large scaling.
 
 
 The IMBBC HPC facility started as a single server and it has now overwhelmed the 
@@ -193,13 +204,12 @@ specs described in this figure.
 
 Since 2015 its system setup is called Zorba. 
 
-<!-- After its latest upgrade, Zorba
+After its latest upgrade, Zorba
 has moved to 
 more than 400 CPU cores & 20 nodes, splitted in 5 partitions,
 with the capacity of 1.5ΤB RAM on a single node. -->
 
-
-### slide 9: HPC measurements
+### slide 8: HPC measurements
 
 Up to this latest upgrade, Zorba has supported 
 several studies of various scopes.
@@ -225,7 +235,7 @@ support the needs of the research community.
 -----------------
 
 ## PEMA
-### slide 10: Bioinformatics challenges
+### slide 9: Bioinformatics challenges
 
 So, let us now move on with the challenges 
 that I tried to deal with.  
@@ -248,7 +258,7 @@ that do not get assigned to a taxon.
 These known unknowns can be novel taxa of the taxonomic groups 
 or something quite out-of-scope! 
 
-### slide 11: PEMA intro
+### slide 10: PEMA intro
 
 So, with respect to the 1st challenge, 
 I developed a workflow aiming at a easy to use, 
@@ -266,12 +276,12 @@ Thus, I also aimed for a scalable solution.
 
 As already mentioned, reproducibility was also an issue to be considered. 
 
-## graphical abstract
+### graphical abstract
 
 So PEMA tries to address the question of *who* and these challenges
 
 
-### slide 12: PEMA implementation 
+### slide 11: PEMA implementation 
 
 by bringing together a series of third party tools and exploiting
 several technologies.
@@ -287,7 +297,7 @@ In addition, PEMA is meant to perform in HPC environments
 enabling the analysis of hundreds of samples.
 
 
-### slide 13: PEMA overview
+### slide 12: PEMA overview
 
 Here you can see an overview of PEMA's main features in its initial version. 
 
@@ -299,7 +309,7 @@ As shown, 4 main steps can be considered:
 * and finally, the taxonomy assigned OTUs or ASVs can be further analysed for biodiversity indeces etc 
 
 
-### slide 14: tuning effects
+### slide 13: tuning effects
 
 PEMA was tested using both mock and real-world data.
 Besides being fast and accurate, PEMA highlights the crucial role of 
@@ -318,7 +328,7 @@ PEMA's ability to deal with that kind of data sensitivity
 is exactly PEMA's added value compared to well established metabarcoding pipelines that work mostly in terms of a black box. 
 
 
-### slide 15: PEMA v.2
+### slide 14: PEMA v.2
 
 Since PEMA was published several extra features have been added. 
 From the coding point-of-view, the architecture of the code has been 
@@ -328,28 +338,27 @@ completely reshaped.
 The most important among them is that 
 taxonomy assingment based on a custom reference database is now also supported. 
 
-### slide 16: LW 
+### slide 15: LW 
 
 Running such an analysis in a personal computer is usually not an option; especially as the number of samples increases. 
 
-In addition, PEMA uses a command line interface, meaning it is not that easy for 
-researchers that are not familiar with a terminal. 
+<!-- In addition, PEMA uses a command line interface, meaning it is not that easy for 
+researchers that are not familiar with a terminal.  -->
 
-To this end, e-infrastuctures can benefit the community to a great extent. 
-They provide computing resources and at the same time, they usually come with 
-a graphical, user-friendly environment. 
+Therefore, e-infrastuctures such as Tesserach of LW ERIC can 
+<!-- benefit the community to a great extent. 
+They  -->
+provide computing resources and they usually come with 
+a graphical, user-friendly environment supporting the community's needs to a great extent.
+
 
 <!-- Moreover, approaches such as the one of LifeWatch ERIC bring together tools 
 enabling the user to build his/her own workflows.  -->
 
 
 
-### slide 17: PEMA conclusions 
-
-
-So, 
-<!-- what we should keep as a take-home message from this part -->
-tuning is crucial for metabarcoding studies. 
+### slide 16: PEMA conclusions 
+So, <!-- what we should keep as a take-home message from this part --> tuning is crucial for metabarcoding studies. 
 
 From a more technical point-of-view, big data pipeline oriented programming languages and workflow managers such as CWL, nextflow etc. along with containerization technologies enable building complex workflows.
 
@@ -362,7 +371,7 @@ the computing resources required.
 
 ## DARN 
 
-### slide 18: DARN intro
+### slide 17: DARN intro
 
 Let us now move to the second challenge mentioned. 
 My task here, was to deal with the known unknown OTUs and or ASVs in COI data. 
@@ -376,33 +385,34 @@ do not get a hit in the reference databases used.
 We argued that a proportion of such sequences correspond to known and/or unknown microbial taxa. 
 
 
-### slide 19: sequences for the tree
+### slide 18: sequences for the tree
 
 To evaluate our hypothesis we built a phylogenetic tree covering both eukaryotes and
 bacteria and archaea. 
-Once we would build such a tree we could then use phylogenetic placement methods 
-to place OTUs and/or ASVs of our interest onto this tree to find out whether they represent target or non-target taxa. 
 
-Eukaryotic COI sequences were covered using Midori 2. 
+<!-- Eukaryotic COI sequences were covered using Midori 2. 
 
 However, the collection of non-eukaryotic COI sequences was not that straight-forward. 
 
-From BOLD database I was able to retrieve only a few thousand bacterial and 117 archaeal sequences. 
+From BOLD database I was able to retrieve only a few thousand bacterial and 117 archaeal sequences.  -->
+
 <!-- representing about 23 hundreds and 117 strains correspondingly.  -->
-To enrich the non-eukaryotic set of sequences the PFam database was also exploited.
+<!-- To enrich the non-eukaryotic set of sequences the PFam database was also exploited. -->
+
+
 <!-- For all the PFam protein sequences related to the accession number for COX1
 the respective DNA sequences were extracted from their corresponding genomes. 
 This way, an additional 217 archaeal and 9,154 bacterial sequences were obtained. -->
 
 <!-- In total, sequences from 15 archaeal, 371 bacterial families and 60 taxonomic groups of higher level not assigned in the family level, were gathered.  -->
 
-Then, consensus sequences at the class level for the case of eukaryotes and 
+Sequences from Midori, BOLD and PFam databases were retrieved and 
+consensus sequences at the class level for the case of eukaryotes and 
 at the family level for the case of bacteria and archaea were built. 
 
+### slide 19: tree evaluation
 
-### slide 20: tree evaluation
-
-So, based on these consensus sequences a COI-oriented phylogenetic tree of life was built. 
+Based on these consensus sequences a COI-oriented phylogenetic tree of life was built. 
 
 Apparently, the phylogenetic signal of eukaryotes is quite stronger compared to those of the other 2 domains as the initial set of sequences was quite biased. 
 
@@ -410,10 +420,15 @@ However, as you see, the placements of the consensus sequences on it verified
 the tree is actually valid. 
 
 
-### slide 21: results using DARN
+### slide 20: results using DARN
 
 DARN takes as input a .fasta file with the OTUs or the ASVs of a sample and 
 places them onto this phylogenetic tree. 
+
+
+<!-- Once we would build such a tree we could then use phylogenetic placement methods 
+to place OTUs and/or ASVs of our interest onto this tree to find out whether they represent target or non-target taxa.  -->
+
 
 To validate our initial hypothesis, several data sets were analysed with DARN
 covering cases of different sampling methods, primers and PCR protocolos as well as 
@@ -421,12 +436,12 @@ bioinformatics analysis.
 
 Intrestingly, regardless all the other parameters, we observed that 
 while in bulk samples the vast majority of the sequences were placed in eukaryotic branches of the tree, that was not the case with sequences from environmental samples.  
-Even when we changed the parameters of the bioinformatics analysis and thus, 
+<!-- Even when we changed the parameters of the bioinformatics analysis and thus, 
 the number of the OTUs/ASVs retrieved from a sample was changing, the proportions 
-were of the placements were rather similar. 
+were of the placements were rather similar.  -->
 
 
-### slide 22: DARN conclusions 
+### slide 21: DARN conclusions 
 
 As COI-based studies usually target eukaryotic taxa,
 DARN highlights the presence of non-target, 
@@ -445,7 +460,7 @@ taxa, could benefit COI-oriented studies.
 
 ## MMCS 
 
-### slide 23: dingo intro 
+### slide 22: dingo intro 
 
 Let's now move from the question of *who* to the one of *how*. 
 
@@ -454,37 +469,42 @@ the complete set of metabolic and physical processes that determine the physiolo
 flux sampling is an approach that allows us to investigate feasible flux solutions 
 of a species. 
 
-We call *flux*, the rate of turnover of molecules through a reaction, i.e. 
+<!-- We call *flux*, the rate of turnover of molecules through a reaction, i.e. 
 the amount of substance per unit volume, 
-per unit time, transformed in a reaction.
+per unit time, transformed in a reaction. -->
 
-Flux sampling applications range from the study of a single strain 
+<!-- Flux sampling applications range from the study of a single strain 
 across changing environmental conditions 
-to the one of metabolic interactions at the community level. 
+to the one of metabolic interactions at the community level.  -->
 
 However, sampling is challenging from the computational point of view, 
-especially as the number of dimensions of the polytope increase. 
+especially as we move to more complex networks.
+<!-- the number of dimensions of the polytope increase.  -->
 
 Here we present, the Multiphase Monte Carlo Sampling algorithm 
-developed by the GeomScale group
-that the dingo Python library implements
+developed by the GeomScale group.
+
+### graph abstract
+
+This MMCS algorithm is the one that the dingo Python library implements
 to enable flux sampling in high dimensional metabolic networks.
 
 
-### slide 24: metabolic modeling intro
+### slide 23: metabolic modeling intro
 
-A genome-scale metabolic model (GEM) is a mathematical representation of the metabolism of an organism, strongly related to the stoichiometric matrix  that includes the metabolites present in the organism as its rows and the reactions as columns.
+A genome-scale metabolic model (GEM) is a mathematical representation of the metabolism of an organism.
+<!-- strongly related to the stoichiometric matrix  that includes the metabolites present in the organism as its rows and the reactions as columns. -->
 
-Sequencing the complete genome of a strain and its functional annotation, 
+<!-- Sequencing the complete genome of a strain and its functional annotation, 
 allows us to have a thorough overview of the metabolic processes that 
-may occur in the strain under study.
+may occur in the strain under study. -->
 Based on the enzymes present in the genome of a species, we can now reconstruct its metabolic network. 
 Of course, this network inherits all the assumptions and limitations that come with genome sequencing and annotation and the manual curation of such networks is 
 almost always necessary. 
-However, semi-automatic ways to build such models are now commonly used. 
 
+<!-- However, semi-automatic ways to build such models are now commonly used, especially in case of microbial taxa.  -->
 
-### slide 25: stoichiometric matrix
+### slide 24: stoichiometric matrix
 
 Once a metabolic network is built, 
 a common question is **how much** a reaction occurs under certain circumstances.
@@ -495,32 +515,33 @@ The values of this matrix are actually the stoichiometry of its of the reactions
 It is a common practice to study a cell under the steady state assumption, meaning 
 states where the production rate of each metabolite equals its consumption rate.
 
-So we are interested in the values the flux vector may get; 
-this way we can then infer key processes for the cell under changing conditions 
-and/or in general. 
+So we are interested in the values the flux vector may get.
+<!-- this way we can then infer key processes for the cell under changing conditions 
+and/or in general -->
 
 
 
-### slide 26: flux sampling 
+### slide 25: flux sampling 
 
-The stoichiometric relationships along with the lower and upper bounds of each flux impose certain constraints for the model.
+The stoichiometric relationships along with the lower and upper bounds of each flux impose certain constraints for the model
+defining its solution space.
 
-When applied to the network these constraints define its allowable solution space.
+<!-- The geometic representation of the solution space of this system, is called a *polytope*. Polytopes, derived from GEMs are usually rather skinny. -->
 
-The geometic representation of the solution space of this system, is called a *polytope*. Polytopes, derived from GEMs are usually rather skinny.
-
-The widely known Flux Balance Analysis that has been proven extremely useful, is strongly dependent on an objective function and that is not a straight-forward task. But most importantly, it returns a sole flux vector out of infinite.
+The widely known Flux Balance Analysis that has been proven extremely useful, is strongly dependent on an objective function 
+that most often is the biomass function of the species under study.
+However, getting this function is not a straight-forward task and most importantly, it returns a sole flux vector out of infinite.
 
 <!-- So what if we could have the distribution of the flux values of each reaction instead of a single value without the need of an objective function? -->
 
-However, if we sample a sufficiently large number of uniformly distributed points, 
+Yet, if we sample a sufficiently large number of uniformly distributed points, 
 we may get the distribution of the flux values of each reaction instead of a single value; with or without using an objective function. 
 <!-- we can generate the probability distribution of each flux. -->
 
 <!-- Moreover, flux sampling can be used both with and without an objective function, in case we need to get the distribution of a flux when another one is optimized. -->
 
 
-### slide 27: MMCS 
+### slide 26: MMCS 
 
 To enable sampling in high dimensional polytopes, we developed a Multiphase Monte Carlo Sampling algorithm which runs at phases, transforming the polytope from phase to phase; an idea of Dr. Apostolos Chalkis. 
 
@@ -532,63 +553,81 @@ To this end, we compute a linear transformation, that puts the sample we just bu
 
 Once the algorithm converges, the samples found are mapped back in the initial polytope.
 
-### slide 28: sampling output 
+### slide 27: sampling output 
 
-Here 
+So, using flux sampling we can now start investigating what is actually happening in 
+a cell under various conditions. 
 
-This way, we may get the the flux distribution of any reaction of the model; 
-for example, in this case, we may see that the flux of the hexokinase reaction 
+So we do know for example that a certain species can carry out both hexokinase and 
+Glucose-6-phosphate phosphatase but to what extent these reactions are actually occurying ?
+
+Using ouf MMCS algorithm we  were able to get the flux distribution of each of them 
+Based on these samples and their bivariate probability distribution 
+<!-- for which the marginal probability distribution of each variable is uniform -->
+we can further study what is the flux value of the one given the flux value of the other.
+
+However, something's going on here is not it ? 
+It seems that when HEX is up then G6PPer is also up. 
+But this would mean an infer loop, would not it ? 
+
+So in this slide we see both the potential and the challenges of the method. 
+
+Apparently, this is a side effect of the steady state assumption combined with a slip in the model reconstruction. 
+
+### slide 28: flux sampling conclusions 
+
+jUST READ THEM! 
 
 
-
-as well as to observe how a flux reaction changes based on the  value of another reaction. 
-
-Howe
-
-
-### slide 29: flux sampling conclusions 
 
 
 
 ---------------------
 
 ## PREGO
-### slide 30: PREGO intro
+### slide 29: PREGO intro
 
+In the title slide I argued that in some cases, bioinformatics may be necessary for omics data to reveal their true potential. 
 
-As already mentioned, in terms of understanding and elucidating the mechanisms that govern ecosystem function, we first need to understand what processes occur in which environments, and which organisms carry them out.
+<!-- Up to now, we have seen how they can be of use in the analysis of HTS data and of their related metabolic models.  -->
 
-In pairs, organisms and biological processes present in an environmental type, allow us to study fundamental features of an ecosystem, such as community structure, process potential and control.
+In terms of understanding and elucidating the mechanisms that govern ecosystem function, we first need to understand what processes occur in which environments, and which organisms carry them out.
+
+To this end, data integration techniques, meaning the combination of data from multiple sources to provide a unified view of them, 
+may contribute to the inference of organisms - environments, organisms - processes and enveironments - processes associations. 
+
+In pairs, organisms and biological processes present in an environmental type, allow us to study fundamental features of an ecosystem, such as community structure, process potential and so on.
+
+<!-- facilitate the interpretation of what processes occur in which environments, and which organisms carry them out. -->
+
+### graph abstract
 
 In the PREGO framework, I used data integration combined with text mining techniques to extract such associations from publicly available omics datasets. 
 
-
-### slide 31: Terminology
-
-In this context, when we are are referring to Organisms, we should consider them as NCBI Taxonomy Ids. 
-
-Likewise, environments should be considered as ENVO terms; meaning terms included in the Environment Ontology from which we are most interested in Feature, Material and Biome terms. 
+### slide 30: Terminology
 
 
-Finally, when we are talking about processes we are referring to biological processes such as ‘Growth’ or ‘sulfur oxidation’, included in Gene Ontology. 
+In the PREGO context, when we are are referring to Organisms, we should consider them as NCBI Taxonomy Ids. 
 
-<!-- As you may noticed, we have selected an Ontology for each of these 3 components.  -->
-In general, an ontology represents a shared, agreed and detailed model of a certain knowledge domain. This way, we are able to extract terms of out interest from massive data and metadata and formulate data searching strategies. 
+Likewise, environments should be considered as Environment Ontology terms. 
+
+And when we are talking about processes we are referring Gene Ontology terms.
+
+<!-- In general, an ontology represents a shared, agreed and detailed model of a certain knowledge domain. This way, we are able to extract terms of out interest from massive data and metadata and formulate data searching strategies.  -->
 
 
 <!-- Aim of PREGO is to address the challenge of extracting associations among ORG-PROC and ENV by taking advantage of the global literature and the main metagenomic resources.  -->
 
 
 
-### slide 32: Get co-occurences; methodology      
+### slide 31: Get co-occurences; methodology      
 
 PREGO implements the well-established tagger from JensenLab to tag microbial taxa, biological and metabolic processes and environments. 
 
-Then, it calculates a respective score for each of the paired 
-co-occurrences found.
+Then, it calculates a respective score for each of the paired co-occurrences found.
 
 
-### slide 33: PREGO explain how we use omics data
+### slide 32: PREGO explain how we use omics data
 
 This approach can be used on the literature but also in 
 omics analyses output and on their related metadata. 
@@ -599,9 +638,11 @@ and linked with the taxa present in their corresponding OTU table.
 Thus, omics repositories such as the JGI/IMG , MG-RAST and MGnify can provide 
 hundreds of thousands of samples that can be used as input to our approach. 
 
+However, it is crucial for such an approach that valid metadata accompany these data. 
 
 
-### slide 34: Overall Methodology
+
+### slide 33: Overall Methodology
 
 
 So, PREGO exploits this approach to extract associations from literature (a task covered by my colleague Savvas Paragkamian)
@@ -615,26 +656,33 @@ in terms of what would be useful to the user.
 
 
 
-### slide 35: PREGO resources
+### slide 34: PREGO resources
 
-Indicatively, in this table you may see the number of publications and experimnetns 
+In this table you may see the number of publications and experimnetns 
 that PREGO exploits. 
 
-More than 30 millions of papers are parsed and dozins of thousands of omics samples. 
+As you can see, more than 30 millions of papers are parsed and dozins of thousands of omics samples. 
 
-The associations extracted form the omics samples is strongly dependent on their 
+<!-- The associations extracted form the omics samples is strongly dependent on their 
 corresponding metadata. 
 
-The Struo resource is a collection of high quality genomes which PREGO integrates as is. 
+The Struo resource is a collection of high quality genomes which PREGO integrates as is.  -->
 
 
 
-### slide 36: PREGO in action
+### slide 35: PREGO in action
 
-The
+The PREGO knowledgebase is now accessible as a web platform where the user 
+may ask for a certain taxon and a series of environments, biological processes and molecular functions 
+may be returned. 
+
+Likewise, environments or processes can be used as the entry point of a PREGO query. 
+
+By combining a number of PREGO queries, one may come with a number of hypotheses that may 
+explain its study case. 
 
 
-### slide 37: PREGO conclusions
+### slide 36: PREGO conclusions
 
 
 
@@ -643,63 +691,68 @@ The
 
 ## Tristomo marsh 
 
-### slide 38: Tristomo intro 
+### slide 37: Tristomo intro 
 
 With resepct to the 2nd aim of this phd, 
 samples from 
 microbial mat communities from a hypersaline marsh in Tristomo, 
 a village in Karpathos island, were used. 
 
-To identify both the taxa present in these communities and their functional 
-potential, both amplicon and metagenomics analysis were performed. 
-
-Our goal was to identify potential taxa and/or processes that have a key role 
-in the functioning of these communities
+<!-- To identify both the taxa present in these communities and their functional 
+potential, both amplicon and metagenomics analysis were performed.  -->
 
 
-### slide 39: Sampling 
+### graphical abstract
 
-Samples were collected in 2 time points, one during summer and another in winter. 
+Our goal was to identify potential taxa meaning the *who*,
+and/or processes, the *what* that have a key role 
+in the functioning of these communities from such environmnets. 
 
-Our samples were either from true mats with top and bottom layers, of from 
+This way, we could make at least some hypotheses about *how* such assemblages actuaylly work. 
 
-We also samples some aggregates as the orange one you may see here. 
+### slide 38: Sampling 
+
+So, samples were collected in 2 time points, one during summer and another in winter. 
+
+A number of our samples were from true mats with top and bottom layers, 
+but others were with no slicing, we will call these "combined". 
+
+We also sampled some aggregates as the orange one you may see here. 
 
 All the sampling was done by Dr. Christina Pavloudi. 
 
 Deep sequencing was then performed in a total of 6 metagenomic and 13 amplicon samples. 
 
 
-### slide 40: bioinformatics 
+### slide 39: bioinformatics 
 
 The amplicon data were analysed using the PEMA workflow. 
 
 However, the analysis of the metagenomics data was not that straight forward. 
 
-Several steps as shown in this diagram were performed.
+<!-- Several steps as shown in this diagram were performed.
 
 Based on the metagenomic data, the composition of the communities was studied both at the reads level 
-as well as at the one of bins. 
+as well as at the one of bins.  -->
 
-To this end, the metagenomes were first co-assembled and the refined bins were used to 
+Metagenomes were first co-assembled and the refined bins were used to 
 reconstruct metagenome-assembled genomes (MAGs). 
-After manual refinement where needed, a total of:
-* 178 bacterial high quality (completeness > 90%, contamination <5%), 
-* 70 bacterial and 39 archaeal medium quality (50% < completeness <90% and 5% < contamination <10%), and 
-* 2 bacterial MAGs of low quality (completeness score <50%) 
-were retrieved. 
-The vast majority of these MAGs represent novel taxa. 
+After manual refinement where needed, a total of 250 bacterial and 39 archaeal MAGs were retrieved; 
+178 of which were of high quality and 109 of medium. 
+
+<!-- * 178 bacterial high quality , 
+* 70 bacterial and 39 archaeal medium quality, and 
+* 2 bacterial MAGs of low quality (completeness score <50%)  -->
 
 The metagenomes were also assembled at the sample level as part of the DiTing software 
 that determines the relative abundance of metabolic and biogeochemical functional pathway in 
 metagenomic datasets. 
 
 
-### slide 41: taxonomic profile comparisons 
+### slide 40: taxonomic profile comparisons 
 
 Interestingly, each of the 3 taxonomic profiles retrieved, meaning the one coming from the amplicon data,
 the one from the metagenomic raw reads and the one from the bins, returns a significan number of phyla 
-
 
 As shown in this plot, 
 the taxonomic profile based on the metagenomic raw reads, returns quite less phyla than the 2 other methods; 
@@ -712,20 +765,34 @@ to their corresponding one from one catergory to the other was done.
 
 
 
-### slide 42: MAGs phylogeny 
+### slide 41: MAGs phylogeny 
 
-A phylogeny of the 
+MAGs were taxonomically assigned using GTDB and the vast majority of them represent novel taxa.
+
+Further, a phylogeny of the reconstructed MAGs was built based on their common single-copy genes. 
+
+The most abundant phyla were Bacteroidota and Proteobacteria.
+
+Myxococcota was the only phylum that was present only in the microbial aggregates, i.e., in Elos03 and Elos07, 
+and was absent from all the other samples was .
+
+The most abundant archaeal phylum was Nanoarchaeota, which was mostly found in Elos01 and in much lower abundances in the other samples. 
+Thermoplasmatota and Asgardarchaeota were found in similar abundances and they were absent from the aggregates. 
+Halobacteriota were not found in Elos10 and Elos12 and were mostly present in Elos01. 
 
 
+### slide 42: cycles of S and N 
 
+As you can see in the left figure, the most abundant pathways in our samples were the 
+assimilatory and dissimilatory reduction of sulphate to sulphite; 
+thiosulphate oxidation contributes to the sulphate pool too.
 
-### slide 43: cycles of S and N 
+In the right figure, dissimilatory nitrate reduction to nitrite and nitrite to ammonia (DNRA) is mostly found in the combined sediment samples (Elos10 and Elos12). 
+Also, nitrification is almost absent from the microbial mat and the microbial aggregates. 
 
-that form intermediates of a metabolic pathway. 
-Examples of such are found in the citric acid cycle (TCA cycle).
-Anaplerosis is the act of replenishing TCA cycle intermediates that have been extracted for biosynthesis (in what are called anaplerotic reactions).
+So, it is clear that the samples have different metabolic profiles depending on their type.
 
-### slide 44 - Tristomo conclusions
+### slide 43 - Tristomo conclusions
 
 
 
@@ -734,13 +801,13 @@ Anaplerosis is the act of replenishing TCA cycle intermediates that have been ex
 ## The end
 
 
-### slide 45 - GENERAL CONCLUSIONS
+### slide 44 - GENERAL CONCLUSIONS
 
 
 
 
 
-### slide 46 - PERSPECTIVES
+### slide 45 - PERSPECTIVES
 
 In the near future, it is my intention to focus on metabolic modelling and 
 constraint-based methods such as flux sampling 
@@ -754,7 +821,7 @@ and
 *how each of the taxa present contribute to the mat's fitness?*
 
 
-### slide 47 - WRAP UP 
+### slide 46 - WRAP UP 
 
 To sum up, during my phd i contributed in 4 coding projects aiming to address on-going challenges 
 in the analysis of microbiome data. 
@@ -762,7 +829,7 @@ in the analysis of microbiome data.
 Almost everything regarding these tools is open and if anyone is interested to contribute please
 go for it!
 
-### slide 48 - PUBLICATIONS 
+### slide 47 - PUBLICATIONS 
 
 These tools and therefore most of the chapters of my thesis, 
 have already been published in peer-reviewed journals 
@@ -771,13 +838,13 @@ and it is only the Tristomo marsh study that is still under review.
 Hopefully we will get some feedback any time now. 
 
 
-### slide 49 - FUNDING
+### slide 48 - FUNDING
 
 Obviously, I could not have done any of this if it was not for the funding I had all these years. 
 So, I would like to thank the funding organisations but mostly all those that 
 helped in writing the proposals that were funded and allowed me to come throught with this. 
 
-### slide 50 - ACKNOWLEDGEMENTS
+### slide 49 - ACKNOWLEDGEMENTS
 
 Having said that, I would like to thank my promotors as well as all the 
 members of my committee for their time. 

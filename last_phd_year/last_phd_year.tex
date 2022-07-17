@@ -2214,11 +2214,32 @@
 
       \begin{tikzpicture}[overlay,remember picture]
 
-            \node[anchor=north east, xshift=-90, yshift=-48pt]
+            \node[anchor=north east, xshift=-75, yshift=-48pt]
                at (current page.north east) {
                   \includegraphics[width=75mm]{resources/figure_3_transp.png}
                };
       \end{tikzpicture}
+
+
+      \begin{textblock*}{4cm}(9.3cm, 3.9cm)
+         \scriptsize
+         \begin{itemize}
+            \item \textbf{Nanoarchaeota}: \\ mostly in top layer
+            \item \textbf{Asgardarchaeota} \& \textbf{Thermoplasmatota}: \\ absent from aggregates
+            \item \textbf{Halobacteriota}: \\ absent from the winter samples
+         \end{itemize}
+         
+      \end{textblock*}
+
+      \begin{textblock*}{4cm}(-0.1cm, 4.3cm)
+         \scriptsize
+         \begin{itemize}
+            \item \textbf{Bacteroidota} \& \textbf{Proteobacteria}: \\ most abundant
+            \item \textbf{Myxococcota}: \\ only in aggregates
+         \end{itemize}
+         
+      \end{textblock*}
+
       % RELATED CHAPTER
       \begin{tikzpicture}[overlay,remember picture]
          \node[anchor=west, xshift=130pt, yshift=-55pt]
@@ -2920,21 +2941,21 @@
       MCMC convergence diagnostics:
 
       \begin{itemize}
-         \item \textbf{Effective Sample Size (ESS): } 
+         \item \textbf{Effective Sample Size (ESS): } the number of effectively independent draws from
+         the target distribution that the Markov chain is equivalent to
          % measures the information content, or effectiveness of a sample chain
          % can be defined as the minimum size of a set of posterior samples (taken directly from the posterior), 
-         % which have the same efficiency (measure of quality) in the posterior density estimation as a given chain of samples obtained from MCMC sampling
+         % which have the same efficiency (measure of quality) in the posterior density estimation 
+         % as a given chain of samples obtained from MCMC sampling
 
-         %  a function proportional to the ratio between the
-         % variance of the ideal Monte Carlo estimator (drawing samples di-
-         % rectly from the target) over the variance of the estimator obtained
-         % by MCMC or IS techniques, using the same number of samples in
-         % both estimators.
+         \tiny a function proportional to the ratio between the
+         \tiny variance of the ideal Monte Carlo estimator %(drawing samples directly from the target) 
+         \tiny over the variance of the estimator obtained
+         \tiny by MCMC %or IS techniques, 
+         \tiny using the same number of samples %in both estimators.
 
-         the number of effectively independent draws from
-         the target distribution that the Markov chain is equivalent to
-
-         \item \textbf{Potential Scale Reduction Factor (PSRF)}
+         \item  \footnotesize \textbf{Potential Scale Reduction Factor (PSRF)}
+         statistical test to evaluate the quality of a generated sample
          
       \end{itemize}
    

@@ -24,7 +24,9 @@ contributes ,as well as
 ## INTRODUCTION
 ### slide 1: microbial ecology in general
 
-It goes without saying, microbial ecology is the ecology of microorganisms: 
+It goes without saying, 
+microbial ecology studied 
+is the ecology of microorganisms: 
 their relationship with one another and with their environment.
 
 
@@ -591,12 +593,12 @@ In the title slide I argued that in some cases, bioinformatics may be necessary 
 
 <!-- Up to now, we have seen how they can be of use in the analysis of HTS data and of their related metabolic models.  -->
 
-In terms of understanding and elucidating the mechanisms that govern ecosystem function, we first need to understand what processes occur in which environments, and which organisms carry them out.
+<!-- In terms of understanding and elucidating the mechanisms that govern ecosystem function, we first need to understand what processes occur in which environments, and which organisms carry them out. -->
 
-To this end, data integration techniques, meaning the combination of data from multiple sources to provide a unified view of them, 
+So, data integration techniques, meaning the combination of data from multiple sources to provide a unified view of them, 
 may contribute to the inference of organisms - environments, organisms - processes and enveironments - processes associations. 
 
-In pairs, organisms and biological processes present in an environmental type, allow us to study fundamental features of an ecosystem, such as community structure, process potential and so on.
+<!-- In pairs, organisms and biological processes present in an environmental type, allow us to study fundamental features of an ecosystem, such as community structure, process potential and so on. -->
 
 <!-- facilitate the interpretation of what processes occur in which environments, and which organisms carry them out. -->
 
@@ -683,9 +685,6 @@ explain its study case.
 
 
 ### slide 36: PREGO conclusions
-
-
-
 
 ---------------------
 
@@ -790,11 +789,11 @@ thiosulphate oxidation contributes to the sulphate pool too.
 In the right figure, dissimilatory nitrate reduction to nitrite and nitrite to ammonia (DNRA) is mostly found in the combined sediment samples (Elos10 and Elos12). 
 Also, nitrification is almost absent from the microbial mat and the microbial aggregates. 
 
-So, it is clear that the samples have different metabolic profiles depending on their type.
+<!-- So, it is clear that the samples have different metabolic profiles depending on their type. -->
 
 ### slide 43 - Tristomo conclusions
 
-
+figure this out 
 
 ---------------------
 
@@ -804,7 +803,7 @@ So, it is clear that the samples have different metabolic profiles depending on 
 ### slide 44 - GENERAL CONCLUSIONS
 
 
-
+figure this out 
 
 
 ### slide 45 - PERSPECTIVES

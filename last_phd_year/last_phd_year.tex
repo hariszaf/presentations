@@ -2200,13 +2200,6 @@
 
    \end{frame}
 
-   % AMPLICON VS METAGENOMICS
-   \begin{frame}
-      \frametitle{Amplicon vs metagenomics}
-      \framesubtitle{number of phyla retrieved per method}
-      \includegraphics[width=80mm]{resources/upset.png}
-   \end{frame}
-
    % MAGs PHYLOGENY
    \begin{frame}
       \frametitle{MAGs phylogeny}
@@ -2247,50 +2240,6 @@
             \includegraphics[width=15mm]{resources/usecase.png}
          };
       \end{tikzpicture}
-
-   \end{frame}
-
-   % THE S AND N CYCLES
-   \begin{frame}
-      \frametitle{The S and the N cycle}
-      \framesubtitle{using KEGG annotation terms}
-
-      \begin{tikzpicture}[overlay, remember picture]
-         \node[anchor=north, xshift=-30mm, yshift=-30mm]
-            at (current page.north){
-               \includegraphics[width=60mm]{resources/Figure 5.png}
-            };
-            \node[anchor=north, xshift=30mm, yshift=-30mm]
-            at (current page.north){
-               \includegraphics[width=63mm]{resources/Figure 6.png}
-            };
-      \end{tikzpicture}
-
-      % RELATED CHAPTER
-      \begin{tikzpicture}[overlay,remember picture]
-         \node[anchor=west, xshift=130pt, yshift=-35pt]
-         at (current page.north) {
-            \includegraphics[width=15mm]{resources/usecase.png}
-         };
-      \end{tikzpicture}
-
-
-      \begin{textblock*}{4cm}(6.6cm, 0.5cm)
-         \tiny
-         \begin{table}[]
-            \begin{tabular}{lll}
-            \hline
-            \textbf{Sample} & \textbf{Type} & \textbf{Season} \\ \hline
-            Elos01 & top & summer \\
-            Elos02 & bottom & summer \\
-            Elos03 & orange aggregate & summer \\
-            Elos07 & pink aggregate & summer \\
-            Elos10 & combined & winter \\
-            Elos12 & combined & winter
-            \end{tabular}
-            \end{table}
-
-      \end{textblock*}
 
    \end{frame}
 
@@ -2535,7 +2484,7 @@
       % \end{textblock*}
 
       % SPECIAL THANKS
-      \begin{textblock*}{4.0cm}(4.8cm, 2.5cm)
+      \begin{textblock*}{4.0cm}(5.0cm, 2.5cm)
 
          \footnotesize \textbf{Special thanks to:} \\
 
@@ -2551,7 +2500,7 @@
       \end{textblock*}
 
       % THE CREW
-      \begin{textblock*}{4.0cm}(8.0cm, 2.5cm)
+      \begin{textblock*}{4.0cm}(8.6cm, 2.5cm)
          \footnotesize
          \textbf{My mojo:}\\
          \footnotesize 
@@ -2564,6 +2513,13 @@
             Would not be here \\
             if it was not with you.
          
+      \end{textblock*}
+
+      \begin{textblock*}{4.0cm}(8.8cm, 6.0cm)
+         \scriptsize
+         \textit{To a little seed, \\
+         meant to join us any time now}
+
       \end{textblock*}
 
       % Logos
@@ -3127,7 +3083,7 @@
 
    \end{frame}
 
-   % FUNCTIONAL POTENIAL 
+   % FUNCTIONAL POTENIAL
    \begin{frame}
       \frametitle{Metabolic pathways per biogeochemical cycle}
       \framesubtitle{and their relative abundance at each sample}
@@ -3142,6 +3098,58 @@
       \end{tikzpicture}
 
    \end{frame}
+
+   % AMPLICON VS METAGENOMICS
+   \begin{frame}
+      \frametitle{Amplicon vs metagenomics}
+      \framesubtitle{number of phyla retrieved per method}
+      \includegraphics[width=80mm]{resources/upset.png}
+   \end{frame}
+
+   % THE S AND N CYCLES
+   \begin{frame}
+      \frametitle{The S and the N cycle}
+      \framesubtitle{using KEGG annotation terms}
+
+      \begin{tikzpicture}[overlay, remember picture]
+         \node[anchor=north, xshift=-30mm, yshift=-30mm]
+            at (current page.north){
+               \includegraphics[width=60mm]{resources/Figure 5.png}
+            };
+            \node[anchor=north, xshift=30mm, yshift=-30mm]
+            at (current page.north){
+               \includegraphics[width=63mm]{resources/Figure 6.png}
+            };
+      \end{tikzpicture}
+
+      % RELATED CHAPTER
+      \begin{tikzpicture}[overlay,remember picture]
+         \node[anchor=west, xshift=130pt, yshift=-35pt]
+         at (current page.north) {
+            \includegraphics[width=15mm]{resources/usecase.png}
+         };
+      \end{tikzpicture}
+
+
+      \begin{textblock*}{4cm}(6.6cm, 0.5cm)
+         \tiny
+         \begin{table}[]
+            \begin{tabular}{lll}
+            \hline
+            \textbf{Sample} & \textbf{Type} & \textbf{Season} \\ \hline
+            Elos01 & top & summer \\
+            Elos02 & bottom & summer \\
+            Elos03 & orange aggregate & summer \\
+            Elos07 & pink aggregate & summer \\
+            Elos10 & combined & winter \\
+            Elos12 & combined & winter
+            \end{tabular}
+            \end{table}
+
+      \end{textblock*}
+
+   \end{frame}
+
 
 \end{document}
 

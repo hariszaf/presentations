@@ -16,11 +16,11 @@
     Gossip in the Microbiome: Metabolic Secrets Behind Microbial Co-Occurrence
   ],
   speaker: [Haris Zafeiropoulos],
-  conference: [Hellenic Society for Computational Biology and Bioinformatics],
-  speaker-website: "url-to-the-speaker.org", // use `none` to disable
-  slides-url: "URL to slides", // use `none` to disable
+  conference: [Hellenic Society for Computational Biology and Bioinformatics 2026],
+  speaker-website: "https://m3i-lab.github.io/", // use `none` to disable
+  slides-url: "https://github.com/hariszaf/presentations/tree/main/HSCBB2026", // use `none` to disable
   qr-caption: text(font: "Excalifont")[Get these slides],
-  logo: image("figs/microbetag_logo.png", height: 3em),
+  logo: image("figs/microbetag_logo.png", height: 5em),
 )
 
 #slide[

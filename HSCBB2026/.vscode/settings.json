@@ -1,0 +1,4 @@
+{
+  // Tinymist build bundling Typst 0.13.1 (friendly-polylux 0.1.0 needs image.decode)
+  "tinymist.serverPath": "/home/micro/.local/opt/tinymist-0.13/tinymist"
+}

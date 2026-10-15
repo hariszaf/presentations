@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "typst13 watch",
+      "type": "shell",
+      "command": "${userHome}/.local/opt/typst-0.13/typst watch ${file}",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

@@ -54,7 +54,7 @@
     Inferring microbial interactions and how they evolve
   ],
   author: [Haris Zafeiropoulos],
-  date: datetime.today(),
+  date: [19 October 2026],
   institution: [Balance of the Microverse \
     Friedrich Schiller University Jena],
 )
@@ -66,6 +66,12 @@
 
 
 #show: init
+// make web/email links stand out (theme purple + underline);
+// internal links, like the section navigation in the header, stay as they are
+#show link: it => if type(it.dest) == str {
+  underline(offset: 2pt, text(fill: rgb("#6a3d8a"), it))
+} else { it }
+
 #set text(font: "Andika")                               // all text
 #show raw: set text(font: "Fantasque Sans Mono")        // code
 #show math.equation: set text(font: "Lete Sans Math")   // maths
@@ -281,5 +287,8 @@
   \
   I am happy to take your questions!
 
+
+  #set text(0.75em)
+  Slides available on #link("https://github.com/hariszaf/presentations/blob/INRAE2026/INRAE2026/main.pdf")[GitHub]
 
 ]

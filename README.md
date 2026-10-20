@@ -60,3 +60,19 @@ logo: image("figs/microbetag_logo.png", height: 3em),
 ```
 
 Use `logo: none` to show nothing.
+
+### Decks needing Typst 0.12 (touying 0.4.x)
+
+`INRAE2026` uses `academic-conf-pre:0.1.0` → `touying:0.4.2`, which relies on `locate(loc => …)`,
+removed in Typst 0.13. Compile it with Typst 0.12.0 (deprecation warnings are harmless):
+
+```bash
+mkdir -p ~/.local/opt/typst-0.12
+curl -L https://github.com/typst/typst/releases/download/v0.12.0/typst-x86_64-unknown-linux-musl.tar.xz \
+  | tar -xJ -C ~/.local/opt/typst-0.12 --strip-components=1
+echo "alias typst12='~/.local/opt/typst-0.12/typst'" >> ~/.bashrc
+typst12 watch main.typ
+```
+
+VS Code for `INRAE2026`: open that folder on its own (not `presentations/`); its `.vscode/settings.json`
+points Tinymist to a 0.12 build (https://github.com/Myriad-Dreamin/tinymist/releases/tag/v0.12.20).

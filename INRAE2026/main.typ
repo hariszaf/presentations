@@ -109,7 +109,7 @@
 ]
 
 #tblock(title: [In one line])[
-  Fascinated by *microbial interactions*, and building a *toolkit* to study those and their evolution.
+  Keen on *microbial interactions*, and building a *toolkit* to study those and their evolution.
 ]
 
 = Microbial Ecology
@@ -168,50 +168,80 @@
   tblock(title: [dingo])[
     #set text(0.7em)
     Python package for *flux sampling* and analysis of metabolic networks.
-    It supports: 
-    sampling the largest models available so-far, 
-    a variety of MCMC algorithms, 
-    statistical guarantees for reaching target distribution.
 
-    In the near future: sampling on community models.
+    Able to sample the largest models available, with
+    a variety of MCMC algorithms, and
+    statistical guarantees.
+    
+    _Under development_: sampling community models
   ],
 )
 
 == dingo: beyond a single optimum
-#grid(columns: (1fr, 1fr), gutter: 0.8em)[
-  #set text(0.8em)
-  - FBA gives *one* optimal flux vector
-  - Flux sampling explores the *whole* feasible space
-  - Distributions of fluxes → robustness, correlations, alternative states
-][
-  // source: https://github.com/GeomScale/dingo (tutorials/figs/gk1.png)
-  #align(center + horizon)[
-    #image("figures/copula_o2_ethenol.svg", width: 110%)
-    #image("figures/dingo_gk1.png", width: 100%)
-  ]
-]
+#let takeaway(body) = box(width: 100%, inset: 0.5em, radius: 6pt, fill: rgb("#e0c8f0"), {
+  set par(justify: false)
+  set text(size: 12pt, hyphenate: false)
+  body
+})
+
+#align(center, text(size: 15pt)[
+  FBA gives *one* optimal flux vector #h(0.4em) vs. #h(0.4em)
+  flux sampling explores the *whole* feasible space
+])
+#v(0.5em)
+#grid(
+  columns: (0.9fr, 1.1fr),
+  column-gutter: 0.8em,
+  align: top,
+  // left: marginal + GK1, stacked
+  stack(spacing: 0.4em,
+    // source: https://github.com/GeomScale/dingo (doc/e_coli_aconta.png)
+    align(center, image("figures/dingo_aconta.png", height: 5.2cm)),
+    takeaway[*Marginal:* the full *distribution* of a reaction's flux, also in *sub-optimal* growth],
+    v(0.2em),
+    // source: https://github.com/GeomScale/dingo (tutorials/figs/gk1.png)
+    align(center, image("figures/dingo_gk1.png", height: 4.6cm)),
+    takeaway[*GK1:* flux increases when the SARS-CoV-2 growth rate is maximised -- a potential *antiviral target*],
+  ),
+  // right: copula, large
+  stack(spacing: 0.4em,
+    v(1.8cm),
+    image("figures/copula_o2_ethenol.svg", width: 100%),
+    takeaway[*Copula:* O#sub[2] uptake and ethanol secretion are *negatively* coupled -- more respiration, less fermentation],
+  ),
+)
+#v(1fr)
 
 = Metabolic interactions
 == microbetag
-// #tblock(title: [From co-occurrence to mechanism])[
-//   Co-occurrence networks show *who appears with whom*, but not *why*.
-// ]
+// one-line overview, then the two figures as large as the slide allows
+#align(center, text(size: 14pt)[
+  Network #h(0.3em) → #h(0.3em)
+  #box(inset: 0.25em, radius: 4pt, fill: rgb("#e0c8f0"))[*traits*]
+  #box(inset: 0.25em, radius: 4pt, fill: rgb("#e0c8f0"))[*pathway complementarity*]
+  #box(inset: 0.25em, radius: 4pt, fill: rgb("#e0c8f0"))[*seed scores \& complementarity*]
+  #h(0.3em) → #h(0.3em) Cytoscape / MGG
+])
+#v(0.1em)
+#align(center, image("figures/seed_compl.png", height: 7.2cm))
+#grid(
+  columns: (1fr, auto),
+  column-gutter: 0.8em,
+  align: horizon,
+  text(size: 13pt)[
+    #set par(justify: false)
+    *Seed complementarity:* a species' missing seed
+    can be produced by a partner
 
-#grid(columns: (1fr, 1fr), gutter: 0.8em)[
-  #set text(0.8em)
-  microbetag annotates network edges with putative metabolic interactions: 
-  
-  - phenotypic traits of the taxa
-  - pathway complementarity
-  - seed-set based complementarity and scores
-  - microbetagDB for GTDB 207 through MGG Cytoscape app
-][
-  // TODO: add a microbetag annotated network figure
-  #align(center + horizon)[
-    #image("figures/seed_compl.png", width: 100%)
-    #image("figures/mtg_precalc.png", width: 100%)
-  ]
-]
+    #v(0.4em)
+    Precomputed for *GTDB v207*, or run locally (Nextflow)
+
+    #v(0.4em)
+    #text(size: 11pt, fill: luma(90))[_Genome Biology_ 26:292 (2025)]
+  ],
+  image("figures/seedComplPanel.png", height: 6.9cm),
+)
+#v(1fr)
 
 = Further modeling
 == mgrowthdb
@@ -266,13 +296,14 @@
     #set text(0.75em)
     - *Dynamic models* of communities (GLV, consumer–resource)
     - *Inferring interactions* from time series (e.g. PINNs)
-    - Stability and coexistence: what selection can act on
+    - *Stability and coexistence:* what selection can act on
   ],
   tblock(title: [What I would bring])[
     #set text(0.75em)
-    - Genome-scale models and flux sampling (dingo)
-    - Interaction priors from metabolism (microbetag)
-    - Growth-curve data for calibration (mgrowthdb)
+    - GEMs *reconstruction* (DNNGIOR) and understanding 
+    - Flux *sampling* (dingo) GEMs, sub-spaces and community models
+    - *Interaction* priors from metabolism (microbetag)
+    - *Growth-curve* data for calibration (mgrowthdb)
   ],
 )
 

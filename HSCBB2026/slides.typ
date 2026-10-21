@@ -489,7 +489,7 @@
 )
 
 #slide[
-  = Questions?
+  = Thank you for your attention!
   #v(1fr)
   #grid(
     columns: (auto, auto, 1fr),
@@ -513,6 +513,8 @@
 // --------
 // Extras
 // --------
+
+// Challenges
 #slide[
   = Challenges in co-occurrence inference 
   #set text(0.8em)
@@ -524,6 +526,7 @@
     but we sample at the *macroscale*
 ]
 
+// Sampling scale
 #slide[
   = Sampling scale
   #grid(
@@ -539,6 +542,7 @@
   )
 ]
 
+// Compositionality
 #slide[
   = Compositionality
   #align(center)[#image("figs/compositionality.png", width: 60%)]

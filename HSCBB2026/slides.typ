@@ -47,26 +47,21 @@
   logo: image("figs/microbetag_logo.png", height: 5em),
 )
 
-// ~12 min talk: ~10 content slides, ~1 min each. Timing per slide in [mm:ss].
-// TODO items: numbers, figures, case-study details.
-
-// [0:00–1:00] Hook
 #slide[
-  = Making sense of the hairball is hard  //Who lives with whom?
+  = Making sense of a hairball is hard  //Who lives with whom?
   #set text(0.8em)
   Amplicon / metagenomic surveys → *co-occurrence networks*:
   thousands of *undirected* edges between taxa that appear together (or avoid each other).
 
   #align(center)[#image("figs/hairball_squeezed.png", height: 5.5cm)]
 
-  #align(center)[How do we make *sense* out of the hairball?]
+  #align(center)[_Who_ is working with _who_ and _how_?]
 ]
 
 #slide[
   = A co-occurrence network in Cytoscape
   #align(center)[#image("figs/cytopanel.png", width: 72.5%)]
 ]
-
 
 
 // [2:30–3:30] Idea
@@ -85,7 +80,6 @@
   ]
 ]
 
-// [3:30–4:30] Workflow
 // small flow-diagram helpers
 #let accent = rgb("#3b5b92")
 #let step(title, body, fill: rgb("#eef2f8")) = box(
@@ -438,22 +432,87 @@
   )
 ]
 
-#friendly.last-slide(
-  title: [That's it!],
-  project-url: "https://github.com/msysbio/microbetag",
-  qr-caption: text(font: "Excalifont")[microbetag on GitHub],
-  contact-appeal: [Get in touch #emoji.hand.wave],
-  // leave out any of the following if they don't apply to you:
-  email: "charalampos-zafeiropoulos@uni-jena.de",
-  // email: "haris.zafeiropoulos@atomicmail.io",
-  // mastodon: "@foo@baz.org",
-  website: "https://hariszaf.github.io",
-  // linkedin: "had", 
-  // github: "hariszaf"
+// Acknowledgements
+#let person(photo, name, affil, size: 3.4cm, name-size: 0.55em) = stack(
+  spacing: 0.3em,
+  align(center, box(clip: true, radius: 50%, width: size, height: size,
+    image(photo, width: size, height: size, fit: "cover"))),
+  align(center, text(size: name-size, weight: "bold", name)),
+  if affil != none { align(center, text(size: 0.42em, fill: luma(80), affil)) },
 )
 
-// Extras
+#slide[
+  = Acknowledgements
+  #grid(
+    columns: (1fr, 1fr, 1fr),
+    column-gutter: 1em,
+    align: top,
+    person("figs/ack_faust.jpg", [Prof. Karoline Faust],
+      [Microbial Systems Biology lab \ 
+      #v(-0.5em) 
+      #image("figs/logo_kuleuven.svg", height: 0.7cm)], size: 2.2cm
+    ),
+    person("figs/ack_morris.jpg", [John "Scooter" Morris],
+      [RBVI, UC San Francisco \ #v(-0.5em) #image("figs/logo_nrnb_dark.svg", height: 0.7cm)], size: 2.2cm),
+    person("figs/ack_ermis.jpg", [Ermis Delopoulos],
+      [MGG development \
+            #v(-0.5em) 
+      #image("figs/logo_kuleuven.svg", height: 0.7cm)],
+       size: 2.2cm),
+  )
+  #v(-0.2em)
+  #align(center, block(breakable: false, inset: (x: 0.8em, y: 0.35em), radius: 8pt, stroke: 0.8pt + luma(200))[
+    #box(baseline: 25%, image("figs/logo_eth.jpg", height: 0.9cm)) #h(0.3em)
+    #text(size: 0.5em, weight: "bold")[testing the software]
+    #v(-0.9em)
+    #grid(
+      columns: (auto, auto, auto),
+      column-gutter: 2em,
+      person("figs/ack_schneider.jpg", [Aline Schneider], none, size: 1.6cm, name-size: 0.42em),
+      person("figs/ack_geirnaert.jpg", [Annelies Geirnaert], none, size: 1.6cm, name-size: 0.42em),
+      person("figs/ack_erega.jpg", [Andrea Erega], none, size: 1.6cm, name-size: 0.42em),
+    )
+  ])
+  #v(-0.3em)
+  #align(center, text(size: 0.5em)[
+    *Funding:* #link("https://www.3domics.eu/")[#box(baseline: 30%, image("figs/logo_3domics.png", height: 1.3em))] (EU Horizon) ·
+    #link("https://nrnb.org/gsoc.html")[#box(baseline: 30%, image("figs/logo_gsoc.svg", height: 1.3em))] with #link("https://nrnb.org/")[#box(baseline: 20%, image("figs/logo_nrnb_dark.svg", height: 1.1em))]
+  ])
+]
 
+// Last slide: two QR codes (project + slides) in the theme's style;
+// friendly.last-slide only supports one, so this is a regular slide.
+#let gold-qr(url, caption) = stack(
+  spacing: 0.3em,
+  link(url, tiaoma.qrcode(url, options: (fg-color: rgb("#E8C872"), bg-color: none), width: 4.6cm)),
+  align(center, text(font: "Excalifont", size: 0.5em, caption)),
+)
+
+#slide[
+  = Questions?
+  #v(1fr)
+  #grid(
+    columns: (auto, auto, 1fr),
+    column-gutter: 1.2em,
+    align: horizon,
+    gold-qr("https://github.com/msysbio/microbetag", [microbetag on GitHub]),
+    gold-qr("https://github.com/hariszaf/presentations/tree/main/HSCBB2026", [Get these slides]),
+    [
+      I'd be happy to take your questions -- or get in touch later #emoji.hand.wave
+      #v(0.6em)
+      #set text(size: 0.65em)
+      #grid(columns: 2, column-gutter: 0.5em, row-gutter: 0.8em, align: horizon,
+        friendly.icons.email, link("mailto:charalampos-zafeiropoulos@uni-jena.de")[charalampos-zafeiropoulos\@uni-jena.de],
+        friendly.icons.www, link("https://hariszaf.github.io")[hariszaf.github.io],
+      )
+    ],
+  )
+  #v(1fr)
+]
+
+// --------
+// Extras
+// --------
 #slide[
   = Challenges in co-occurrence inference 
   #set text(0.8em)
@@ -464,7 +523,6 @@
   + *Sampling scale* → interactions happen at the *microscale*,
     but we sample at the *macroscale*
 ]
-
 
 #slide[
   = Sampling scale

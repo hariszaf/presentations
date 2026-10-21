@@ -495,15 +495,16 @@
     columns: (auto, auto, 1fr),
     column-gutter: 1.2em,
     align: horizon,
-    gold-qr("https://github.com/msysbio/microbetag", [microbetag on GitHub]),
     gold-qr("https://github.com/hariszaf/presentations/tree/main/HSCBB2026", [Get these slides]),
+    gold-qr("https://github.com/msysbio/microbetag", [microbetag on GitHub]),
     [
+      #set text(size: 0.8em)
       I'd be happy to take your questions -- or get in touch later #emoji.hand.wave
       #v(0.6em)
       #set text(size: 0.65em)
       #grid(columns: 2, column-gutter: 0.5em, row-gutter: 0.8em, align: horizon,
         friendly.icons.email, link("mailto:charalampos-zafeiropoulos@uni-jena.de")[charalampos-zafeiropoulos\@uni-jena.de],
-        friendly.icons.www, link("https://hariszaf.github.io")[hariszaf.github.io],
+        friendly.icons.www, link("https://hariszaf.github.io/")[hariszaf.github.io],  // trailing slash: not shrunk by the title-slide link rule
       )
     ],
   )

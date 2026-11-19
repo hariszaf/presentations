@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Magnifying glass combined with a green-to-red sensitivity gauge">
+  <rect width="1200" height="1200" fill="#ffffff"/>
+  <defs>
+    <style>
+      .ink { fill: #292929; }
+    </style>
+  </defs>
+
+  <!-- Segmented sensitivity arc -->
+  <g stroke="#ffffff" stroke-width="10" stroke-linejoin="round">
+    <path d="M 235.3 778.2 A 430 430 0 0 1 153.3 680.0 L 256.1 620.7 A 312 312 0 0 0 315.5 691.9 Z" fill="#087F45"/>
+    <path d="M 153.3 680.0 A 430 430 0 0 1 112.4 558.1 L 229.8 542.2 A 312 312 0 0 0 256.1 620.7 Z" fill="#16A34A"/>
+    <path d="M 112.4 558.1 A 430 430 0 0 1 112.4 431.9 L 229.8 447.8 A 312 312 0 0 0 229.8 542.2 Z" fill="#65B82E"/>
+    <path d="M 112.4 431.9 A 430 430 0 0 1 153.3 310.0 L 256.1 369.3 A 312 312 0 0 0 229.8 447.8 Z" fill="#A6CE25"/>
+    <path d="M 153.3 310.0 A 430 430 0 0 1 235.3 211.8 L 315.5 298.1 A 312 312 0 0 0 256.1 369.3 Z" fill="#E4D51A"/>
+    <path d="M 235.3 211.8 A 430 430 0 0 1 344.0 145.8 L 391.1 254.0 A 312 312 0 0 0 315.5 298.1 Z" fill="#F2C21B"/>
+    <path d="M 344.0 145.8 A 430 430 0 0 1 470.0 111.0 L 480.8 228.5 A 312 312 0 0 0 391.1 254.0 Z" fill="#F5A623"/>
+    <path d="M 470.0 111.0 A 430 430 0 0 1 596.0 145.8 L 548.9 254.0 A 312 312 0 0 0 480.8 228.5 Z" fill="#F28C22"/>
+    <path d="M 596.0 145.8 A 430 430 0 0 1 704.7 211.8 L 624.5 298.1 A 312 312 0 0 0 548.9 254.0 Z" fill="#EF5B2A"/>
+    <path d="M 704.7 211.8 A 430 430 0 0 1 786.7 310.0 L 683.9 369.3 A 312 312 0 0 0 624.5 298.1 Z" fill="#D9232E"/>
+  </g>
+
+  <!-- Magnifying-glass handle, behind the lens -->
+  <path d="M 682 690 L 900 908" fill="none" stroke="#292929" stroke-width="104" stroke-linecap="round"/>
+
+  <!-- Lens and frame -->
+  <circle cx="480" cy="510" r="278" fill="#292929"/>
+  <circle cx="480" cy="510" r="244" fill="#ffffff"/>
+
+  <!-- Gauge needle -->
+  <path
+    d="M 474 510 L 405 342 Q 399 327 411 324 Q 421 321 428 334 L 520 484 Z"
+    class="ink"
+    transform="rotate(40 480 470)"
+  />
+  <circle cx="480" cy="510" r="43" class="ink"/>
+  <circle cx="480" cy="510" r="17" fill="#ffffff"/>
+
+  <!-- O2 molecule -->
+  <g transform="translate(590 590)">
+    <!-- Double bond -->
+    <line x1="-85" y1="-7" x2="15" y2="-7"
+          stroke="#292929" stroke-width="12"/>
+    <line x1="-85" y1="7" x2="15" y2="7"
+          stroke="#292929" stroke-width="12"/>
+
+    <!-- Oxygen atoms -->
+    <circle cx="-105" cy="0" r="33" fill="#E53935"/>
+    <circle cx="35" cy="0" r="33" fill="#E53935"/>
+  </g>
+</svg>
